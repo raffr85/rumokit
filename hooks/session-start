@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+set -euo pipefail
+
+plugin_root="${CLAUDE_PLUGIN_ROOT:-$(cd "$(dirname "$0")/.." && pwd)}"
+router_file="${plugin_root}/skills/use-rumokit/SKILL.md"
+
+if [[ ! -r "$router_file" ]]; then
+  printf 'RumoKit bootstrap failed: portable router is not readable.\n' >&2
+  exit 1
+fi
+
+router=$(<"$router_file")
+context="<RUMOKIT_BOOTSTRAP>
+RumoKit's portable router is active for this session. Follow it before non-trivial software work; do not ask the user to invoke it.
+
+${router}
+</RUMOKIT_BOOTSTRAP>"
+
+context=${context//\\/\\\\}
+context=${context//\"/\\\"}
+context=${context//$'\n'/\\n}
+context=${context//$'\r'/\\r}
+context=${context//$'\t'/\\t}
+
+printf '{"hookSpecificOutput":{"hookEventName":"SessionStart","additionalContext":"%s"}}\n' "$context"

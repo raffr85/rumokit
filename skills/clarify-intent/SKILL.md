@@ -1,0 +1,44 @@
+---
+name: clarify-intent
+description: Use at the start of every new software-work request and when its intent materially changes, before committing to a solution, scope, or implementation.
+---
+
+# Clarify Intent
+
+Establish a shared understanding of the requested result. Clarification is always part of the work; it is not an optional reaction to feeling uncertain.
+
+## Establish the outcome
+
+Inspect the request, accepted decisions, relevant existing behavior, and available evidence. Facts are the agent's job: do not ask the user to perform research or design an experiment they delegated to you.
+
+Keep a compact working agreement in the conversation or an existing task artifact: the observable outcome and who needs it, material constraints and preservation obligations, settled decisions and their basis, open choices, and the requested stopping point. Distinguish user decisions, delegated choices, technical facts, and assumptions. Do not create a separate document or approval turn merely to hold this understanding.
+
+An explicit, sufficiently defined request can establish this agreement immediately. Otherwise, test the understanding against a concrete example of the user's operation, not just the name of the requested artifact.
+
+## Walk the consequential path
+
+For new or changed behavior, trace a representative case: who starts with what, what they do, what should change, and what must remain unchanged. For stateful or consequential work, follow the relevant failure, retry, or intervening change far enough to expose decisions about authority, commitment, and recovery. Distinguish a preview or proposal from an action that changes state. This is a discovery aid, not a fixed interview or a checklist to apply to every task.
+
+When replacing an existing workflow, establish what is already in progress at first use and what happens to it. Preserving a schema or catalog does not settle active commitments held elsewhere. If alternatives imply lost state or duplicate work, resolve that product choice before calling the replacement usable; do not invent migration work when an accepted starting condition already settles it.
+
+Find the first unresolved fork where credible alternatives produce materially different user outcomes, included capabilities, authority, risk, cost, or reversibility. Code can reveal what the system does; it cannot choose what the user wants. An instruction to implement authorizes execution, not every unstated product choice. Use `scope-product-increment` when the product boundary itself needs resolution.
+
+## Ask neutrally
+
+- Explain the concrete consequence of the decision.
+- Ask in outcome terms rather than transferring technical choices to the user.
+- Present credible alternatives and their consequences without steering toward a preferred answer.
+- Group questions only when they are independent and easy to answer together.
+- Use a small concrete example when abstract alternatives hide different effects.
+
+Ask before the dependent commitment and wait for the answer. An asynchronous question being accepted by a tool is not a human response. Continue only independent, authorized work; if the host cannot deliver an answer during the turn, return the question before doing work that assumes it. Do not implement a preferred answer while waiting.
+
+If the user does not know yet, help them decide with consequences, concrete examples, or `prototype-decision`. Do not turn an unknown preference into a technical default. Ask only questions whose answers can affect the requested result; stop questioning once those decisions are established.
+
+For a cheap, reversible detail that does not change the core outcome, make a clearly stated assumption and continue. Do not assume permission for external writes, destructive actions, release, or materially broader scope.
+
+## Carry the agreement into delivery
+
+Closure requires an explicit request or answer, a prior accepted decision, delegated choice with sufficient criteria, or evidence that eliminates the material alternatives. Silence about an announced default is not acceptance. Preserve an explicit decision closely enough that another owner can apply it; do not ask the user to approve it again.
+
+Return the agreement to the primary owner. Keep its concrete example and preservation obligations available to implementation, delegation, and final verification. Revisit only newly opened material choices. When a decision changes, replace the superseded expectation and its dependent plan or checks; do not silently rewrite the expectation to match what was built.

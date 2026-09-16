@@ -1,0 +1,32 @@
+{
+  "name": "rumokit",
+  "interface": {
+    "displayName": "RumoKit"
+  },
+  "plugins": [
+    {
+      "name": "rumokit",
+      "source": {
+        "source": "local",
+        "path": "./"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    },
+    {
+      "name": "rumokit-codex",
+      "source": {
+        "source": "local",
+        "path": "./adapters/rumokit-codex"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Developer Tools"
+    }
+  ]
+}

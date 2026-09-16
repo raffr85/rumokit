@@ -1,0 +1,39 @@
+{
+  "name": "rumokit",
+  "version": "1.0.0",
+  "description": "Portable coding-agent workflows to clarify intent, adapt the process, and verify the outcome.",
+  "author": {
+    "name": "Rafael Affonso",
+    "url": "https://github.com/raffr85"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/raffr85/rumokit#readme",
+  "repository": "https://github.com/raffr85/rumokit",
+  "keywords": [
+    "coding-agents",
+    "software-quality",
+    "software-engineering",
+    "verification",
+    "multi-repository"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "RumoKit",
+    "shortDescription": "Help your agent build what you actually meant",
+    "longDescription": "Clarify the intended outcome, select the skills the task needs, and verify the final result against what the user agreed. Planning, tests, reviews, and subagents adapt to the work.",
+    "developerName": "Rafael Affonso",
+    "category": "Developer Tools",
+    "capabilities": [
+      "Adaptive workflow routing",
+      "Research and design",
+      "Implementation guidance",
+      "Verification and review",
+      "Multi-repository coordination"
+    ],
+    "defaultPrompt": [
+      "Establish the intended outcome, implement this change, and verify the result against what we agreed.",
+      "Fix this bug at its root cause and verify the real behavior.",
+      "Review this cross-repository change and its integration order."
+    ]
+  }
+}

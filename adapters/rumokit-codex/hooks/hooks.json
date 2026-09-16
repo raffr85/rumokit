@@ -1,0 +1,19 @@
+{
+  "description": "Activate RumoKit's portable router in Codex.",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|resume|clear|compact",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "cat \"${PLUGIN_ROOT}/hooks/session-start-context.md\"",
+            "commandWindows": "cmd /d /s /c type \"%PLUGIN_ROOT%\\hooks\\session-start-context.md\"",
+            "timeout": 5,
+            "additionalContextLimit": 0
+          }
+        ]
+      }
+    ]
+  }
+}

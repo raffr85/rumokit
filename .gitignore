@@ -1,0 +1,23 @@
+# Reduce accidental inclusion; a complete file and diff review remains mandatory.
+# Experiments, runs, logs, and mutable state belong outside the public package.
+
+# Experiment and evaluation artifacts
+/lab/
+/runs/
+/results/
+/experiments/
+/evals/
+*.log
+*.jsonl
+
+# Local state reserved for a possible future implementation
+/.rumokit/
+# Keep legacy local state out of the renamed package too.
+/.steelman/
+
+# Development residue
+node_modules/
+__pycache__/
+.venv/
+.env
+.DS_Store
