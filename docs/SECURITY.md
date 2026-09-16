@@ -14,8 +14,8 @@ This project does not promise a response deadline or certify host security.
 
 ## Current facts
 
-- The repository root contains the portable Agent Plugins package and Agent Skills. Claude Code can load that root with one `SessionStart` hook. The optional `adapters/rumokit-codex` package contains a separate `SessionStart` hook and no skills because Codex currently loads the portable core and lifecycle hook from separate roots.
-- The Claude Code hook reads the bundled `use-rumokit` skill and emits it as session context. The Codex hook reads one bundled static context file. Neither hook reads the user prompt, transcript, workspace, credentials, or network.
+- The repository contains portable Agent Skills and native Codex and Claude-compatible manifests. One `rumokit` installation supplies the skills and one `SessionStart` hook. The separate `rumokit-codex` adapter is retained for legacy installations only; do not install both with version 1.0.1 or later.
+- The shared startup hook reads the bundled `use-rumokit` skill and emits it as session context. The legacy adapter reads one bundled static context file. Neither hook reads the user prompt, transcript, workspace, credentials, or network.
 - Hosts decide how plugins are installed, reviewed, trusted, and injected. If an integration is absent, disabled, unsupported, or untrusted, routing falls back to native skill discovery. Neither hook blocks a recommendation or verifies that the model followed the context.
 - The repository contains no MCP server, daemon, policy engine, telemetry client, or RumoKit-owned agent runtime.
 - The package itself does not request, store, or transmit credentials. An activated skill may guide the host to use its native tools, subject to the host's permissions and the user's authority.

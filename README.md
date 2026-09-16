@@ -1,118 +1,123 @@
 # RumoKit
 
+[![Release](https://img.shields.io/github/v/release/raffr85/rumokit)](https://github.com/raffr85/rumokit/releases/latest)
+[![Package checks](https://github.com/raffr85/rumokit/actions/workflows/package-checks.yml/badge.svg)](https://github.com/raffr85/rumokit/actions/workflows/package-checks.yml)
+[![License](https://img.shields.io/github/license/raffr85/rumokit)](LICENSE)
+
 Help your coding agent build what you actually meant.
 
-RumoKit is a portable workflow plugin for coding agents. It helps the agent
-clarify your intended outcome, choose the work the task needs, and check the
-finished result against what you agreed.
+RumoKit guides coding agents to clarify the intended outcome, carry out the work,
+and verify the finished result against what you agreed. Its 22 skills cover
+product decisions, code exploration, implementation, debugging, review, and
+changes across repositories.
 
-It provides 22 focused skills for understanding code, product decisions,
-implementation, debugging, review, verification, and coordinated changes.
-The workflow selects relevant skills instead of loading the entire catalog.
-You can also invoke a focused skill directly.
-
-Specs, plans, TDD, and subagents are conditional tools, not a mandatory pipeline.
-RumoKit uses your chosen host, tools, permissions, and model preferences.
-It adds no daemon, MCP server, telemetry, or separate agent runtime.
-
-## What this looks like
-
-Suppose you ask: "Add a waitlist when a workshop is full."
-
-Working code can still implement the wrong product decision. Should the next
-person receive a confirmed seat, or an offer they must accept? RumoKit directs
-the agent to inspect the existing behavior, ask you about that unresolved
-decision, implement the agreed behavior, and verify the final interaction,
-including recovery from an interrupted request.
-
-This illustrates the workflow; it is not a quoted transcript. Clarification
-does not mean repeating questions you have answered or asking you for facts the
-agent can inspect.
+Specs, plans, TDD, and subagents are tools to use when the task needs them.
+There is no required sequence of stages or fixed model choice. RumoKit uses
+your agent's existing tools and permissions, with no extra runtime or telemetry.
 
 ## Install
 
-Download a [release](https://github.com/raffr85/rumokit/releases) or clone the source,
-then follow the [installation guide](docs/INSTALL.md)
-for your host. The core contains the same skills across hosts. Codex uses an
-additional bootstrap adapter.
+Choose your coding agent. You do not need a RumoKit account or API key.
 
-| Host | v1 status | Setup |
-|---|---|---|
-| Codex CLI 0.153.1, Astra medium | Passed the defined acceptance case | Core plus the trusted Codex adapter |
-| Devin CLI 3000.10.27, Opus 5 medium | Passed the defined acceptance case | Root plugin |
-| Claude Code | Compatible package layout; no completed Claude acceptance case | Root plugin |
-| Other Agent Skills clients | Portable format; behavior not validated | Native skill discovery |
+### Codex
 
-Portability means the same workflow principles can be used across hosts.
-It does not promise equal performance from every model or client.
+```sh
+codex plugin marketplace add raffr85/rumokit
+codex plugin add rumokit@rumokit
+```
 
-## Use
+The single plugin includes the skills and startup hook. Open `/hooks` in the
+Codex CLI to review and trust the hook, then start a new task. No separate
+adapter is needed.
 
-With the bootstrap active, describe the result you want in your own words:
+### Devin CLI
 
-> Add a waitlist to this workshop panel. Preserve existing registrations and
-> clarify unresolved product decisions before implementing them.
+```sh
+devin plugins install --local raffr85/rumokit
+```
 
-Focused skills also work independently. Ask your host to use the named skill:
+Review the trust request, then start a new session. This installs for the current
+user on this machine, without syncing the plugin to Devin Cloud.
 
-- `understand-code`: explain how a feature works without changing it.
-- `locate-change`: find where a proposed change belongs and what it affects.
-- `debug-change`: reproduce a failure, trace its cause, and verify the fix.
-- `remove-slop`: clean an existing artifact while preserving its behavior or meaning.
-- `review-change`: review a change and return findings supported by evidence.
+### Claude Code
 
-The [full catalog](docs/DESIGN.md#catalog) includes product scoping, research,
-design, specifications, plans, implementation, and cross-repository coordination.
-See the install guide for host-specific invocation and activation checks.
+Run these commands inside Claude Code:
 
-## How the workflow adapts
+```text
+/plugin marketplace add raffr85/rumokit
+/plugin install rumokit@rumokit
+```
 
-The router, `use-rumokit`, establishes the intended result and selects the skill
-responsible for delivering it. Supporting skills are added for specific work.
-A direct skill invocation keeps its own scope rather than starting a new pipeline.
+Follow Claude Code's trust prompts, then start a new session. A full behavioral
+acceptance run on Claude Code has not been completed.
 
-The working agreement records what success means, which decisions you accepted,
-and what must remain unchanged. It can stay in the conversation. Specs and plans
-are used when requested or needed for decisions, dependencies, risk, or handoff;
-they do not create extra approval stages.
+See the [installation guide](docs/INSTALL.md) for activation checks, updates,
+removal, and other Agent Skills clients.
 
-Work can stay inline or use bounded subagents, including for implementation
-across repositories. Your explicit preferences take priority over project policy
-and host defaults. RumoKit does not select a fixed model or reasoning level.
-See [delegation preferences](skills/delegate-work/SKILL.md).
+## Use it on your next task
 
-Verification checks the final artifact against the agreed outcome. Passing tests
-alone does not establish that the right product was built. Missing evidence and
-unfinished behavior must remain visible in the handoff.
+With the startup hook active, describe the result you want:
 
-Keep domain skills and tools you need. Use one default workflow router per task
-to avoid competing instructions about planning, approvals, tests, or delegation.
-RumoKit provides guidance, not enforcement or additional permissions.
+> Add a waitlist to this workshop panel. Preserve existing registrations.
 
-## Validation
+A missing product decision matters here: does a freed seat automatically confirm
+the next person, or create an offer they must accept? RumoKit directs the agent
+to ask about that choice before implementing it. It also directs the agent to
+inspect facts it can find itself, instead of asking you to explain the codebase.
 
-Version 1.0.0 passed a controlled acceptance case on Codex and Devin. The case
-evaluated clarification, agreed product behavior, preservation of existing data,
-concurrency, interrupted requests, and the delivered browser interaction.
+After you agree on the behavior, the work includes checking that registrations
+survive the change and that interrupted requests do not lose a seat. This is
+an illustrative example, not a quoted evaluation transcript.
 
-The [validation report](docs/VALIDATION.md) includes consumption, comparator
-results, and limitations. These are maintainer-reported results from one known
-case, not a public reproducible benchmark, a universal saving, or a SOTA claim.
-RumoKit does not guarantee that generated software is correct or production-ready.
+You can also request a focused skill without starting the whole workflow:
 
-## Contribute and learn more
+| Task | Skill |
+| --- | --- |
+| Explain existing behavior without editing files | `understand-code` |
+| Find where a change belongs | `locate-change` |
+| Diagnose and fix a defect | `debug-change` |
+| Coordinate a change across repositories | `coordinate-change` |
+| Review a diff for supported findings | `review-change` |
+| Remove unnecessary code or prose | `remove-slop` |
 
-Rafael Affonso maintains RumoKit. Everyone is welcome to use, adapt, and contribute
-to it. See [contribution guidelines](CONTRIBUTING.md), [credits](CREDITS.md),
-[design](docs/DESIGN.md), and the [trust model](docs/SECURITY.md).
+Use your agent's skill picker or request the skill by name. Select `use-rumokit`
+to start the router explicitly. The [full catalog](docs/DESIGN.md#catalog)
+describes all 22 skills.
 
-*Rumo* is Portuguese for direction. The project was developed as Steelman;
-[existing installations need an explicit migration](docs/INSTALL.md#migrate-from-steelman).
+## What RumoKit changes
+
+- Clarification focuses on unresolved decisions that affect the result. Existing
+  answers and authorization carry forward.
+- The agent keeps the agreed outcome and constraints visible. A conversation can
+  be enough; durable specs and plans are used when the work calls for them.
+- Delegation follows the task and your preferences. Work can stay inline or use
+  bounded subagents, including implementation across repositories.
+- Verification checks the delivered behavior, not just whether tests pass.
+  The handoff distinguishes completed work from missing evidence.
+
+Keep the domain skills and tools you need. Choose one default workflow router
+per task to avoid competing rules about approvals, planning, or delegation.
+RumoKit supplies instructions, not enforcement or additional permissions.
+
+## Evidence
+
+The v1 skills passed a controlled workshop-waitlist acceptance case on Codex
+with Astra and on Devin with Opus. Checks covered the product decision, existing
+data, concurrency, interrupted requests, and the delivered browser interaction.
+
+The [validation report](docs/VALIDATION.md) includes technical results, token
+consumption, comparator details, and limitations. These are maintainer-reported
+results from one known case, not a public reproducible benchmark or a guarantee
+of savings on your tasks. Version 1.0.1 improves packaging and installation;
+it does not introduce a new benchmark result.
+
+## Contribute
+
+Rafael Affonso maintains RumoKit. Bug reports, documentation fixes, and
+contributions are welcome. Read the [contribution guide](CONTRIBUTING.md),
+[design](docs/DESIGN.md), [credits](CREDITS.md), and [security guidance](docs/SECURITY.md).
 
 ## License
 
 [MIT](LICENSE). Copyright (c) 2026 Rafael Affonso.
-
-You may use, modify, and redistribute RumoKit, including commercially, under the
-license terms. Keep the copyright and permission notice with copies or substantial
-portions of the software. The software is provided without warranty.
+Free to use, modify, and redistribute, including commercially, under the license terms.

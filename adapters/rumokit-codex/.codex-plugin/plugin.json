@@ -1,7 +1,7 @@
 {
   "name": "rumokit-codex",
-  "version": "1.0.0",
-  "description": "Optional Codex SessionStart adapter for the RumoKit portable skill package.",
+  "version": "1.0.1",
+  "description": "Legacy startup adapter for RumoKit 1.0.0. New installations need only the main rumokit package.",
   "author": {
     "name": "Rafael Affonso",
     "url": "https://github.com/raffr85"
@@ -16,9 +16,9 @@
     "session-start"
   ],
   "interface": {
-    "displayName": "RumoKit Codex adapter",
-    "shortDescription": "Codex bootstrap for the RumoKit skill package",
-    "longDescription": "Adds an instruction to load RumoKit's portable router to Codex developer context at session start and after context resets.",
+    "displayName": "RumoKit Codex adapter (legacy)",
+    "shortDescription": "Legacy adapter; install RumoKit alone for version 1.0.1+",
+    "longDescription": "Retained for RumoKit 1.0.0 installations. The main RumoKit package includes its startup hook from version 1.0.1. Do not install both packages together.",
     "developerName": "Rafael Affonso",
     "category": "Developer Tools",
     "capabilities": [

@@ -5,6 +5,25 @@ The external evaluator was separate from the candidate, not an independent
 public auditor. Raw private artifacts are not distributed, so this report alone
 is not a publicly reproducible benchmark.
 
+## 1.0.1 installation correction
+
+Version 1.0.1 preserves all 22 skill bodies. It removes the root manifest that
+made Codex 0.153.1 skip hook discovery and uses the existing native manifests and
+shared startup hook. A disposable-profile installation verified that one
+`rumokit` package exposes the 22 namespaced skills and its `SessionStart` hook.
+After trust was granted only in that disposable profile, Codex reported
+`hook/completed` and recorded the router in the session context. No model response
+was obtained in that network-restricted smoke check. The package tests check
+hook output, relocation, and missing-router errors.
+
+The native catalogs also installed version 1.0.1 in disposable Claude Code
+2.1.258 and Devin CLI 3000.10.27 profiles. Those were package-loading checks,
+not agent tasks or new behavioral acceptance runs.
+
+These checks validate installation and bootstrap behavior, not a new model
+benchmark. The performance figures below belong to the original 1.0 acceptance
+configuration, which used the separate Codex adapter.
+
 ## 1.0 acceptance — 2026-09-16
 
 The accepted `1.0.0-rc.1` skills and hooks were promoted unchanged to `1.0.0`.

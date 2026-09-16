@@ -29,9 +29,11 @@ require their original workflows, approval stages, or model choices.
 
 ## Formats
 
-The package uses [Agent Skills](https://agentskills.io/specification) and
-[Agent Plugins](https://agent-plugins.org/specification). Host-specific bootstrap
-integrations connect the portable instructions to supported clients.
+The instructions use [Agent Skills](https://agentskills.io/specification).
+Native Codex and Claude-compatible manifests connect the same skills and startup
+hook to supported clients. The earlier package also used the
+[Agent Plugins](https://agent-plugins.org/specification) root manifest; version
+1.0.1 uses the native manifests to keep Codex installation to one package.
 
 ## Research influences
 

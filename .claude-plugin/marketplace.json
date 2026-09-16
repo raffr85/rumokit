@@ -1,0 +1,14 @@
+{
+  "name": "rumokit",
+  "description": "RumoKit workflows for coding agents.",
+  "owner": {
+    "name": "Rafael Affonso"
+  },
+  "plugins": [
+    {
+      "name": "rumokit",
+      "source": "./",
+      "description": "Help your coding agent build what you actually meant."
+    }
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "description": "Load RumoKit's portable router on SessionStart, including resume and context resets, on hosts that support Claude-layout plugins.",
+  "description": "Load RumoKit's portable router at session start and after context resets in Codex, Claude Code, and compatible hosts.",
   "hooks": {
     "SessionStart": [
       {

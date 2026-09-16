@@ -1,5 +1,19 @@
 # Changes
 
+## 1.0.1
+
+- Install the skills and startup hook together as one `rumokit` plugin in Codex.
+  Remove the root Agent Plugins manifest that made Codex 0.153.1 skip the hook.
+  Keep the native Codex and Claude-compatible manifests and all 22 skills.
+- Reuse the existing startup hook across Codex, Devin, and Claude Code. Retain the
+  separate Codex adapter only for legacy installations.
+- Rewrite the README around installation, first use, and the intended result.
+  Add release, license, and live package-check badges.
+- Add the native Claude Code marketplace and document direct GitHub installation
+  for Devin, so neither requires a manual clone for normal installation.
+- Check packaging and hook behavior on Linux and macOS in GitHub Actions.
+- Leave workflow instructions and the published 1.0.0 acceptance results unchanged.
+
 ## 1.0.0
 
 - License the core and the separately packaged Codex adapter under MIT,

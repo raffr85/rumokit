@@ -1,179 +1,223 @@
 # Install RumoKit
 
-Get the v1.0.0 source from the [release page](https://github.com/raffr85/rumokit/releases/tag/v1.0.0)
-or clone the tagged version:
+Use the instructions for your coding agent. Install the agent's CLI first and
+complete its normal authentication. RumoKit needs no separate account or API key.
 
-```sh
-git clone --branch v1.0.0 --depth 1 https://github.com/raffr85/rumokit.git
-cd rumokit
-```
-
-Run the commands below from the RumoKit root, where `plugin.json` and `skills/` are located.
-The commands assume your chosen coding-agent CLI is installed and on your PATH.
-
-Review the [trust model](SECURITY.md) before enabling hooks. RumoKit does not need
-its own account or API key; your host still needs its normal authentication.
-The executable hooks use a POSIX shell. Windows-native hook execution is not
-validated by this release.
-
-For a trial, use a disposable project and the host's supported profile isolation.
-A disposable project alone does not isolate user-wide plugins or instructions.
-The persistent installation commands below change plugin state for the current
-host profile. They are not clean-profile or benchmark setup commands.
+Review the [security guidance](SECURITY.md) before enabling hooks. Executable
+hooks use a POSIX shell; Windows-native hook execution has not been validated.
 
 ## Codex
 
-The install path is checked against Codex CLI 0.153.1. The portable core provides
-the skills. The optional `rumokit-codex` adapter supplies the startup instruction
-that asks Codex to load the portable router.
+### Install from GitHub
 
-Register the repository's bundled catalog and install the core:
+```sh
+codex plugin marketplace add raffr85/rumokit
+codex plugin add rumokit@rumokit
+```
+
+RumoKit 1.0.1 includes all 22 skills and the startup hook in one plugin.
+Launch `codex`, open `/hooks`, and review and trust RumoKit's `SessionStart`
+hook. Then start a new task in your client. The hook only reads the bundled
+router instructions. The install path is checked against Codex CLI 0.153.1.
+
+To pin a release instead of following the default branch, use this first command:
+
+```sh
+codex plugin marketplace add raffr85/rumokit --ref v1.0.1
+```
+
+Then run `codex plugin add rumokit@rumokit`.
+
+### Check the installation
+
+```sh
+codex plugin list --marketplace rumokit
+```
+
+Check that `rumokit` is installed and enabled. In a new task, the skill picker
+should include `rumokit:use-rumokit` and the other focused skills.
+Check the hook output or startup context to confirm that the hook ran.
+
+If the hook is unavailable or untrusted, you can still select
+`rumokit:use-rumokit` explicitly. Skill discovery and hook execution are
+separate checks.
+
+### Use a local checkout or an existing app link
+
+If you already have a clone, register its catalog from the repository root:
 
 ```sh
 codex plugin marketplace add .
 codex plugin add rumokit@rumokit
 ```
 
-If you prefer not to clone the source yourself, replace `marketplace add .` with:
+Use either the GitHub source or the local checkout for this catalog, not both.
+
+A generated `codex://plugins/…?marketplacePath=…` link opens a plugin in a
+catalog on that computer. You can install it through the app. The link is not a
+portable installer for another user's computer. For public installation, use
+the GitHub commands above.
+
+If you installed through an app link, inspect its source in Codex before
+registering another copy. A local source and a GitHub source can contain the
+same plugin name at different versions.
+
+### Update
+
+For a GitHub installation that follows the default branch:
 
 ```sh
-codex plugin marketplace add raffr85/rumokit --ref v1.0.0
+codex plugin marketplace upgrade rumokit
+codex plugin add rumokit@rumokit
 ```
 
-Then run the same core and adapter installation commands. Use one catalog
-registration method, not both.
+Check the installed version, review any changed hook, and start a new task.
+A catalog pinned to a tag stays on that tag. Update a local checkout at its
+source and reinstall through the same catalog.
 
-For automatic startup routing, also install the adapter:
-
-```sh
-codex plugin add rumokit-codex@rumokit
-```
-
-Inspect the installed entries:
-
-```sh
-codex plugin list --marketplace rumokit
-```
-
-Both packages should report version `1.0.0`. Review and trust the adapter's
-`SessionStart` hook through your client's hook-review controls. Start a new
-session after installation or a trust change. Installation alone does not prove
-that the hook ran.
-
-The catalog in `.agents/plugins/marketplace.json` points to the root and
-`adapters/rumokit-codex`; it does not duplicate the skills. These paths are
-relative to the repository root. The tested loader accepts the core path `./`.
-Do not install the adapter alone or rewrite the core manifest to force hook loading.
-
-To invoke a focused skill, use Codex's skill picker and choose its installed name.
-If the hook is unavailable or untrusted, select `use-rumokit` explicitly when you
-want the router. Native skill discovery remains available without the adapter.
-
-To remove this installation, run only the commands for packages you installed:
+If you previously installed the separate `rumokit-codex` adapter from version
+1.0.0, remove it after updating the main plugin:
 
 ```sh
 codex plugin remove rumokit-codex@rumokit
+```
+
+Run that command only if the old adapter is installed. New installations need
+only `rumokit`; the old adapter is retained for compatibility.
+
+### Uninstall
+
+For the GitHub or local catalog named `rumokit`:
+
+```sh
 codex plugin remove rumokit@rumokit
 codex plugin marketplace remove rumokit
 ```
 
-Restart the session so previously loaded instructions do not remain in context.
-These commands target the catalog named `rumokit`, not another catalog containing
-a separate RumoKit installation.
+Remove the old adapter first if it is still installed. For installations in
+another catalog, use that catalog's plugin entry instead. Start a new task so
+previously loaded instructions do not remain in context.
 
 ## Devin CLI
 
-The accepted case used Devin CLI 3000.10.27. Install the root plugin:
+### Install
 
 ```sh
-devin plugins install --local .
+devin plugins install --local raffr85/rumokit
 ```
 
-Review the plugin trust request before accepting. Inspect the registered plugin:
+Review the plugin trust request, then start a new session. Check the installation:
 
 ```sh
 devin plugins info rumokit
 devin plugins list
 ```
 
-Start a new session after installation. The root's Claude-compatible hook supplies
-the router, and Devin's native skill invocation loads the selected workflow.
+The root plugin contains the skills and startup hook. The v1 acceptance case
+used Devin CLI 3000.10.27.
 
-`--local` means installation for the current user on this machine, without adding
-it to synced personal plugins. It can affect sessions in other projects. It does
-not disable other plugins, imported instructions, or global skills.
-The local directory remains linked; keep it in place and review edits before
-starting another session.
+`--local` installs for the current user on this machine, without adding the plugin
+to synced personal plugins. It can affect sessions in other projects. Omit
+`--local` only if you want the plugin synced through your Devin personal account.
 
-To remove this machine-local installation:
+### Update or uninstall
+
+To fetch the latest version:
+
+```sh
+devin plugins update rumokit
+```
+
+Review the changes and start a new session. To uninstall the machine-local plugin:
 
 ```sh
 devin plugins remove --local rumokit
 ```
 
-This removal command is not the path for a synced personal installation.
-Restart the session after removal.
+Start a new session after removal. A synced personal installation has a separate
+removal path in Devin.
+
+### Use a local checkout
+
+For plugin development, run `devin plugins install --local .` from the RumoKit
+repository root. Devin links to that directory, so keep it in place. Reviewed
+edits take effect in the next session without an update command.
 
 ## Claude Code
 
-Load the root plugin for one session:
+### Install from GitHub
 
-```sh
-claude --plugin-dir .
+Run these commands inside Claude Code:
+
+```text
+/plugin marketplace add raffr85/rumokit
+/plugin install rumokit@rumokit
 ```
 
-Follow the host's trust prompts. The root contains the skills and its
-`SessionStart` hook. A direct skill invocation uses the plugin namespace:
+Follow Claude Code's trust prompts, then start a new session. Open `/plugin`
+and check the Installed tab for RumoKit. The plugin includes the skills and
+`SessionStart` hook. To invoke a focused skill directly:
 
 ```text
 /rumokit:understand-code
 ```
 
-To start without this session-local plugin, end the session and launch `claude`
-without `--plugin-dir`. No persistent installation is created by this command.
-An existing persistent RumoKit installation would need separate removal.
+A full behavioral acceptance run on Claude Code has not been completed.
 
-This is a documented loading path for the compatible package format. Version 1.0
-does not claim a completed behavioral acceptance case on Claude Code.
+### Update or uninstall
+
+From your terminal, refresh the catalog and update the installed plugin:
+
+```sh
+claude plugin marketplace update rumokit
+claude plugin update rumokit@rumokit
+```
+
+Review any changed hooks and start a new session. To uninstall, open `/plugin`
+inside Claude Code, select RumoKit in the Installed tab, and choose Uninstall.
+
+### Try a local copy for one session
+
+For a session-only trial, use a clone instead of the persistent installation:
+
+```sh
+git clone --branch v1.0.1 --depth 1 https://github.com/raffr85/rumokit.git
+cd rumokit
+claude --plugin-dir .
+```
+
+Follow the trust prompts. Keep the clone in place for later sessions using this
+command. To start without this copy, launch `claude` without `--plugin-dir`.
+Any separately installed persistent copy remains enabled until you remove it.
 
 ## Other Agent Skills clients
 
-Use your client's documented skill installation mechanism to load the directories
-under `skills/`. Keep any supporting files in each directory. Select `use-rumokit`
-for routed work or invoke a focused skill directly.
+Use your client's skill installation mechanism to load the directories under
+`skills/`. Keep the supporting files inside each skill directory. Select
+`use-rumokit` for routed work or invoke a focused skill directly.
 
-Automatic bootstrap behavior needs a supported host integration. Importing skills
-alone does not install either bundled hook. No model choice or permission policy
-is changed by the portable instructions.
+Skills-only installation does not add a startup hook. Automatic routing needs
+a supported host integration. Portability of the instructions does not mean
+that every client or model has been behaviorally validated.
 
-## Check activation
+## Confirm activation
 
-In a new session, check that the actual skill catalog includes `use-rumokit` and
-the focused skills you need. When a hook is enabled, check the host's hook output
-or startup context, not just the installed-plugin list.
+In a new session, check both the available skills and, if enabled, the startup
+hook output. Try an explanation-only request in a disposable project. Confirm
+that the agent loads `understand-code`, explains the requested behavior, and
+does not edit files. This checks loading and basic scope, not overall quality.
 
-Try an explanation-only request in a disposable project. Confirm that the host
-loads `understand-code`, explains the requested behavior, and does not edit files.
-This checks loading and basic scope; it is not proof of overall effectiveness.
+Keep your domain and tool plugins. Choose one default workflow router for the
+task. Multiple routers can impose conflicting planning, approval, test, or
+delegation rules.
 
-Keep domain and tool plugins you need, but choose one default workflow router
-for the task. Other routers can introduce competing planning, approval, testing,
-or delegation rules.
+For an isolated trial, use the host's supported profile isolation. A disposable
+project alone does not isolate user-wide plugins or instructions.
 
-## Migrate from Steelman
-
-RumoKit is a renamed package, not an automatic in-place upgrade. Install the new
-package in your chosen profile and retire the old Steelman package and router
-there. Do not leave both names enabled as competing workflow routers.
-
-Renaming source files does not update installed caches or trust decisions.
-Start a new session and repeat the activation check. Historical evaluation files
-retain their original Steelman name.
-
-## Host references
+## Host documentation
 
 - [Codex plugin packaging](https://developers.openai.com/plugins/build/plugins)
-- [Codex 0.153.1 catalog path resolution](https://github.com/openai/codex/blob/rust-v0.153.1/codex-rs/core-plugins/src/marketplace.rs)
+- [Codex hook review](https://learn.chatgpt.com/docs/hooks#review-and-trust-hooks)
 - [Devin CLI plugins](https://docs.devin.ai/cli/extensibility/plugins/overview)
 - [Claude Code plugins](https://code.claude.com/docs/en/plugins)
 - [Agent Skills specification](https://agentskills.io/specification)

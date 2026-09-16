@@ -23,7 +23,7 @@ A direct invocation can enter at a focused owner instead of the router. The skil
 
 Keep decision rules with their owner. The bootstrap activates routing; `scope-product-increment` owns product-priority authority. Do not duplicate its procedure in adapters or require a fixed authority label as a substitute for resolving the choice. This architecture is shared across models; model-specific variants need evidence of a behavioral difference.
 
-Claude Code loads the portable root and its `SessionStart` hook together. Codex uses a separate adapter root because Codex 0.153.1 does not activate hooks from the schema-declared Agent Plugins package. This packaging difference stays at the host boundary; both integrations route into the same portable skills.
+Codex, Claude Code, and compatible hosts load the same skills and `SessionStart` hook from one package through their native manifests. Version 1.0.1 removes the schema-declared root manifest because Codex 0.153.1 skips lifecycle hooks for that format. The portable skills remain unchanged; portability does not require a particular host's manifest. The separate Codex adapter is retained only for legacy installations and is not part of the current setup.
 
 ## The primary owner closes the current request
 

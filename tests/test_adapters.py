@@ -18,7 +18,7 @@ def load_json(path: Path) -> dict:
 
 class AdapterPackagingTest(unittest.TestCase):
     def test_package_identifiers_agree_across_hosts(self) -> None:
-        for relative in ("plugin.json", ".codex-plugin/plugin.json", ".claude-plugin/plugin.json"):
+        for relative in (".codex-plugin/plugin.json", ".claude-plugin/plugin.json"):
             with self.subTest(manifest=relative):
                 self.assertEqual(load_json(ROOT / relative)["name"], "rumokit")
         adapter = ROOT / "adapters" / "rumokit-codex" / ".codex-plugin" / "plugin.json"
@@ -26,7 +26,6 @@ class AdapterPackagingTest(unittest.TestCase):
 
     def test_manifests_share_one_version(self) -> None:
         manifests = [
-            ROOT / "plugin.json",
             ROOT / ".codex-plugin" / "plugin.json",
             ROOT / ".claude-plugin" / "plugin.json",
             ROOT / "adapters" / "rumokit-codex" / ".codex-plugin" / "plugin.json",
@@ -99,6 +98,42 @@ class AdapterPackagingTest(unittest.TestCase):
 
         self.assertNotIn("hooks", manifest)
         self.assertEqual(manifest["skills"], "./skills/")
+
+    def test_native_package_does_not_shadow_codex_hook_discovery(self) -> None:
+        # Codex 0.153.1 skips hooks for a schema-declared root manifest.
+        self.assertFalse((ROOT / "plugin.json").exists())
+        self.assertEqual(len(list((ROOT / "skills").glob("*/SKILL.md"))), 22)
+
+    def test_both_catalogs_resolve_the_complete_root_plugin(self) -> None:
+        codex = load_json(ROOT / ".agents" / "plugins" / "marketplace.json")
+        claude = load_json(ROOT / ".claude-plugin" / "marketplace.json")
+        for catalog in (codex, claude):
+            self.assertEqual(catalog["name"], "rumokit")
+            entry = next(plugin for plugin in catalog["plugins"] if plugin["name"] == "rumokit")
+            path = entry["source"] if isinstance(entry["source"], str) else entry["source"]["path"]
+            self.assertEqual((ROOT / path).resolve(), ROOT)
+        self.assertTrue((ROOT / "hooks" / "session-start").is_file())
+
+    def test_session_start_preserves_the_complete_router(self) -> None:
+        completed = subprocess.run(
+            [str(ROOT / "hooks" / "session-start")],
+            check=True, capture_output=True, text=True,
+            env={**os.environ, "CLAUDE_PLUGIN_ROOT": str(ROOT)},
+        )
+        context = json.loads(completed.stdout)["hookSpecificOutput"]["additionalContext"]
+        router = (ROOT / "skills" / "use-rumokit" / "SKILL.md").read_text().rstrip("\n")
+        self.assertIn(router, context)
+
+    def test_session_start_reports_a_missing_router(self) -> None:
+        with tempfile.TemporaryDirectory() as temporary:
+            completed = subprocess.run(
+                [str(ROOT / "hooks" / "session-start")],
+                check=False, capture_output=True, text=True,
+                env={**os.environ, "CLAUDE_PLUGIN_ROOT": temporary},
+            )
+        self.assertNotEqual(completed.returncode, 0)
+        self.assertEqual(completed.stdout, "")
+        self.assertIn("router is not readable", completed.stderr)
 
     def test_codex_hook_emits_its_bundled_bootstrap(self) -> None:
         adapter = ROOT / "adapters" / "rumokit-codex"
