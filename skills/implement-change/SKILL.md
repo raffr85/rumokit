@@ -31,6 +31,10 @@ Add `assess-blast-radius` for shared boundaries and `coordinate-change` for inde
 
 Use the host's supported editing operations and permitted working and temporary paths. After a failed write, inspect whether it changed the artifact, then correct the operation against that state. Reuse already-produced content when the host allows it; a tool-format or permission error does not require redesigning or repeatedly emitting the whole file.
 
+## Maintain existing task state
+
+When the work uses a durable specification, plan, or handoff, follow [the durable work-state contract](../resume-work/references/work-state.md). Update progress and evidence at material transitions so the next session can continue without reconstructing the conversation. Keep current summaries and next actions aligned with accepted changes; a dated appendix alone does not update them. This maintains existing task state, not a requirement to create documents for every edit.
+
 ## Prove the resulting behavior
 
 When the change affects identity, permissions, persistent state, or a consumer-facing contract, apply `review-change` to the completed diff against the starting contract before closing. Reconcile each material behavior change with an accepted decision or preservation obligation. This can be an inline review within implementation; independent delegation is conditional on its added value. Reuse an equivalent review already completed against the same artifact.

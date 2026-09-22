@@ -5,6 +5,35 @@ For the original controlled acceptance case, the external evaluator was separate
 from the candidate, not an independent public auditor. Raw private artifacts are
 not distributed, so this report alone is not a publicly reproducible benchmark.
 
+## 1.0.3: durable work state and resumption
+
+Five existing skills and the specification/plan templates now share a compact
+work-state contract. The change addresses stale current summaries, conflated
+expected versus observed evidence, and continuation across sessions. It does not
+add a skill, runtime, hook, mandatory document chain, or approval stage.
+
+Local checks passed the eleven package tests, frontmatter validation for all
+22 skills, local-reference checks, and diff whitespace checks. These are
+construction checks, not behavioral acceptance.
+
+A short synthetic documentation trial used two agents without the maintainer
+conversation. The author received an accepted storage change and revision-bound
+evidence, then updated an existing specification and plan. A separate cold reader
+received only the resulting workspace and resumption guidance. It recovered the
+accepted direction, treated old-revision checks as historical, inspected the
+already-started operation's metadata, and reported its missing result without
+claiming completion or initiating a duplicate. Both outputs kept publication
+and activation outside scope. They also identified evidence missing for part of
+the accepted behavior rather than treating a storage PASS as full acceptance.
+
+This checks a documentation handoff and read-only continuation, not software
+implementation, automatic host compaction, or a cross-host guarantee. There was
+no matched control, repeated sampling, cost comparison, or plugin-only host
+isolation. Ambient host instructions and installed skills remained available;
+the proposed source skills were loaded explicitly. Observed historical failures
+motivated the patch but are not a controlled baseline for this trial. No causal
+improvement or efficiency claim is made, and active installations are unchanged.
+
 ## 1.0.2 instruction corrections
 
 Nine existing skills and the implementation-plan template were adjusted after

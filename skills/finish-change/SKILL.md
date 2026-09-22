@@ -19,7 +19,7 @@ Use `coordinate-change` when readiness depends on multiple repositories, version
 
 Compare the final artifact with the accepted user outcome, examples, and preservation obligations, not only the latest plan or specification. State what was expected, what is integrated, and what is actually evidenced. Worker-only output and documented but absent capabilities remain unfinished. Surface unplanned changes, stale results, skipped boundaries, open findings, and claims that exceed the evidence. Confirm that no recommendation, rollout gate, or next artifact still depends on a superseded direction. Do not hide blockers in a general success summary.
 
-Use [assets/change-handoff.md](assets/change-handoff.md) for durable handoffs, deleting unused sections.
+For a durable handoff, follow [the durable work-state contract](../resume-work/references/work-state.md) and use [assets/change-handoff.md](assets/change-handoff.md) as needed. Update the existing entry point with final progress and the next action; do not leave a competing current summary behind. A separate handoff file is unnecessary when the existing task document already provides it.
 
 ## Give the next-step decision
 

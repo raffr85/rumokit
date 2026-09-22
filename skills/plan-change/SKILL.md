@@ -25,12 +25,13 @@ Each unit should state:
 - its concrete scope and exclusions;
 - dependencies and compatibility requirements;
 - the implementation move;
-- the task-shaped evidence that completes it.
+- the task-shaped evidence that completes it;
+- its current status and any evidence already obtained, bound to the artifact checked.
 
 Order units so the system remains understandable and, where practical, usable between them. Parallelize only units with independent inputs, outputs, and writable state. Test-first is useful when a fail-before check is cheap and discriminating; it is not a universal phase.
 
-Use [assets/implementation-plan.md](assets/implementation-plan.md) as a compact starting point.
+Use [assets/implementation-plan.md](assets/implementation-plan.md) as a compact starting point. Follow [the durable work-state contract](../resume-work/references/work-state.md) so a new session can locate the accepted contract, distinguish planned checks from completed evidence, and identify the next authorized unit. Extend the existing task entry point instead of creating another status document.
 
 ## Finish at implementation readiness
 
-Check that the plan covers the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Distinguish executable units from conditional ones; coverage counts do not establish readiness. Stop at the plan unless implementation is also authorized.
+Check that the plan covers the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Distinguish executable units from conditional ones; coverage counts do not establish readiness. Reconcile the current summary and next action with changed or completed units before handoff. Stop at the plan unless implementation is also authorized.

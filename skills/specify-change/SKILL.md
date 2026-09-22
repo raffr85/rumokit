@@ -26,11 +26,11 @@ Cover the parts that matter:
 - examples and acceptance evidence;
 - remaining decisions, owners, and consequences.
 
-Use [assets/change-spec.md](assets/change-spec.md) as a starting shape, deleting sections that do not earn their place.
+Use [assets/change-spec.md](assets/change-spec.md) as a starting shape, deleting sections that do not earn their place. Follow [the durable work-state contract](../resume-work/references/work-state.md) for document identity, decision authority, and its relationship to plans and continuation state. Reuse an existing entry point; a specification does not require a separate status file.
 
 ## Check completeness
 
-Walk representative success, failure, boundary, and preservation cases. A reader should be able to distinguish a compliant implementation from a plausible but wrong one.
+Walk representative success, failure, boundary, and preservation cases. A reader without the prior conversation should be able to distinguish a compliant implementation from a plausible but wrong one, and identify which decisions are accepted rather than proposed. Reconcile changed decisions with the current summary and linked dependent artifacts, not only a new history entry.
 
 Stop with the accepted behavioral boundary. Do not expand the document into an implementation plan unless that is also requested.
 

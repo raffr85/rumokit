@@ -108,9 +108,10 @@ data, concurrency, interrupted requests, and the delivered browser interaction.
 The [validation report](docs/VALIDATION.md) includes technical results, token
 consumption, comparator details, and limitations. These are maintainer-reported
 results from one known case, not a public reproducible benchmark or a guarantee
-of savings on your tasks. Version 1.0.2 refines clarification, planning, research,
-and delivery guidance following usage reviews. Its focused checks are documented
-separately; the original acceptance results do not validate these later changes.
+of savings on your tasks. Versions 1.0.2 and 1.0.3 refine workflow guidance and
+the consistency of specifications, plans, and session continuation. Their focused
+checks are documented separately; the original acceptance results do not validate
+these later changes.
 
 ## Contribute
 

@@ -1,7 +1,7 @@
 {
   "name": "rumokit",
   "displayName": "RumoKit",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Portable coding-agent workflows to clarify intent, adapt the process, and verify the outcome.",
   "author": {
     "name": "Rafael Affonso",

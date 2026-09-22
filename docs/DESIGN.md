@@ -86,6 +86,8 @@ The catalog size is not a target. Keep a skill separate only while it has a dist
 
 Specs and plans are outputs, not taxes. Create them when the current request includes them or when decisions, dependencies, risk, or handoff make durable state necessary for the requested work. Neither artifact creates an approval gate or requires the other.
 
+When those artifacts exist, their owners use the shared [durable work-state contract](../skills/resume-work/references/work-state.md). A specification records expected behavior and decision authority; a plan records units, status and observed evidence; a compact continuation block identifies the next authorized action. These may share one existing document. Update current state at material transitions, mark replaced directions as history, and resume from that entry point with artifact checks. This is a portable document convention, not a memory service or a pre-compaction hook.
+
 ## Delegation follows separability
 
 Use a worker when the unit has bounded inputs, an independent output, isolated writable state, and evidence the lead can inspect. Research, implementation, and review can all qualify.

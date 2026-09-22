@@ -1,5 +1,18 @@
 # Changes
 
+## 1.0.3
+
+- Share a small durable-state contract across specification, planning,
+  implementation, handoff, and resumption. Preserve existing project conventions
+  and keep current state distinct from historical decisions.
+- Add decision authority, observed unit status, and continuation fields to the
+  existing templates without requiring a new document or approval stage.
+- Resume from the task entry point and artifact evidence, reconcile in-flight
+  work, and update current summaries when accepted directions change.
+
+The bounded documentation handoff check and its limits are recorded in
+`docs/VALIDATION.md`. Publishing this release does not update active installations.
+
 ## 1.0.2
 
 - Resolve material intent uncovered during preparation instead of substituting
