@@ -15,7 +15,7 @@ codex plugin marketplace add raffr85/rumokit
 codex plugin add rumokit@rumokit
 ```
 
-RumoKit 1.0.1 includes all 22 skills and the startup hook in one plugin.
+RumoKit includes all 22 skills and the startup hook in one plugin.
 Launch `codex`, open `/hooks`, and review and trust RumoKit's `SessionStart`
 hook. Then start a new task in your client. The hook only reads the bundled
 router instructions. The install path is checked against Codex CLI 0.153.1.
@@ -23,7 +23,7 @@ router instructions. The install path is checked against Codex CLI 0.153.1.
 To pin a release instead of following the default branch, use this first command:
 
 ```sh
-codex plugin marketplace add raffr85/rumokit --ref v1.0.1
+codex plugin marketplace add raffr85/rumokit --ref v1.0.2
 ```
 
 Then run `codex plugin add rumokit@rumokit`.
@@ -181,7 +181,7 @@ inside Claude Code, select RumoKit in the Installed tab, and choose Uninstall.
 For a session-only trial, use a clone instead of the persistent installation:
 
 ```sh
-git clone --branch v1.0.1 --depth 1 https://github.com/raffr85/rumokit.git
+git clone --branch v1.0.2 --depth 1 https://github.com/raffr85/rumokit.git
 cd rumokit
 claude --plugin-dir .
 ```

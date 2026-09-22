@@ -15,6 +15,8 @@ Use an existing specification or plan when one is accepted. Create one only when
 
 During review repairs, distinguish restoring accepted behavior from proposing different behavior. Do not make a finding disappear by changing the specification or expected test result to match the code. If a repair would change a material accepted outcome, state the old and proposed behavior and use `clarify-intent` unless existing authorization covers that choice. Documentation corrections that preserve accepted behavior need no new approval.
 
+Do not add a policy bypass for test convenience or hypothetical future operations without an accepted requirement. When the user rejects an agent-added policy or capability, remove its dependent mechanisms and checks within the authorized scope, not only its wording. Inspect dependencies and preserve unrelated user work; do not retain the rejected behavior as an optional switch.
+
 ## Change the owning path
 
 - Reuse current concepts and conventions when they fit.

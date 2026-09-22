@@ -11,7 +11,7 @@ Honor temporal scope. If evidence is the current result and a later artifact is 
 
 ## Frame the question
 
-State the decision, the material unknowns, and what evidence would change the answer. Inspect relevant local code first when system fit matters.
+State the decision, the material unknowns, and what evidence would change the answer. Inspect relevant local code first when system fit matters. For a broad applicability question, examine credible uses and alternatives before choosing one to prototype. Explain which part of the decision the selected case can answer; a convenient narrow test must not silently replace the broader question. Honor an explicitly bounded experiment instead of expanding it into a survey.
 
 Prefer primary sources: official documentation, standards, original research, source code, and authoritative operational records. Use secondary sources to discover or contrast.
 
@@ -27,7 +27,7 @@ Keep a compact ledger of the decision gap, source or artifact identity, result, 
 
 - Search competing explanations, not only confirmation of the leading idea.
 - Record source date, scope, and applicability when they matter.
-- Distinguish a documented fact from an inference and a recommendation.
+- Distinguish a documented fact from an inference and a recommendation. Limit conclusions to what the source or experiment observed, including when a narrow hypothesis fails.
 - Surface contradictions instead of averaging them away.
 - Stop when another search is unlikely to alter the material conclusion.
 

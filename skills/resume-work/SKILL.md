@@ -17,7 +17,7 @@ Read the available handoff, recent transcript, accepted specification or plan, a
 - decisions with their authority or source, explicit exclusions, and unanswered questions;
 - claims and evidence with source, revision, and freshness;
 - work claimed complete and its artifact identity;
-- failed or unavailable prerequisites that should not be retried unchanged;
+- failed or unavailable prerequisites, resolved environment issues, and the execution contexts in which their fixes worked;
 - superseded directions and their dependent artifacts or gates;
 - unresolved failures, approvals, and next actions.
 

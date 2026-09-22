@@ -13,6 +13,8 @@ Capture the exact observed and expected behavior, environment, revision, input, 
 
 Trace from the symptom through executed code, state, data, configuration, and external dependencies. Compare a working case when useful. Do not start with a favorite explanation.
 
+Before asking the user to repair authentication or configuration, check the failing invocation's execution context and available history of the same problem. An error from one CLI process does not establish account-wide state. Use `resume-work` when prior resolutions may apply; verify the relevant boundary without exposing credentials or changing global settings as a diagnostic shortcut.
+
 ## Narrow with discriminating evidence
 
 Form the smallest current hypothesis and run the cheapest observation that could disprove it. Every retry should add information. Read callers and sibling paths before changing a shared function.

@@ -19,14 +19,16 @@ An explicit, sufficiently defined request can establish this agreement immediate
 
 For new or changed behavior, trace a representative case: who starts with what, what they do, what should change, and what must remain unchanged. For stateful or consequential work, follow the relevant failure, retry, or intervening change far enough to expose decisions about authority, commitment, and recovery. Distinguish a preview or proposal from an action that changes state. This is a discovery aid, not a fixed interview or a checklist to apply to every task.
 
-When replacing an existing workflow, establish what is already in progress at first use and what happens to it. Preserving a schema or catalog does not settle active commitments held elsewhere. If alternatives imply lost state or duplicate work, resolve that product choice before calling the replacement usable; do not invent migration work when an accepted starting condition already settles it.
+When introducing an integration or replacing a workflow, establish what state and work already exist at first use and what happens to them. Importing current state and processing historical events are different choices; either may trigger new effects. An exclusion of history does not settle those effects. Resolve material alternatives before treating the starting behavior as accepted; do not invent migration work or reopen a starting condition that the user already settled.
 
 Find the first unresolved fork where credible alternatives produce materially different user outcomes, included capabilities, authority, risk, cost, or reversibility. Code can reveal what the system does; it cannot choose what the user wants. An instruction to implement authorizes execution, not every unstated product choice. Use `scope-product-increment` when the product boundary itself needs resolution.
+
+Once evidence exposes such a fork, bring it to the user before expanding dependent research, delegation, or planning. A list of open decisions is not shared understanding. For an explicitly inventory-only or research-only request, report the relevant unknowns without pulling future decisions into scope; when the requested result requires resolving them, conduct that clarification rather than leaving it as a generic future task.
 
 ## Ask neutrally
 
 - Explain the concrete consequence of the decision.
-- Ask in outcome terms rather than transferring technical choices to the user.
+- Ask for missing outcomes or constraints; research and recommend technical choices against them rather than making the user design the solution.
 - Present credible alternatives and their consequences without steering toward a preferred answer.
 - Group questions only when they are independent and easy to answer together.
 - Use a small concrete example when abstract alternatives hide different effects.

@@ -4,6 +4,8 @@
 
 State the requested result, accepted behavior and example with their source, current revision or state, and decisive constraints. Reuse an existing agreement or specification rather than duplicating it.
 
+Identify whether this is an executable implementation plan or a conditional discovery/impact map. Name material open decisions and their dependent units; do not bury unresolved behavior in a generic first unit.
+
 ## Verifiable units
 
 For each unit:

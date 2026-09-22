@@ -29,10 +29,12 @@ Give each worker:
 - required evidence and stopping condition;
 - shared-state and communication rules.
 
+Pass the task-relevant context and precise evidence locations. Inherit full history only when the unit needs it; a small review should not restart the whole investigation. Workers may inspect additional evidence to resolve their assigned gap, but return unrelated findings to the owner instead of expanding the assignment.
+
 Use isolated branches, worktrees, files, or read-only tasks when concurrent writes could collide. Never let multiple workers silently edit the same state.
 
 ## Integrate as the owner
 
-Inspect outputs and evidence against the accepted outcome, not just the worker's local completion criteria. Workers return newly exposed product choices to the owner; they do not independently narrow the result. Resolve contradictions from source evidence; agreement or voting is not proof. The primary owner remains responsible for integration, cross-unit behavior, final edits, and the final claim. Unintegrated worker output is not the delivered artifact.
+Inspect outputs and evidence against the accepted outcome, not just the worker's local completion criteria. Workers return newly exposed product choices to the owner; they do not independently narrow the result. The owner resolves choices needed for the current result through `clarify-intent`, rather than merely collecting pending decisions. Resolve contradictions from source evidence; agreement or voting is not proof. The primary owner remains responsible for integration, cross-unit behavior, final edits, and the final claim. Unintegrated worker output is not the delivered artifact.
 
-Keep requested configuration separate from host-attested execution identity when reporting worker results.
+Keep requested configuration separate from host-attested execution identity when reporting worker results. For cost comparisons, include workers and integration for the same work unit, preserving the host's distinct token and cache counters; report missing accounting rather than treating it as zero.

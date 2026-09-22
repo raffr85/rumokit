@@ -32,6 +32,8 @@ Separate:
 
 Do not turn names, comments, mocks, or one isolated test into proof of production behavior. Prefer the shortest source map that answers the question over a repository tour.
 
+Before recommending a correction, connect the suspicious code to a current caller or consumer and the outcome it would break. For partial failures, establish which effects already committed and what a retry would repeat. If that link is unknown, recommend the discriminating investigation, not a code change presented as a confirmed fix.
+
 ## Finish with a usable mental model
 
 Return:

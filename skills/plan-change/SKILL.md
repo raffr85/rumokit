@@ -13,6 +13,8 @@ A specification does not automatically require a plan or a separate approval tur
 
 Establish or reuse the outcome through `clarify-intent`, including direct invocation. Verify the current code, accepted decisions and examples, relevant specification, and existing work. A plan inherits that acceptance boundary; it does not silently defer required capabilities. Name exact files, symbols, contracts, or repositories when known; mark unresolved locations instead of inventing them.
 
+Before sequencing dependent implementation, resolve choices that change what it must do. If behavior across components, authority, or recovery needs a durable shared contract, use `specify-change`; file count alone does not require it. Do not move foundational intent into a generic first unit and call the remaining sequence executable. A requested discovery plan or conditional impact map may legitimately leave these choices open: label it accordingly and identify which units depend on them. Continue independent mapping while awaiting answers.
+
 Add `assess-blast-radius` before sequencing shared contracts. Add `coordinate-change` when multiple independently versioned components participate.
 
 ## Sequence by evidence and dependency
@@ -31,4 +33,4 @@ Use [assets/implementation-plan.md](assets/implementation-plan.md) as a compact 
 
 ## Finish at implementation readiness
 
-Check that the plan covers the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Stop at the plan unless implementation is also authorized.
+Check that the plan covers the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Distinguish executable units from conditional ones; coverage counts do not establish readiness. Stop at the plan unless implementation is also authorized.

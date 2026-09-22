@@ -1,5 +1,25 @@
 # Changes
 
+## 1.0.2
+
+- Resolve material intent uncovered during preparation instead of substituting
+  an open-decisions list for clarification; preserve inventory-only requests.
+- Distinguish executable plans from conditional maps and create a behavioral
+  contract when shared behavior requires one, without a mandatory artifact chain.
+- Keep proposed business behavior distinct from accepted scope inside a design,
+  including effects on existing state and activation timing.
+- Ground correction recommendations in actual callers, committed effects, and
+  consumer outcomes; recover known environment resolutions before asking for
+  authentication or configuration changes.
+- Remove rejected agent-added mechanisms along with their prose, and keep broad
+  research questions distinct from the narrow experiments used to investigate them.
+- Bound worker context and assignments, retain owner responsibility for exposed
+  decisions, and account for delegated work in cost comparisons.
+
+These instruction changes do not establish improved comparative efficiency.
+See `docs/VALIDATION.md` for the checks and their limits. Updating the source or
+publishing this release does not update active installations.
+
 ## 1.0.1
 
 - Install the skills and startup hook together as one `rumokit` plugin in Codex.

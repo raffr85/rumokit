@@ -1,9 +1,38 @@
 # Validation and claim limits
 
-These are maintainer-reported results from a controlled acceptance case.
-The external evaluator was separate from the candidate, not an independent
-public auditor. Raw private artifacts are not distributed, so this report alone
-is not a publicly reproducible benchmark.
+These are maintainer-reported checks and results, separated by version.
+For the original controlled acceptance case, the external evaluator was separate
+from the candidate, not an independent public auditor. Raw private artifacts are
+not distributed, so this report alone is not a publicly reproducible benchmark.
+
+## 1.0.2 instruction corrections
+
+Nine existing skills and the implementation-plan template were adjusted after
+usage reviews. The changes address unresolved intent, conditional plans,
+unaccepted behavior in designs, premature correction recommendations, environment
+recovery, rejected mechanisms, research scope, and delegation context. The package
+still has 22 skills, with no new runtime, hook, or mandatory workflow stage.
+
+Local checks passed all eleven package tests, the plugin manifest validator,
+and frontmatter validation for all 22 skills. These verify structure and hook
+output, not model compliance. The host packaging and startup scripts are unchanged;
+this version has not repeated the earlier cross-host installation campaign.
+
+Short read-only trials used synthetic vendor and system documents. A request to
+prepare an integration prompted a material scope question; an inventory-only
+request completed without unnecessary questions, specifications, or plans.
+After supplied scope decisions, a continuation selected a transport consistent
+with the constraints but treated initial-state behavior as settled too early.
+A further trial loaded specification and planning guidance, while leaving the
+possible effects of initial-state capture unresolved. The final clarification
+adjustment received structural validation, not another behavioral trial.
+
+These trials were not isolated from host instructions, did not implement a
+product, and included no baseline, cost comparison, or new end-to-end acceptance
+run. Other instruction changes were reviewed against the observed failures, not
+individually replayed. The trials do not establish causal improvement or validate
+every changed behavior. The efficiency figures below remain historical results
+for the original 1.0 configuration, not measurements of 1.0.2.
 
 ## 1.0.1 installation correction
 

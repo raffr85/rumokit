@@ -13,6 +13,8 @@ Establish or reuse the accepted outcome through `clarify-intent`, including dire
 
 Decide technical alternatives within delegated criteria without asking the user to repeat authorization. The design must satisfy the accepted outcome, not substitute a smaller one that is easier to build.
 
+If a design choice changes who receives an effect, when it takes effect, or how existing state is processed, establish its authority through `clarify-intent` before treating it as settled. Mark unaccepted proposals as proposals; agreement on capabilities does not settle every behavior within them.
+
 Describe the domain and state transitions before choosing modules or abstractions. Add `assess-blast-radius` for shared boundaries and `coordinate-change` for independently versioned components.
 
 ## Compare credible options
