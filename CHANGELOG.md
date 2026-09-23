@@ -1,5 +1,17 @@
 # Changes
 
+## 1.0.5
+
+- Separate broad investigation from the authorized repair scope, including
+  worker assignments and selection of returned patches.
+- Include changes needed for the requested result and compatibility, without
+  treating discovered defects or a dependency inventory as an implementation list.
+- Explain the original symptom's status and verification limits in the response,
+  not only in an attached report. No skills, hooks, or workflow stages were added.
+- Restore an explicit search-and-reuse decision before adding implementation.
+  Connect the existing anti-slop skill to implementation and review, sharing its
+  criteria and preservation rules instead of requiring a separate cleanup request.
+
 ## 1.0.4
 
 - Bind source and tool selection to the current task. Keep other sessions'

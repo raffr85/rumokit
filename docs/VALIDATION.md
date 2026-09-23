@@ -5,6 +5,39 @@ For the original controlled acceptance case, the external evaluator was separate
 from the candidate, not an independent public auditor. Raw private artifacts are
 not distributed, so this report alone is not a publicly reproducible benchmark.
 
+## 1.0.5: repair scope and anti-slop integration
+
+An observed integration-incident session loaded 1.0.4 but included incidental
+repairs and caller migrations beyond the requested incident. Four existing
+skills now distinguish investigation from changes, bound worker operations,
+select patches by their connection to the accepted outcome, and check the
+necessity of a shared change before deriving its consumer migrations.
+
+Two fresh-context readers evaluated the same three supplied decision checkpoints
+using the prior and edited instructions. Both kept incidental changes separate,
+allowed a necessary cross-repository fix in the counterexample, and distinguished
+local regression evidence from untested integrated recovery. These read-only
+checks did not reproduce the observed failure or demonstrate improvement. They
+used explicit skill reads with ambient host instructions, not autonomous
+implementation or a plugin-only comparison. No efficiency claim is made.
+
+The follow-up connects `remove-slop` to implementation, repair, refactoring and
+review, and restores search-and-reuse choices before implementation. One
+fresh-context agent completed a CSV export draft in an isolated repository. It
+received the implementation skill, not a separate cleanup request. The native
+trace records its source reads of `remove-slop`, review and verification. It
+replaced speculative classes/options and manual CSV concatenation with the
+standard library, reused the existing visibility filter, and preserved the
+original functions. Five tests passed; a separate check covered 81 field pairs,
+visibility, input preservation and empty output. The draft failed CSV quoting
+before correction. This is one functional exercise with explicit source-skill
+loading and ambient host instructions, not a comparative efficacy or installation
+test. It does not show that a previous version would have failed.
+
+Eleven package tests, validation of all nine changed skill files, and whitespace
+checks passed. These are structural checks. Publishing this release does not
+update active installations or reload ongoing tasks.
+
 ## 1.0.4: task identity and causal recommendations
 
 Four existing skills were adjusted after observed wrong-target actions following

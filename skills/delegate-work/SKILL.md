@@ -23,7 +23,7 @@ Give each worker:
 
 - accepted outcome, why it matters, and the worker's contribution;
 - authoritative inputs and current revision;
-- owned scope, preservation obligations, and explicit exclusions;
+- authorized operation (investigate, implement, or review), owned scope, preservation obligations, and explicit exclusions;
 - representative acceptance example and any still-open material decisions;
 - expected artifact or findings;
 - required evidence and stopping condition;
@@ -35,6 +35,6 @@ Use isolated branches, worktrees, files, or read-only tasks when concurrent writ
 
 ## Integrate as the owner
 
-Inspect outputs and evidence against the accepted outcome, not just the worker's local completion criteria. Workers return newly exposed product choices to the owner; they do not independently narrow the result. The owner resolves choices needed for the current result through `clarify-intent`, rather than merely collecting pending decisions. Resolve contradictions from source evidence; agreement or voting is not proof. The primary owner remains responsible for integration, cross-unit behavior, final edits, and the final claim. Unintegrated worker output is not the delivered artifact.
+Inspect outputs and evidence against the accepted outcome, not just the worker's local completion criteria. Select worker changes for integration by their necessity to that outcome and its preservation checks; keep incidental findings separate instead of converting every valid finding into another implementation unit. Workers return newly exposed product choices to the owner; they do not independently narrow the result. The owner resolves choices needed for the current result through `clarify-intent`, rather than merely collecting pending decisions. Resolve contradictions from source evidence; agreement or voting is not proof. The primary owner remains responsible for integration, cross-unit behavior, final edits, and the final claim. Unintegrated worker output is not the delivered artifact.
 
 Keep requested configuration separate from host-attested execution identity when reporting worker results. For cost comparisons, include workers and integration for the same work unit, preserving the host's distinct token and cache counters; report missing accounting rather than treating it as zero.

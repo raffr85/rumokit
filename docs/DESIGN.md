@@ -62,7 +62,7 @@ A utility can own the result when the user directly requests its artifact. Other
 | Outcome | `implement-change` | New or changed behavior on the real path |
 | Outcome | `debug-change` | Root-cause fix with reproduction and regression evidence |
 | Outcome | `refactor-change` | Structural change with preservation evidence |
-| Outcome | `remove-slop` | Artifact cleanup with preserved behavior or meaning |
+| Outcome/support | `remove-slop` | Changed-artifact necessity check or requested cleanup, preserving behavior and meaning |
 | Outcome | `verify-change` | Bounded verdict from task-shaped evidence |
 | Outcome | `review-change` | Prioritized, evidence-backed findings |
 | Outcome | `finish-change` | Final-state readiness and handoff |
@@ -72,7 +72,7 @@ A utility can own the result when the user directly requests its artifact. Other
 | Utility | `resume-work` | Current state reconstructed from history and live evidence |
 | Utility | `create-project-verification` | Project-local instructions for driving the real surface |
 
-The catalog size is not a target. Keep a skill separate only while it has a distinct trigger and completion condition. Router-led new work loads clarification and one owner. A directly requested narrow result can establish its already-explicit scope inline. Add other skills only for a concrete unresolved job; neither placement nor cleanup loads for every implementation.
+The catalog size is not a target. Keep a skill separate only while it has a distinct trigger and completion condition. Router-led new work loads clarification and one owner. A directly requested narrow result can establish its already-explicit scope inline. Add supporting skills for concrete work: code-changing owners and review share `remove-slop` for the final diff, while placement remains conditional. Reuse the same artifact check rather than adding a cleanup phase.
 
 ## Process follows task shape
 

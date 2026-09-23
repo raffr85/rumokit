@@ -20,7 +20,7 @@ Prioritize:
 1. incorrect behavior, data loss, security or privacy failure;
 2. broken state, concurrency, recovery, compatibility, or integration behavior;
 3. missing or misleading validation on a material path;
-4. maintainability problems with a concrete future failure mode.
+4. unnecessary complexity and maintainability problems supported by the actual diff and callers.
 
 Trace each candidate finding to executable behavior, a violated contract, or a credible concrete scenario. Check whether nearby code already handles it. Do not report personal style preferences, speculative architecture, or issues unrelated to the change.
 
@@ -33,6 +33,8 @@ Distinguish a capability that the artifact implements or deliberately preserves 
 Do not rely only on tests, explanations, or expected values authored with the change; seek an independent requirement, caller, or observable when the finding depends on behavior.
 
 For a changed contract, identify the previous behavior from the starting revision, an existing caller, or an accepted decision; then compare the final behavior and its authorization. Check changes to defaults, omissions, permissions, and errors where consumers depend on them. A consistent new code/test/spec trio can still contain an unapproved behavior change.
+
+Apply `remove-slop` to the changed artifact within this review, reusing an equivalent check already completed. A supported simpler equivalent can justify a finding without inventing a future bug. Identify the unnecessary construct, its replacement or removal, and the behavior that must survive. Keep these findings below correctness and safety issues; a read-only review does not authorize cleanup edits.
 
 ## Report findings first
 

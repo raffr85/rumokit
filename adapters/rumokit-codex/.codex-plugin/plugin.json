@@ -1,6 +1,6 @@
 {
   "name": "rumokit-codex",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "Legacy startup adapter for RumoKit 1.0.0. New installations need only the main rumokit package.",
   "author": {
     "name": "Rafael Affonso",

@@ -64,4 +64,4 @@ While a question or job is pending, coordinate follow-up work with what is alrea
 
 ## Tighten before return
 
-Before the owner returns, remove repeated evidence, detail that cannot change the current result, questions placed after the decision they should govern, and artifacts beyond the stop point. This short pass does not load `remove-slop`; that skill owns requested cleanup of an existing artifact. Do not use either to shrink required outcomes. If the pass exposes a material commitment without authority, return to the owner and `clarify-intent` instead of polishing the commitment into an assumption.
+Before the owner returns, remove repeated evidence, detail that cannot change the current result, questions placed after the decision they should govern, and artifacts beyond the stop point. This response pass is separate from `remove-slop`, which checks the changed artifact within its owner or owns an explicit cleanup request. Do not use either to shrink required outcomes. If the pass exposes a material commitment without authority, return to the owner and `clarify-intent` instead of polishing the commitment into an assumption.

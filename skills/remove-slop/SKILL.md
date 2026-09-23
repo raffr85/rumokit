@@ -1,11 +1,11 @@
 ---
 name: remove-slop
-description: Use when the user asks to remove AI slop, redundant scaffolding, noisy comments, repetition, or generic filler from existing code, documentation, or prose while preserving its intended behavior or meaning.
+description: Use when implementation or review needs a final check for unnecessary complexity in the changed artifact, or the user requests cleanup of code, documentation, or prose while preserving behavior and meaning.
 ---
 
 # Remove Slop
 
-Clean the requested artifact without changing its contract. A direct invocation needs no router, spec, plan, or reviewer panel. If the user requested an audit rather than edits, return findings without modifying it.
+Remove unnecessary complexity without changing the contract. During implementation or review, support that owner within the current diff and its existing authority. A direct cleanup request owns its stated artifact. Neither mode requires a router, spec, plan, or reviewer panel. For a read-only review, return findings without modifying anything.
 
 ## Establish what must survive
 
@@ -15,12 +15,12 @@ Inspect the artifact and enough surrounding context to identify its purpose and 
 
 Look for concrete noise, not stylistic tells alone:
 
-- prose that repeats a conclusion, inflates certainty, or adds generic filler without information;
-- comments that narrate obvious syntax rather than explain a non-obvious constraint;
-- redundant wrappers, checks, abstractions, or branches whose lack of purpose is supported by callers, invariants, or tests;
-- duplicated explanations that can be consolidated without losing distinct conditions.
+- reimplementations of existing helpers, standard-library or platform capabilities, and dependencies added without a needed capability;
+- speculative options, forwarding layers, or abstractions without a current consumer or requirement;
+- redundant checks, catch blocks, type-system bypasses, or nested branches where a simpler equivalent preserves the observed contract;
+- comments narrating syntax, repeated explanations, generic filler, and prose that inflates certainty.
 
-Keep useful edge cases, domain language, compatibility boundaries, and necessary defensive behavior. Unfamiliar code is not automatically slop. Preserve uncertainty when its removal would make a stronger unsupported claim.
+Check callers and data boundaries before removing defensive behavior. Preserve trust-boundary validation, data-loss prevention, security, accessibility, compatibility, required tests, and useful domain explanations. A single caller or unfamiliar pattern alone does not prove an abstraction unnecessary. Do not trade readability or required behavior for fewer lines, or remove uncertainty to make prose sound stronger.
 
 Make the smallest coherent edits. If simplification requires a broader structural change or different behavior, surface that separately; use `refactor-change` or the relevant change owner only within existing authorization. Do not smuggle a redesign into cleanup.
 
@@ -28,4 +28,4 @@ Make the smallest coherent edits. If simplification requires a broader structura
 
 Compare before and after against the preserved contract. For code or executable configuration, use `verify-change` with the affected public behavior and current evidence. For prose, check that facts, meaning, caveats, and required content survived; shorter is not inherently better.
 
-Return the material cleanup and any deliberately retained complexity or verification gap. Do not invoke this skill for every generated response: the owner's short relevance pass remains sufficient unless artifact cleanup itself is requested.
+Return material cleanup or supported findings and any preservation gap to the current owner. If the diff is already appropriate, leave it alone. Check the changed artifact once, not every progress message; the owner's response-relevance pass remains separate.

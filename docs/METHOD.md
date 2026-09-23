@@ -25,7 +25,7 @@ A local decision not to add machinery is not a standing constraint. Add or split
 - When a decision rule moves to another skill, identify every owner that needs it and make the required or conditional dependency explicit. Check direct invocation as well as router entry; a rule that stays unloaded cannot guide the task. Clarification is required for new requested results, not conditional on the agent already noticing ambiguity.
 - Keep host tool names, model slugs, and subagent syntax outside the portable core.
 - Preserve user authority. Guidance never grants permission for another action.
-- Keep the owner's short relevance pass inline. Use `remove-slop` when cleanup of an existing artifact is the requested result; do not load it for every response. Neither mechanism can narrow required outcomes, erase meaningful caveats, or clean an unresolved decision into an assumption.
+- Keep the owner's response-relevance pass inline. Implementation, fixes, refactoring and review use `remove-slop` on the changed artifact, reusing an equivalent check; explicit cleanup remains a direct capability. Do not load it for every progress message. Neither mechanism can narrow required outcomes, erase meaningful caveats, or clean an unresolved decision into an assumption.
 
 ## Reuse a prior failure without overfitting
 
