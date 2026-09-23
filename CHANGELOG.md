@@ -1,5 +1,18 @@
 # Changes
 
+## 1.0.4
+
+- Bind source and tool selection to the current task. Keep other sessions'
+  requests and approvals separate, including handoffs from the same repository.
+- Re-establish the target after a user correction before continuing dependent
+  searches or tool actions. Preserve explicitly requested cross-session work.
+- Keep causal repairs conditional until their decisive evidence is available,
+  and distinguish local source from the revision producing the live failure.
+
+Both 1.0.3 and the changed instructions recovered the corrected target in the
+two paired Sol/xhigh scenarios. These checks did not reproduce the desktop
+failure or establish a reliability gain. See `docs/VALIDATION.md` for the limits.
+
 ## 1.0.3
 
 - Share a small durable-state contract across specification, planning,

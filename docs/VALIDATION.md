@@ -5,6 +5,50 @@ For the original controlled acceptance case, the external evaluator was separate
 from the candidate, not an independent public auditor. Raw private artifacts are
 not distributed, so this report alone is not a publicly reproducible benchmark.
 
+## 1.0.4: task identity and causal recommendations
+
+Four existing skills were adjusted after observed wrong-target actions following
+an explicit user correction and a separate premature causal recommendation.
+The patch binds retrieval and tool targets to the current task, re-establishes scope after subject corrections,
+keeps another session's authority separate, and treats unmatched local source or
+an unavailable decisive observation as insufficient for a confirmed causal fix.
+
+Five fresh-context synthetic checks used actual read-only file tools. The
+candidates selected the corrected project's log, asked which project when the
+target was genuinely ambiguous, compared another session when explicitly asked,
+did not execute an unrelated same-project handoff's approved next step, and kept
+a proposed repair conditional when data access failed and code/runtime identity
+was unknown. Tool targets were inspected, not only final answers. An independent
+static review found no material blocker. The eleven package tests, changed-skill
+frontmatter validation and plugin manifest validation passed separately.
+
+The original 1.0.3 also passed one matched synthetic correction case. Therefore
+these runs check the edited instructions in bounded scenarios; they do not show
+a measured improvement or reproduce the observed desktop failure. The observed
+incident remains the motivating failure, not a matched experimental control.
+There was one sample per candidate case, ambient host instructions remained,
+skills were explicitly loaded, and app sessions were represented by files. This
+is not tool confinement, a full GUI replay, or evidence that cross-session drift
+has been eliminated. Publishing this release does not update active installations.
+
+The synthetic candidates used Astra/ultra, whereas the wrong-target incident
+turn used Sol/xhigh. The user subsequently confirmed that their opening message
+did concern the initial topic: that initial interpretation is not a plugin
+failure. The demonstrated defect is recovery after the correction, not an
+established automatic merge of another conversation's history.
+
+A follow-up used CLI 0.156.1 with Sol/xhigh, frozen old/new skill trees and
+simulated read-only tools. One paired case resumed a reconstructed correction;
+another also supplied competing historical summaries. Both versions recovered
+the current project's development log in both cases. Neither opened the wrong
+app, read an unrelated session, or adopted its approvals. The patched version
+made one additional project-related session search, so minimal retrieval is not
+demonstrated either. Actual requests and answers were reviewed independently.
+This follow-up still did not reproduce the desktop failure or demonstrate causal
+improvement. It was not a native GUI/history replay, installation test, statistical
+reliability study, or implementation-efficiency benchmark. No further trials were
+added to force a favorable comparison.
+
 ## 1.0.3: durable work state and resumption
 
 Five existing skills and the specification/plan templates now share a compact

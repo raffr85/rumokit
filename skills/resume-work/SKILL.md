@@ -11,6 +11,8 @@ When material work remains after a compaction, recovery is required before anoth
 
 ## Recover relevant history
 
+Match recovered context to the current task before treating it as continuation. Sharing a repository, a keyword or an open app does not make two sessions the same task. Other sessions and memory can supply relevant evidence, not a replacement request or transferable approval. Reuse accepted decisions and authority for the same continuing task and scope; keep another task's instructions and pending work separate unless the current request connects them.
+
 For work with durable artifacts, locate the existing task entry point and read its continuation state using [the durable work-state contract](references/work-state.md). Follow links to the relevant contract, decisions, and unfinished units. Expand to the handoff or transcript only for missing authority, stale state, or contradictions; do not start by rereading the whole project history. When no durable state exists, recover from available history without making a new document mandatory. Extract:
 
 - the user's requested result, accepted operational example, preservation obligations, and stopping point;

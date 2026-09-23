@@ -17,6 +17,8 @@ When this router selects an owner or an applicable dependency, load that skill b
 
 Load and follow `clarify-intent` for every new requested result, before selecting its solution or committing to its scope. This is a required dependency, not a conditional overlay. An implementation request does not bypass it. Reuse the understanding already established for an unchanged continuation; reopen it when new information changes a material decision.
 
+If the user rejects the subject or target, return to that clarification before another dependent tool action. Retrieved history must not silently replace the current task.
+
 Clarification determines what is settled and obtains the missing human decisions. It does not require a specification, plan, questionnaire, or repeated approval of an explicit instruction. Once intent is established, select the owner below and continue through the requested result.
 
 ## Choose one owner

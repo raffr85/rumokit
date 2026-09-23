@@ -19,6 +19,8 @@ Before asking the user to repair authentication or configuration, check the fail
 
 Form the smallest current hypothesis and run the cheapest observation that could disprove it. Every retry should add information. Read callers and sibling paths before changing a shared function.
 
+Before prescribing a correction, verify the causal premise that makes it appropriate. Bind explanatory source and configuration to the failing runtime's revision; unmatched local code is a candidate explanation, not proof of the live cause. Distinguish a directly observed fault from alternatives still compatible with the evidence. If a decisive check is unavailable or fails, keep the recommendation conditional and name the missing observation. A request for the fix does not confirm the hypothesis.
+
 A fail-before test is valuable when it faithfully reproduces the defect and is cheap to retain. Do not force test-first when the failure lives in a surface the test cannot observe.
 
 ## Fix the owner when authorized

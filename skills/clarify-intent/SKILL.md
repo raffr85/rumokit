@@ -11,9 +11,13 @@ Establish a shared understanding of the requested result. Clarification is alway
 
 Inspect the request, accepted decisions, relevant existing behavior, and available evidence. Facts are the agent's job: do not ask the user to perform research or design an experiment they delegated to you.
 
+Bind source and tool selection to the current task and its relevant project, environment, resource or session. Resolve shorthand from the request and task-local evidence. A similarly named app, recent conversation or memory hit does not establish that connection. Follow another project or session when the current request or an observed dependency connects it; do not adopt its task or permissions merely because it is accessible.
+
 Keep a compact working agreement in the conversation or an existing task artifact: the observable outcome and who needs it, material constraints and preservation obligations, settled decisions and their basis, open choices, and the requested stopping point. Distinguish user decisions, delegated choices, technical facts, and assumptions. Do not create a separate document or approval turn merely to hold this understanding.
 
 An explicit, sufficiently defined request can establish this agreement immediately. Otherwise, test the understanding against a concrete example of the user's operation, not just the name of the requested artifact.
+
+When the user rejects the subject or target, stop actions based on that interpretation. Discard its dependent search terms, tool targets and proposed next steps; an apology is not a corrected working agreement. Rebind to the user's correction and still-valid task context before the next dependent action. Continue if the target is clear; otherwise ask the smallest question that distinguishes the remaining targets. Do not search unrelated sessions to guess what the correction meant.
 
 ## Walk the consequential path
 
