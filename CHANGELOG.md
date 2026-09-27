@@ -1,5 +1,19 @@
 # Changes
 
+## 1.0.6
+
+- Check proposed mechanisms against required behavior and existing capabilities
+  before carrying them into a specification, plan, or estimate.
+- Compose anti-slop within design, specification, and planning. Preserve accepted
+  obligations while questioning unsupported mechanisms and duplicate rules.
+- Carry user constraints and corrections into the recommendation, distinguish
+  illustrative examples from requirements, and explain the concrete result in chat.
+- Keep required protections and capabilities. No new skills, hooks, workflow
+  stages, model-specific rules, or runtime dependencies.
+- Summarize validation evidence without changing historical results or their
+  limits. Clarify the legacy adapter's migration instructions and allow reviewed
+  synthetic public scenarios while excluding private task material.
+
 ## 1.0.5
 
 - Separate broad investigation from the authorized repair scope, including

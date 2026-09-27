@@ -11,7 +11,7 @@ Write the behavioral contract needed to build or review the change. A specificat
 
 Establish or reuse the outcome through `clarify-intent`, including direct invocation. Inspect current behavior and relevant interfaces. Carry forward accepted examples, preservation obligations, and the basis for decisions; do not replace user intent with a technically convenient scope. Incorporate accepted research and design without reopening settled choices. Use `coordinate-change` for versioned component edges.
 
-Describe behavior independently of an imagined implementation unless the implementation mechanism is itself a requirement.
+Describe behavior independently of an imagined implementation unless the mechanism is itself an accepted requirement. For a proposed mechanism, state the required behavior it supports and why existing capabilities cannot supply it. Keep optional improvements outside the required contract.
 
 ## Make boundaries testable
 
@@ -30,7 +30,9 @@ Use [assets/change-spec.md](assets/change-spec.md) as a starting shape, deleting
 
 ## Check completeness
 
-Walk representative success, failure, boundary, and preservation cases. A reader without the prior conversation should be able to distinguish a compliant implementation from a plausible but wrong one, and identify which decisions are accepted rather than proposed. Reconcile changed decisions with the current summary and linked dependent artifacts, not only a new history entry.
+Walk representative success, failure, boundary, and preservation cases. A reader without the prior conversation should distinguish a compliant implementation from a plausible but wrong one, and accepted decisions from proposals. Reconcile changed decisions with the current summary and linked dependent artifacts, not only a new history entry.
+
+Apply `remove-slop` to the affected specification, including duplicated rules and unsupported mechanisms. Check linked material for consistency; edit it only within the existing authorized scope, otherwise report the dependent correction. Reuse an equivalent check against unchanged content. Explain the resulting behavior, material changes, and remaining decisions in the response, with the document as supporting detail.
 
 Stop with the accepted behavioral boundary. Do not expand the document into an implementation plan unless that is also requested.
 

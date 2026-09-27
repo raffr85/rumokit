@@ -1,5 +1,6 @@
 # Reduce accidental inclusion; a complete file and diff review remains mandatory.
-# Experiments, runs, logs, and mutable state belong outside the public package.
+# Private experiments, run outputs, logs, and mutable state stay outside the package.
+# Reviewed synthetic public scenarios may live in tests/scenarios/.
 
 # Experiment and evaluation artifacts
 /lab/

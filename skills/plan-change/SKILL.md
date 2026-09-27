@@ -5,7 +5,7 @@ description: Use when the requested result needs an ordered implementation plan 
 
 # Plan a Change
 
-Turn accepted behavior and design into the smallest sequence of verifiable implementation units. Do not create a plan as ceremony for a trivial edit.
+Turn accepted behavior and design into the smallest sequence of verifiable implementation units. For a software change, the units describe future code, configuration, data, or operational changes and their checks. Delivering the plan as documentation does not turn those units into tasks for writing documentation or authorize executing them. Do not create a plan as ceremony for a trivial edit.
 
 A specification does not automatically require a plan or a separate approval turn. Plan only when the current request includes it or the implementation genuinely needs durable sequencing. Honor an approval gate when the user explicitly set one or a material decision remains unresolved.
 
@@ -24,7 +24,7 @@ Each unit should state:
 - the behavior or contract it changes;
 - its concrete scope and exclusions;
 - dependencies and compatibility requirements;
-- the implementation move;
+- the implementation move, what it reuses, and the requirement or concrete failure that makes any new mechanism necessary;
 - the task-shaped evidence that completes it;
 - its current status and any evidence already obtained, bound to the artifact checked.
 
@@ -34,4 +34,6 @@ Use [assets/implementation-plan.md](assets/implementation-plan.md) as a compact 
 
 ## Finish at implementation readiness
 
-Check that the plan covers the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Distinguish executable units from conditional ones; coverage counts do not establish readiness. Reconcile the current summary and next action with changed or completed units before handoff. Stop at the plan unless implementation is also authorized.
+Apply `remove-slop` to the plan before handoff, reusing an equivalent check of unchanged content. Cover the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Keep optional improvements outside required units, dependencies, and estimates. Distinguish executable units from conditional ones; coverage counts do not establish readiness.
+
+Reconcile the current summary, estimates, and next action with changed or completed units. Explain what will change, in which components, why, what is preserved, and how completion will be checked in the response. Stop at the plan unless implementation is also authorized.

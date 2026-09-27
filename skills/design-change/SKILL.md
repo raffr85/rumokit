@@ -19,20 +19,15 @@ Describe the domain and state transitions before choosing modules or abstraction
 
 ## Compare credible options
 
-Develop only options that could reasonably be shipped. Compare them on:
+Start with the existing path and the smallest change that could satisfy the accepted outcome. For a material new service, persistent state, abstraction, or operational dependency, identify the required outcome, guarantee, or concrete failure mode it addresses and why reuse is insufficient. A credible failure mode can justify prevention before an incident occurs; a generic appeal to robustness cannot justify unrelated infrastructure.
 
-- fit with existing ownership and conventions;
-- correctness and failure modes;
-- migration and compatibility risk;
-- operational and security consequences;
-- reversibility and evidence needed to validate them;
-- reader and maintainer load.
+Compare viable options against correctness, security, compatibility, reversibility, maintenance effort, and the team's stated delivery and operating constraints. Separate necessary changes from optional improvements. Simplicity cannot justify dropping required behavior or protection. Use `prototype-decision` only when a focused artifact can distinguish the options.
 
-Prefer removing or reusing structure before adding a new layer. Use `prototype-decision` only when a focused artifact can distinguish the options.
+Apply `remove-slop` to the proposed design before carrying its mechanisms into a specification or plan. Reuse an equivalent check of the same proposal; do not add a separate stage, document, or reviewer.
 
 ## Produce the selected design
 
-Record:
+Explain the selected solution in the response: what changes, where, why it is needed, and what remains unchanged. Supporting documents do not replace that explanation. Record the relevant detail:
 
 - objective and non-goals;
 - current-system evidence;

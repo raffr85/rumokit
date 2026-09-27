@@ -15,11 +15,11 @@ For each unit:
 1. **Result:** behavior or contract completed.
 2. **Scope:** exact files, symbols, components, or a marked discovery task.
 3. **Dependencies:** prerequisites and compatibility boundary.
-4. **Change:** focused implementation action.
+4. **Change:** focused implementation action, reused capability, and the requirement or concrete failure that justifies a new mechanism.
 5. **Completion check:** observation that would prove this unit on the resulting artifact.
 6. **Status and observed evidence:** pending, in progress, blocked, or complete; actual result and artifact revision/state when checked. Separate local verification from publication and activation. Use the project's equivalent status names if they already exist.
 
-Use stable unit identifiers when dependencies or evidence refer to them.
+Use stable unit identifiers when dependencies or evidence refer to them. Keep optional improvements outside required units, dependencies, and estimates.
 
 ## Continuation state
 

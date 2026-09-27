@@ -22,7 +22,7 @@ Which product and technical choices are settled, by whom or on what authority? W
 
 ## Behavioral contract
 
-Describe actors, inputs, outputs, states, transitions, invariants, and interfaces.
+Describe actors, inputs, outputs, states, transitions, invariants, and interfaces. Distinguish required behavior from proposed mechanisms. For material additions, identify the guarantee they supply and the gap in existing capabilities; keep optional improvements outside the required contract.
 
 ## Preservation and forbidden effects
 

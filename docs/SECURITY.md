@@ -53,14 +53,20 @@ Use the host's containment that matches the risk, such as a disposable workspace
 
 ## Public/private boundary
 
-The public repository may contain design, method, schemas only after justified, and aggregate claims that have passed review. It must not contain:
+The public repository may contain product documentation, reviewed aggregate
+results, and deliberately public synthetic examples or regression scenarios.
+Label synthetic material as such and check that it contains no private inputs.
+It must not contain:
 
 - private source code or repository snapshots;
-- prompts, patches, task fixtures, hidden oracles, or raw traces;
-- local paths, account details, quotas, tokens, or credentials;
-- unpublished mechanism results or human review notes.
+- private task prompts, patches, fixtures, transcripts, or raw traces;
+- confidential evaluation answers or oracles reserved for blind testing;
+- personal filesystem paths, private account details, quotas, tokens, or credentials;
+- private review notes or results not approved for publication.
 
-`.gitignore` reduces accidental inclusion; it is not proof of isolation. Before any publication, review the complete file set and diff for private material.
+`.gitignore` reduces accidental inclusion; it is not proof of isolation. Before
+publication, review the complete file set, diff, and Git metadata for private
+material, including author and tagger email addresses.
 
 During research, keep URLs, hostnames, repository and issue identifiers, and quoted content from private sources inside the trusted local or approved connector boundary. Public web queries must be reduced to the general technical question and stripped of private identifiers. A useful public source does not justify disclosing the internal context used to find it.
 

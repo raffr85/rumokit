@@ -15,9 +15,9 @@ Bind source and tool selection to the current task and its relevant project, env
 
 Keep a compact working agreement in the conversation or an existing task artifact: the observable outcome and who needs it, material constraints and preservation obligations, settled decisions and their basis, open choices, and the requested stopping point. Distinguish the investigation surface from the authorized changes: permission to inspect broadly or prepare repositories does not authorize repairing every discovered problem. Distinguish user decisions, delegated choices, technical facts, and assumptions. Do not create a separate document or approval turn merely to hold this understanding.
 
-An explicit, sufficiently defined request can establish this agreement immediately. Otherwise, test the understanding against a concrete example of the user's operation, not just the name of the requested artifact.
+An explicit, sufficiently defined request can establish this agreement immediately. Otherwise, test the understanding against a concrete example of the user's operation. Extract the behavior the example illustrates; a sample vendor, technology, or name is not an additional integration requirement.
 
-When the user rejects the subject or target, stop actions based on that interpretation. Discard its dependent search terms, tool targets and proposed next steps; an apology is not a corrected working agreement. Rebind to the user's correction and still-valid task context before the next dependent action. Continue if the target is clear; otherwise ask the smallest question that distinguishes the remaining targets. Do not search unrelated sessions to guess what the correction meant.
+When the user rejects the subject, scope, or complexity, stop work based on that interpretation. Discard stale search terms and tool targets. Reconcile the affected mechanisms, worker assignments, estimates, and next steps with the correction before continuing. Retain required behavior and still-valid evidence. Continue if the target is clear; otherwise ask the smallest question that distinguishes the remaining targets. Do not search unrelated sessions to guess what the correction meant.
 
 ## Walk the consequential path
 
@@ -32,7 +32,7 @@ Once evidence exposes such a fork, bring it to the user before expanding depende
 ## Ask neutrally
 
 - Explain the concrete consequence of the decision.
-- Ask for missing outcomes or constraints; research and recommend technical choices against them rather than making the user design the solution.
+- Ask for missing outcomes or constraints. For a delegated technical choice, use those constraints to recommend what to change, where, and why; do not return the design work as another question.
 - Present credible alternatives and their consequences without steering toward a preferred answer.
 - Group questions only when they are independent and easy to answer together.
 - Use a small concrete example when abstract alternatives hide different effects.
@@ -45,6 +45,6 @@ For a cheap, reversible detail that does not change the core outcome, make a cle
 
 ## Carry the agreement into delivery
 
-Closure requires an explicit request or answer, a prior accepted decision, delegated choice with sufficient criteria, or evidence that eliminates the material alternatives. Silence about an announced default is not acceptance. Preserve an explicit decision closely enough that another owner can apply it; do not ask the user to approve it again.
+Closure requires an explicit request or answer, a prior accepted decision, delegated choice with sufficient criteria, or evidence that eliminates the material alternatives. Silence about an announced default is not acceptance. Writing an assumption into a draft does not settle it. Preserve decisions and constraints in the resulting recommendation; do not ask the user to approve them again.
 
 Return the agreement to the primary owner. Keep its concrete example and preservation obligations available to implementation, delegation, and final verification. Revisit only newly opened material choices. When a decision changes, replace the superseded expectation and its dependent plan or checks; do not silently rewrite the expectation to match what was built.

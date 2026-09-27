@@ -5,140 +5,121 @@ For the original controlled acceptance case, the external evaluator was separate
 from the candidate, not an independent public auditor. Raw private artifacts are
 not distributed, so this report alone is not a publicly reproducible benchmark.
 
+## Evidence at a glance
+
+| Evidence | What it supports | What it does not support |
+| --- | --- | --- |
+| Original 1.0 acceptance | The agreed workshop-waitlist outcome on two host/model configurations | General superiority or validation of later changes |
+| Recorded consumption | A lower token count in that known case, with comparator limits below | A universal savings rate or speed advantage |
+| Later focused exercises | Specific observed decisions and behaviors | Causal reliability gains or a full new acceptance run |
+| Package tests | Manifest consistency, hook output, and relocation | Model compliance or automatic activation in every host |
+
+## 1.0.6: proportional design and decision closure
+
+Real-use review found oversized proposals despite successful 1.0.5 skill reads.
+The source changes connect anti-slop to design, specification, and planning,
+distinguish accepted behavior from agent-proposed mechanisms, and carry user
+constraints and corrections through the recommendation and estimate.
+
+Two fresh-context agents, configured as GPT-5.6 Sol, applied the source skills to
+the [three manual scenarios](../tests/scenarios/design-scope.md). They removed
+unsupported infrastructure from a reservation-expiry proposal, retained a
+transactional approval journal needed for crash-safe history, and revised
+independent provider selection without commissioning an illustrative provider.
+These are maintainer-reviewed decisions in generated proposals, not implemented
+or runtime-tested software.
+
+The first reservation plan described documentation tasks instead of the future
+software correction. An initial wording change and same-agent retry did not
+resolve that error. After making the expected unit type explicit, the other
+agent's first attempt at that case included the client correction and its
+checks. Exact code locations and the existing API contract were not supplied,
+so that output is not evidence of a fully implementation-ready plan.
+
+The scenarios used explicit source-skill loading with ambient host instructions.
+Follow-up checks reused agent context. There was no matched prior-version or
+no-plugin control, installed-plugin activation check, full session replay, or
+token-efficiency comparison. The original incidents justify the change but are
+not experimental controls. No reliability gain or universal efficacy is claimed.
+
+Eleven package tests, changed-skill metadata validation, local reference checks,
+and whitespace checks passed before release preparation. A release review also
+made explicit that linked documents can be edited only within the authorized
+scope. That wording correction received static review, not a new behavioral
+trial. Publication does not update installed plugins or reload ongoing tasks.
+
 ## 1.0.5: repair scope and anti-slop integration
 
-An observed integration-incident session loaded 1.0.4 but included incidental
-repairs and caller migrations beyond the requested incident. Four existing
-skills now distinguish investigation from changes, bound worker operations,
-select patches by their connection to the accepted outcome, and check the
-necessity of a shared change before deriving its consumer migrations.
+Two fresh-context readers applied old and new instructions to three repair-scope
+checkpoints. Both excluded incidental changes, allowed a necessary cross-repository
+fix, and separated local evidence from untested integrated recovery. The checks
+did not reproduce the motivating failure or establish improvement.
 
-Two fresh-context readers evaluated the same three supplied decision checkpoints
-using the prior and edited instructions. Both kept incidental changes separate,
-allowed a necessary cross-repository fix in the counterexample, and distinguished
-local regression evidence from untested integrated recovery. These read-only
-checks did not reproduce the observed failure or demonstrate improvement. They
-used explicit skill reads with ambient host instructions, not autonomous
-implementation or a plugin-only comparison. No efficiency claim is made.
+In one isolated CSV-export exercise, a fresh agent received the implementation
+skill without a separate cleanup request. Its trace records reads of anti-slop,
+review, and verification guidance. It replaced speculative classes and manual
+CSV concatenation with standard-library code, reused the visibility filter, and
+preserved the original functions. Five tests and a separate check of 81 field
+pairs, visibility, input preservation, and empty output passed. The original
+draft failed quoting before correction.
 
-The follow-up connects `remove-slop` to implementation, repair, refactoring and
-review, and restores search-and-reuse choices before implementation. One
-fresh-context agent completed a CSV export draft in an isolated repository. It
-received the implementation skill, not a separate cleanup request. The native
-trace records its source reads of `remove-slop`, review and verification. It
-replaced speculative classes/options and manual CSV concatenation with the
-standard library, reused the existing visibility filter, and preserved the
-original functions. Five tests passed; a separate check covered 81 field pairs,
-visibility, input preservation and empty output. The draft failed CSV quoting
-before correction. This is one functional exercise with explicit source-skill
-loading and ambient host instructions, not a comparative efficacy or installation
-test. It does not show that a previous version would have failed.
-
-Eleven package tests, validation of all nine changed skill files, and whitespace
-checks passed. These are structural checks. Publishing this release does not
-update active installations or reload ongoing tasks.
+These exercises explicitly loaded source skills with ambient host instructions.
+They do not test installed-plugin activation or show that the prior version
+would fail. Eleven package tests, metadata validation of nine changed skills,
+and whitespace checks passed separately. No efficiency claim is made.
 
 ## 1.0.4: task identity and causal recommendations
 
-Four existing skills were adjusted after observed wrong-target actions following
-an explicit user correction and a separate premature causal recommendation.
-The patch binds retrieval and tool targets to the current task, re-establishes scope after subject corrections,
-keeps another session's authority separate, and treats unmatched local source or
-an unavailable decisive observation as insufficient for a confirmed causal fix.
+Five fresh-context Astra/ultra checks used read-only file tools. Candidates
+recovered corrected targets, asked about genuine ambiguity, honored explicit
+cross-session comparison, rejected unrelated handoff authority, and kept an
+unsupported causal repair conditional. Tool targets and answers were inspected.
+Version 1.0.3 also passed a matched synthetic correction case.
 
-Five fresh-context synthetic checks used actual read-only file tools. The
-candidates selected the corrected project's log, asked which project when the
-target was genuinely ambiguous, compared another session when explicitly asked,
-did not execute an unrelated same-project handoff's approved next step, and kept
-a proposed repair conditional when data access failed and code/runtime identity
-was unknown. Tool targets were inspected, not only final answers. An independent
-static review found no material blocker. The eleven package tests, changed-skill
-frontmatter validation and plugin manifest validation passed separately.
+A follow-up used CLI 0.156.1 with Sol/xhigh, frozen old/new skill trees, and
+simulated tools. Both versions recovered the corrected target in two paired
+cases, including one with competing historical summaries. Neither adopted
+unrelated approvals. The new version made an extra project-related session
+search, so the checks show neither a reliability nor a retrieval-efficiency gain.
 
-The original 1.0.3 also passed one matched synthetic correction case. Therefore
-these runs check the edited instructions in bounded scenarios; they do not show
-a measured improvement or reproduce the observed desktop failure. The observed
-incident remains the motivating failure, not a matched experimental control.
-There was one sample per candidate case, ambient host instructions remained,
-skills were explicitly loaded, and app sessions were represented by files. This
-is not tool confinement, a full GUI replay, or evidence that cross-session drift
-has been eliminated. Publishing this release does not update active installations.
-
-The synthetic candidates used Astra/ultra, whereas the wrong-target incident
-turn used Sol/xhigh. The user subsequently confirmed that their opening message
-did concern the initial topic: that initial interpretation is not a plugin
-failure. The demonstrated defect is recovery after the correction, not an
-established automatic merge of another conversation's history.
-
-A follow-up used CLI 0.156.1 with Sol/xhigh, frozen old/new skill trees and
-simulated read-only tools. One paired case resumed a reconstructed correction;
-another also supplied competing historical summaries. Both versions recovered
-the current project's development log in both cases. Neither opened the wrong
-app, read an unrelated session, or adopted its approvals. The patched version
-made one additional project-related session search, so minimal retrieval is not
-demonstrated either. Actual requests and answers were reviewed independently.
-This follow-up still did not reproduce the desktop failure or demonstrate causal
-improvement. It was not a native GUI/history replay, installation test, statistical
-reliability study, or implementation-efficiency benchmark. No further trials were
-added to force a favorable comparison.
+The observed incident used Sol/xhigh. Its opening message actually concerned
+the initial topic, as the user later confirmed. The motivating defect was
+recovery after correction, not proven automatic merging of session histories.
+The synthetic checks did not reproduce that desktop failure. They used explicit
+skill loading, ambient host instructions, and one sample per case, not a native
+GUI replay, installation test, statistical study, or efficiency benchmark.
+Independent static review and eleven package tests passed, along with skill and
+manifest validation. No additional trials were added to force a favorable result.
 
 ## 1.0.3: durable work state and resumption
 
-Five existing skills and the specification/plan templates now share a compact
-work-state contract. The change addresses stale current summaries, conflated
-expected versus observed evidence, and continuation across sessions. It does not
-add a skill, runtime, hook, mandatory document chain, or approval stage.
+A synthetic handoff used two agents without the maintainer conversation. One
+updated an existing specification and plan from an accepted storage decision
+and revision-bound evidence. A separate reader recovered that direction,
+treated old checks as historical, inspected an already-started operation, and
+reported missing evidence without claiming completion or duplicating the work.
+Both kept publication and activation outside scope.
 
-Local checks passed the eleven package tests, frontmatter validation for all
-22 skills, local-reference checks, and diff whitespace checks. These are
-construction checks, not behavioral acceptance.
-
-A short synthetic documentation trial used two agents without the maintainer
-conversation. The author received an accepted storage change and revision-bound
-evidence, then updated an existing specification and plan. A separate cold reader
-received only the resulting workspace and resumption guidance. It recovered the
-accepted direction, treated old-revision checks as historical, inspected the
-already-started operation's metadata, and reported its missing result without
-claiming completion or initiating a duplicate. Both outputs kept publication
-and activation outside scope. They also identified evidence missing for part of
-the accepted behavior rather than treating a storage PASS as full acceptance.
-
-This checks a documentation handoff and read-only continuation, not software
-implementation, automatic host compaction, or a cross-host guarantee. There was
-no matched control, repeated sampling, cost comparison, or plugin-only host
-isolation. Ambient host instructions and installed skills remained available;
-the proposed source skills were loaded explicitly. Observed historical failures
-motivated the patch but are not a controlled baseline for this trial. No causal
-improvement or efficiency claim is made, and active installations are unchanged.
+This was a documentation and read-only continuation check, not implementation
+or automatic host compaction. Skills were explicitly loaded with ambient host
+instructions. There was no matched control, repeated sampling, cost comparison,
+or plugin-only isolation. Eleven package tests, all 22 skills' frontmatter,
+local references, and whitespace checks passed separately.
 
 ## 1.0.2 instruction corrections
 
-Nine existing skills and the implementation-plan template were adjusted after
-usage reviews. The changes address unresolved intent, conditional plans,
-unaccepted behavior in designs, premature correction recommendations, environment
-recovery, rejected mechanisms, research scope, and delegation context. The package
-still has 22 skills, with no new runtime, hook, or mandatory workflow stage.
+Read-only trials with synthetic documents elicited a material integration-scope
+decision and completed an inventory request without unnecessary specs or plans.
+A continuation chose a compatible transport but treated initial-state behavior
+as settled too early. A further trial left initial-state effects unresolved.
+The final clarification adjustment received structural validation only.
 
-Local checks passed all eleven package tests, the plugin manifest validator,
-and frontmatter validation for all 22 skills. These verify structure and hook
-output, not model compliance. The host packaging and startup scripts are unchanged;
-this version has not repeated the earlier cross-host installation campaign.
-
-Short read-only trials used synthetic vendor and system documents. A request to
-prepare an integration prompted a material scope question; an inventory-only
-request completed without unnecessary questions, specifications, or plans.
-After supplied scope decisions, a continuation selected a transport consistent
-with the constraints but treated initial-state behavior as settled too early.
-A further trial loaded specification and planning guidance, while leaving the
-possible effects of initial-state capture unresolved. The final clarification
-adjustment received structural validation, not another behavioral trial.
-
-These trials were not isolated from host instructions, did not implement a
-product, and included no baseline, cost comparison, or new end-to-end acceptance
-run. Other instruction changes were reviewed against the observed failures, not
-individually replayed. The trials do not establish causal improvement or validate
-every changed behavior. The efficiency figures below remain historical results
-for the original 1.0 configuration, not measurements of 1.0.2.
+The trials had ambient host instructions, no implementation, no baseline or
+cost comparison, and no new end-to-end acceptance. Other changes were reviewed
+against observed failures, not individually replayed. Eleven package tests,
+manifest validation, and frontmatter validation for all 22 skills passed.
+Host scripts were unchanged, and cross-host installation was not repeated.
+The original efficiency figures do not measure this release.
 
 ## 1.0.1 installation correction
 

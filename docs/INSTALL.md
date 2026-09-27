@@ -23,7 +23,7 @@ router instructions. The install path is checked against Codex CLI 0.153.1.
 To pin a release instead of following the default branch, use this first command:
 
 ```sh
-codex plugin marketplace add raffr85/rumokit --ref v1.0.5
+codex plugin marketplace add raffr85/rumokit --ref v1.0.6
 ```
 
 Then run `codex plugin add rumokit@rumokit`.
@@ -181,7 +181,7 @@ inside Claude Code, select RumoKit in the Installed tab, and choose Uninstall.
 For a session-only trial, use a clone instead of the persistent installation:
 
 ```sh
-git clone --branch v1.0.5 --depth 1 https://github.com/raffr85/rumokit.git
+git clone --branch v1.0.6 --depth 1 https://github.com/raffr85/rumokit.git
 cd rumokit
 claude --plugin-dir .
 ```

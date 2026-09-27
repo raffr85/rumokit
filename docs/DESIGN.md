@@ -72,7 +72,7 @@ A utility can own the result when the user directly requests its artifact. Other
 | Utility | `resume-work` | Current state reconstructed from history and live evidence |
 | Utility | `create-project-verification` | Project-local instructions for driving the real surface |
 
-The catalog size is not a target. Keep a skill separate only while it has a distinct trigger and completion condition. Router-led new work loads clarification and one owner. A directly requested narrow result can establish its already-explicit scope inline. Add supporting skills for concrete work: code-changing owners and review share `remove-slop` for the final diff, while placement remains conditional. Reuse the same artifact check rather than adding a cleanup phase.
+The catalog size is not a target. Keep a skill separate only while it has a distinct trigger and completion condition. Router-led new work loads clarification and one owner. A directly requested narrow result can establish its already-explicit scope inline. Design, specification, and planning share `remove-slop` with code-changing owners and review. Its necessity check distinguishes accepted obligations from proposed mechanisms before those mechanisms become required work. Reuse an equivalent check of unchanged content rather than adding a cleanup phase. Placement remains conditional.
 
 ## Process follows task shape
 
