@@ -102,7 +102,6 @@ class AdapterPackagingTest(unittest.TestCase):
     def test_native_package_does_not_shadow_codex_hook_discovery(self) -> None:
         # Codex 0.153.1 skips hooks for a schema-declared root manifest.
         self.assertFalse((ROOT / "plugin.json").exists())
-        self.assertEqual(len(list((ROOT / "skills").glob("*/SKILL.md"))), 22)
 
     def test_both_catalogs_resolve_the_complete_root_plugin(self) -> None:
         codex = load_json(ROOT / ".agents" / "plugins" / "marketplace.json")

@@ -1,6 +1,6 @@
 ---
 name: finish-change
-description: Use when implementation or review is complete and the requested result is an honest readiness decision, integration handoff, release sequence, or concise final state.
+description: Use when assessing delivery readiness or handing off a change with its remaining gates.
 ---
 
 # Finish a Change
@@ -29,4 +29,4 @@ Choose one:
 - `NOT_READY`: a concrete blocker prevents that action;
 - `INCONCLUSIVE`: required state or evidence cannot be established.
 
-State the exact next action and who or what still owns it. Do not merge, deploy, publish, delete, or approve on the user's behalf without authority.
+State the next observation or action within the requested stopping point and who or what owns it. A status-only answer may be complete without another action; missing evidence calls for the missing observation, not an instruction to merge or deploy afterward. Do not merge, deploy, publish, delete, or approve on the user's behalf without authority.

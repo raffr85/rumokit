@@ -1,6 +1,6 @@
 ---
 name: clarify-intent
-description: Use at the start of every new software-work request and when its intent materially changes, before committing to a solution, scope, or implementation.
+description: Use when starting software work or when the intended outcome or material constraints change.
 ---
 
 # Clarify Intent

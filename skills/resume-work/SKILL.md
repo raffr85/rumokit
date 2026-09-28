@@ -1,6 +1,6 @@
 ---
 name: resume-work
-description: Use when continuing after compaction, handoff, or interruption; when prior work risks being repeated; or when accepted decisions, source identity, failed prerequisites, and live state may have drifted.
+description: Use when resuming after compaction, handoff, or interruption, or reconciling stale task state.
 ---
 
 # Resume Work

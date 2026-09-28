@@ -1,6 +1,6 @@
 ---
 name: prototype-decision
-description: Use when one material design or technical uncertainty is cheaper and more reliable to answer with a disposable executable or visual artifact than with discussion alone.
+description: Use when a disposable executable or visual prototype can resolve a material design uncertainty.
 ---
 
 # Prototype a Decision

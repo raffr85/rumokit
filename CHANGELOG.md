@@ -1,5 +1,22 @@
 # Changes
 
+## 1.1.0
+
+- Add independent skills for PR preparation, review-feedback resolution, CI
+  diagnosis and repair, and requested PR monitoring. Preserve existing authority
+  and distinguish local work, publication, checks, readiness, and merge.
+- Shorten catalog descriptions and clarify routing between a fresh review,
+  existing feedback, readiness, and ongoing monitoring.
+- Load specialized state and recovery verification from a conditional reference,
+  preserving its requirements. Keep common evidence rules in the entry point.
+- Maintain existing project verification instructions, identify the intended
+  running instance, and preserve evidence and unrelated resources during cleanup.
+- Check catalog and resource integrity without fixing the total skill count.
+
+Structural checks and bounded decision exercises do not establish comparative
+efficiency or end-to-end forge integration. Publishing this release does not
+update active installations.
+
 ## 1.0.6
 
 - Check proposed mechanisms against required behavior and existing capabilities

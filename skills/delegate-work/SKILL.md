@@ -1,6 +1,6 @@
 ---
 name: delegate-work
-description: Use when a bounded work unit benefits from independent, parallel, or specialist execution enough to justify briefing and integration.
+description: Use when a separable work unit justifies a bounded independent, parallel, or specialist worker.
 ---
 
 # Delegate Work

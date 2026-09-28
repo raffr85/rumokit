@@ -1,6 +1,6 @@
 ---
 name: scope-product-increment
-description: Use when defining or recommending an MVP, V1, first product increment, product boundary, or release order across materially different user or business outcomes; clarify any human-owned outcome priority before a preferred boundary or order.
+description: Use when choosing MVP or V1 scope, product boundaries, priorities, or release order.
 ---
 
 # Scope a Product Increment

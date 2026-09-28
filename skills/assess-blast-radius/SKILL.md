@@ -1,6 +1,6 @@
 ---
 name: assess-blast-radius
-description: Use when a proposed or completed change touches a shared contract, boundary, state shape, dependency, or behavior whose downstream consumers are materially uncertain.
+description: Use when a change's downstream callers, contracts, state, or dependencies are uncertain.
 ---
 
 # Assess Blast Radius

@@ -11,6 +11,8 @@ Replace `project-name` in the skill name and directory with the project's concis
 
 List required tools, environment, safe credentials or fixtures, exact checks, and recoverable failure guidance.
 
+Identify the expected checkout or build, environment, account or tenant, and process or port ownership. Distinguish the intended instance from a healthy but unrelated one.
+
 ## Launch and readiness
 
 Provide exact project commands, working directories, expected ports or processes, and a positive readiness observation.
@@ -30,6 +32,8 @@ Record artifact identity, actions, expected and actual results, and useful logs,
 ## Cleanup and recovery
 
 Provide exact cleanup, shutdown, rollback, and stale-state recovery steps.
+
+Retain the evidence needed to explain the result before cleanup. Name the resources this task owns and preserve unrelated processes, fixtures, and failure evidence.
 
 ## Feature map
 

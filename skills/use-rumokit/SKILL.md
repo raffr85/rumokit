@@ -1,6 +1,6 @@
 ---
 name: use-rumokit
-description: Use when starting non-trivial software work with RumoKit available, or when the requested result, workflow, or supporting skills need to be selected or restored after compaction.
+description: Use when selecting RumoKit skills for new or resumed software work.
 ---
 
 # Use RumoKit
@@ -40,7 +40,13 @@ Then select the owner. Research that supports a requested MVP or V1 boundary doe
 - implementation, fix, or refactor: `implement-change`, `debug-change`, or `refactor-change`
 - cleanup of an existing code, documentation, or prose artifact: `remove-slop`
 - verification, review, or readiness: `verify-change`, `review-change`, or `finish-change`
+- preparing or opening a pull request: `prepare-pr`
+- assessing or resolving existing review feedback: `address-review`
+- diagnosing or repairing CI failures: `fix-ci`
+- ongoing pull-request monitoring or shepherding: `watch-pr`
 - reusable real-surface instructions: `create-project-verification`
+
+For PR work, select the current result rather than the artifact's name. A fresh code review uses `review-change`; existing comments use `address-review`; a one-time readiness question uses `finish-change`. Preparing a PR, fixing a check, or asking for status does not start monitoring. PR skills are independent entry points, not a delivery sequence.
 
 Load the chosen owner's instructions, then continue through the current requested stop point. Do not stop before a current deliverable, pull a deferred deliverable into the current turn, infer a spec or plan from complexity alone, or invent an approval gate between artifacts.
 

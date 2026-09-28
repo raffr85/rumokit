@@ -66,13 +66,21 @@ A utility can own the result when the user directly requests its artifact. Other
 | Outcome | `verify-change` | Bounded verdict from task-shaped evidence |
 | Outcome | `review-change` | Prioritized, evidence-backed findings |
 | Outcome | `finish-change` | Final-state readiness and handoff |
+| Outcome | `prepare-pr` | Reviewable PR description and requested creation or update |
+| Outcome | `address-review` | Evidence-backed feedback dispositions and authorized resolutions |
+| Outcome | `fix-ci` | CI cause, authorized repair, and current-revision check status |
+| Outcome | `watch-pr` | Requested monitoring or shepherding through a stated stop condition |
 | Overlay | `assess-blast-radius` | Concrete downstream impact and tested safety facts |
 | Overlay | `coordinate-change` | Dependency, revision, integration, and release topology |
 | Overlay | `delegate-work` | Safe partitioning and adjudication of independent work |
 | Utility | `resume-work` | Current state reconstructed from history and live evidence |
-| Utility | `create-project-verification` | Project-local instructions for driving the real surface |
+| Utility | `create-project-verification` | Created or repaired project-local instructions for driving the real surface |
 
 The catalog size is not a target. Keep a skill separate only while it has a distinct trigger and completion condition. Router-led new work loads clarification and one owner. A directly requested narrow result can establish its already-explicit scope inline. Design, specification, and planning share `remove-slop` with code-changing owners and review. Its necessity check distinguishes accepted obligations from proposed mechanisms before those mechanisms become required work. Reuse an equivalent check of unchanged content rather than adding a cleanup phase. Placement remains conditional.
+
+PR work follows the requested result. `review-change` finds defects; `address-review` evaluates an existing feedback queue. `prepare-pr` makes the change reviewable and performs requested PR creation or updates. `fix-ci` diagnoses check executions and carries out authorized repairs. `watch-pr` owns ongoing follow-through, using the host's monitoring facilities and composing repairs only within the user's authority. None implies a pipeline, a push, or a merge. One-time readiness questions remain with `finish-change`.
+
+Descriptions distinguish these entry points before their bodies are loaded. The common verification path stays in `verify-change`; state, asynchronous-effect, and recovery details load from its reference when those properties affect correctness. This changes instruction organization, not the required guarantees. More available skills need not mean more active instructions; routing and behavior still need validation on the actual host.
 
 ## Process follows task shape
 

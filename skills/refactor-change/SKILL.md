@@ -1,6 +1,6 @@
 ---
 name: refactor-change
-description: Use when the requested result is a structural code change that should preserve externally relevant behavior while improving ownership, readability, maintainability, or internal design.
+description: Use when restructuring code while preserving externally relevant behavior.
 ---
 
 # Refactor a Change

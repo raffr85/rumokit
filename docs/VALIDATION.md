@@ -14,6 +14,54 @@ not distributed, so this report alone is not a publicly reproducible benchmark.
 | Later focused exercises | Specific observed decisions and behaviors | Causal reliability gains or a full new acceptance run |
 | Package tests | Manifest consistency, hook output, and relocation | Model compliance or automatic activation in every host |
 
+## 1.1.0: PR capabilities and conditional verification
+
+The source adds four independent PR capabilities and shortens catalog
+descriptions. It moves state and recovery checks into a conditionally loaded
+reference without removing their substantive requirements. It also makes
+project verification identify the intended instance and preserve evidence
+through cleanup.
+
+Two fresh-context agents, configured as GPT-5.6 Sol, completed the same four
+[offline requests](../tests/scenarios/pr-workflows.md), one with installed
+1.0.6 source instructions and one with the changed source. Both identified the
+missing CSV header, rejected an unsafe review suggestion, preserved the agreed
+response defaults, distinguished setup failure from application failure, and
+rejected stale checks as evidence for a new head. Both correctly reported that
+no monitor was running without a scheduler. The earlier version already handled
+these decisions; this is preservation evidence, not an improvement result.
+
+Both readers treated unexplained generated output too readily as mechanical.
+The preparation instruction was tightened to report generation inputs, command,
+and reproduction status. A same-agent follow-up then flagged uninspected output
+as unverified. That follow-up also kept static-link verification narrow and
+designed a committed-but-lost-response/manual-retry check with current-UI-context
+isolation, without claiming execution. It selected a one-time readiness answer
+instead of monitoring, but recommended merging after a future check despite the
+status-only request. The handoff instruction was narrowed to the requested next
+observation or action. This follow-up is not an independent trial or a measured
+reliability gain. A further same-agent status-only response named only the
+missing live observation and did not recommend a merge.
+
+An independent instruction review found two further gaps in the initial draft:
+tree equality did not cover uncommitted work during history cleanup, and a
+monitor needed a final forge refresh before declaring readiness. Both were
+corrected and the affected paragraphs were reviewed again. These checks did not
+execute a history rewrite or race a live PR.
+
+The exercises used explicit skill-tree selection with ambient host instructions
+and synthetic snapshots, not a plugin-only environment or a real forge. They
+did not exercise publication, remote feedback resolution, CI reruns, native
+monitor scheduling, or installation. No comparative token or time claim is made.
+
+Fourteen package checks and metadata validation of all 26 skills passed, including
+catalog membership and relative-resource resolution. The five moved text blocks
+remain verbatim in the state/recovery reference. Names and descriptions total
+2,693 bytes instead of 3,994; the verification entry point is 6,500 bytes instead
+of 8,988. These are source-text measurements, not model tokens or observed cost.
+The router grew to include the new entry points. Publishing this release does
+not update active installations or reload ongoing tasks.
+
 ## 1.0.6: proportional design and decision closure
 
 Real-use review found oversized proposals despite successful 1.0.5 skill reads.

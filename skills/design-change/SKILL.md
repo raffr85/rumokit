@@ -1,6 +1,6 @@
 ---
 name: design-change
-description: Use when the requested result is a technical design, architecture choice, interface shape, or migration approach rather than implementation code.
+description: Use when designing architecture, interfaces, or a migration approach before implementation.
 ---
 
 # Design a Change

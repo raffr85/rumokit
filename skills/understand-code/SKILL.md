@@ -1,6 +1,6 @@
 ---
 name: understand-code
-description: Use when the user asks how existing code behaves or why a current design or historical decision exists, without requesting changes.
+description: Use when explaining existing code behavior or design decisions without changing them.
 ---
 
 # Understand Code

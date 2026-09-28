@@ -11,7 +11,9 @@ Linked projects retain their own licenses.
   workflows, focused skills, progressive loading, and verification before completion.
 - [pstack](https://github.com/cursor/plugins/tree/main/pstack), by Lauren Tan:
   task-specific workflows, explicit delegation preferences, root-cause analysis,
-  and project-specific verification. The
+  project-specific verification, PR reviewability, feedback triage, and CI
+  follow-through. RumoKit's PR instructions are independently written and retain
+  its own authorization and portability boundaries. The
   [pstack-claude port](https://github.com/michael-denyer/pstack-claude), by Michael
   Denyer, was also a reference and the source of the comparison stack.
 - [Matt Pocock's skills](https://github.com/mattpocock/skills): investigating facts,

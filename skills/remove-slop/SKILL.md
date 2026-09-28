@@ -1,6 +1,6 @@
 ---
 name: remove-slop
-description: Use when a design, specification, plan, implementation, or review needs a check for unnecessary complexity, or the user requests cleanup of code, documentation, or prose while preserving required behavior and meaning.
+description: Use when checking or removing unnecessary complexity in code, designs, plans, or prose.
 ---
 
 # Remove Slop

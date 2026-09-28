@@ -1,6 +1,6 @@
 ---
 name: specify-change
-description: Use when the requested result needs a durable behavioral contract, acceptance boundary, or shared definition of what a proposed change must and must not do.
+description: Use when writing a specification, behavioral contract, or durable acceptance criteria.
 ---
 
 # Specify a Change

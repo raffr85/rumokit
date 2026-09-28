@@ -1,6 +1,6 @@
 ---
 name: locate-change
-description: Use when the user asks which repository, layer, module, symbol, or consumers should own a proposed behavior or fix.
+description: Use when identifying which repository, layer, or module should own a proposed change.
 ---
 
 # Locate a Change

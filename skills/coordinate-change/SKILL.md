@@ -1,6 +1,6 @@
 ---
 name: coordinate-change
-description: Use when a requested outcome crosses independently versioned repositories, services, packages, schemas, generated artifacts, owners, or release steps that must remain compatible.
+description: Use when coordinating compatibility or delivery across repositories, services, or versioned components.
 ---
 
 # Coordinate a Change

@@ -7,9 +7,9 @@
 Help your coding agent build what you actually meant.
 
 RumoKit guides coding agents to clarify the intended outcome, carry out the work,
-and verify the finished result against what you agreed. Its 22 skills cover
-product decisions, code exploration, implementation, debugging, review, and
-changes across repositories.
+and verify the finished result against what you agreed. Its skills cover
+product decisions, code exploration, implementation, debugging, review,
+cross-repository changes, and pull-request delivery.
 
 Specs, plans, TDD, and subagents are tools to use when the task needs them.
 There is no required sequence of stages or fixed model choice. RumoKit uses
@@ -78,11 +78,15 @@ You can also request a focused skill without starting the whole workflow:
 | Diagnose and fix a defect | `debug-change` |
 | Coordinate a change across repositories | `coordinate-change` |
 | Review a diff for supported findings | `review-change` |
+| Prepare or open a reviewable pull request | `prepare-pr` |
+| Assess or resolve existing review feedback | `address-review` |
+| Diagnose or repair failed CI checks | `fix-ci` |
+| Monitor or shepherd a pull request | `watch-pr` |
 | Remove unnecessary code or prose | `remove-slop` |
 
 Use your agent's skill picker or request the skill by name. Select `use-rumokit`
 to start the router explicitly. The [full catalog](docs/DESIGN.md#catalog)
-describes all 22 skills.
+describes every skill. These are independent capabilities, not required stages.
 
 ## What RumoKit changes
 

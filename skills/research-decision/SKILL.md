@@ -1,6 +1,6 @@
 ---
 name: research-decision
-description: Use when a software decision depends on external evidence, current practice, primary sources, competing approaches, or facts not established by the local codebase.
+description: Use when researching external evidence, current practice, or alternatives for a software decision.
 ---
 
 # Research a Decision

@@ -1,6 +1,6 @@
 ---
 name: plan-change
-description: Use when the requested result needs an ordered implementation plan because the change has multiple dependent units, meaningful risk, cross-component sequencing, or a handoff boundary.
+description: Use when planning implementation units, dependencies, verification, or handoff.
 ---
 
 # Plan a Change

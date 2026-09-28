@@ -1,6 +1,6 @@
 ---
 name: implement-change
-description: Use when the requested result is authorized implementation of new or changed behavior in an existing codebase.
+description: Use when implementing authorized new or changed behavior in a codebase.
 ---
 
 # Implement a Change

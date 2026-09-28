@@ -1,6 +1,6 @@
 ---
 name: debug-change
-description: Use when the requested result is to diagnose or fix a defect, regression, failing test, unexpected runtime behavior, or unexplained discrepancy at its root cause.
+description: Use when diagnosing or fixing defects, regressions, failing tests, or unexpected runtime behavior.
 ---
 
 # Debug a Change

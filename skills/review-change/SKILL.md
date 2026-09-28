@@ -1,6 +1,6 @@
 ---
 name: review-change
-description: Use when asked to review a diff, branch, pull request, implementation, design, or plan, or when a change owner needs a focused technical review of a material risk.
+description: Use when reviewing code, a diff, PR, design, or plan for defects and material risks.
 ---
 
 # Review a Change
