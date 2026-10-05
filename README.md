@@ -81,8 +81,12 @@ You can also request a focused skill without starting the whole workflow:
 | Prepare or open a reviewable pull request | `prepare-pr` |
 | Assess or resolve existing review feedback | `address-review` |
 | Diagnose or repair failed CI checks | `fix-ci` |
-| Monitor or shepherd a pull request | `watch-pr` |
-| Remove unnecessary code or prose | `remove-slop` |
+| Monitor or follow through on a pull request | `watch-pr` |
+| Remove unnecessary code or prose | `reduce-complexity` |
+| Work through consequential product decisions | `resolve-product-decisions` |
+| Clarify domain terms, states, and authority | `model-domain` |
+| Compare a proposal or delivery with the agreement | `check-agreement` |
+| Explain a technical result clearly | `write-clearly` |
 
 Use your agent's skill picker or request the skill by name. Select `use-rumokit`
 to start the router explicitly. The [full catalog](docs/DESIGN.md#catalog)
@@ -94,14 +98,23 @@ describes every skill. These are independent capabilities, not required stages.
   answers and authorization carry forward.
 - The agent keeps the agreed outcome and constraints visible. A conversation can
   be enough; durable specs and plans are used when the work calls for them.
+- Tasks use the host's available task tools, without a parallel `todo.md`.
+  Without those tools, tracking stays in the conversation. Task files follow
+  an explicit user request or an established project convention.
 - Delegation follows the task and your preferences. Work can stay inline or use
   bounded subagents, including implementation across repositories.
 - Verification checks the delivered behavior, not just whether tests pass.
   The handoff distinguishes completed work from missing evidence.
+- Material scope changes are compared with the accepted agreement before the
+  dependent commitment, including changes returned by workers.
+- Clear writing explains what you can do, what changed, and what remains
+  unverified. It is distinct from removing unnecessary code or design complexity.
 
 Keep the domain skills and tools you need. Choose one default workflow router
 per task to avoid competing rules about approvals, planning, or delegation.
 RumoKit supplies instructions, not enforcement or additional permissions.
+New skills and activation conditions are welcome when they fill a distinct
+reusable need. There is no target or maximum skill count.
 
 ## Evidence
 

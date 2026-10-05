@@ -25,7 +25,7 @@ Add `assess-blast-radius` for shared contracts and `coordinate-change` for indep
 
 ## Verify preservation
 
-Apply `remove-slop` to the resulting diff, reusing an equivalent check already performed. Judge the resulting structure at its callers, not just the proposed design.
+Apply `reduce-complexity` to the resulting diff, reusing an equivalent check already performed. Judge the resulting structure at its callers, not just the proposed design.
 
 Apply `verify-change` to the preservation contract, using equivalence, characterization, integration, build, static, or real-surface evidence as appropriate. Include representative edge and failure behavior when material. Use `finish-change` for a multi-component handoff or release-readiness claim. These checks require no new phase, agent, or approval.
 

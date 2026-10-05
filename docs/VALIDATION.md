@@ -14,6 +14,74 @@ not distributed, so this report alone is not a publicly reproducible benchmark.
 | Later focused exercises | Specific observed decisions and behaviors | Causal reliability gains or a full new acceptance run |
 | Package tests | Manifest consistency, hook output, and relocation | Model compliance or automatic activation in every host |
 
+## 2.0.0: task decisions, native task tracking, and clear communication
+
+The correction adds independent interviewing, domain modeling, agreement
+comparison, and technical-writing capabilities. Their triggers apply before
+dependent product decisions, material scope commitments, conflicting recovery,
+worker integration, and delivery claims. Catalog size is neither a target nor a
+cap. General acknowledgments are in [CREDITS](../CREDITS.md).
+
+The public cleanup skill is renamed to `reduce-complexity` without changing its
+procedure. The new interviewing capability is published as
+`resolve-product-decisions`. Current callers and discovery paths use these names;
+recorded behavior and frozen comparison versions below remain unchanged.
+Packaging checks do not demonstrate that naming improves agent selection.
+
+The task-tracking correction makes native task tools the execution record, with
+conversation-only fallback when those tools are absent. Specification and plan
+templates describe content rather than requiring files or synchronized task
+lists. Two fresh-context readers configured as GPT-5.6 Sol applied the source
+before and after this correction to controlled capability scenarios H, I, and J.
+Both chose native tracking and inline fallback. The earlier source left record
+ownership ambiguous for a requested cross-tool plan; the revised reader kept
+native status and a clearly identified portable handoff snapshot distinct.
+There is no measured reliability gain or native integration result from this
+exercise. The revised reader also suggested subsequent execution after a
+plan-only request; that future action was not authorized or carried out. The
+existing plan stop rule still applies. Limited-field task tools may keep evidence
+references in the conversation rather than require a new document. No native
+task API, real implementation, or compaction was exercised by these readers.
+
+Two fresh-context readers, configured as GPT-5.6 Luna with max reasoning,
+applied explicitly selected source instructions to synthetic snapshots. The
+baseline reader used 1.1.0 for the first five [checkpoints](../tests/scenarios/task-decisions.md).
+It already asked the material queue question, rejected the unauthorized
+reservation layer, distinguished local checks from delivery, preserved pending
+work on resumption, and proceeded with the fully specified edit. The changed
+source reader reached the same decisions and also justified necessary new
+history storage and asked about acceptance versus financial settlement.
+Those two additional cases have no baseline comparison. These decisions show
+preservation and bounded coverage, not a measured improvement.
+
+The changed-source response blurred a prepared migration artifact with an
+unapplied database change. Its authorization decision was correct, but the
+explanation was not precise enough. This is recorded as a response defect,
+not discarded to produce a clean score. The writing guidance was made explicit
+about prepared, applied, and observed state. A same-reader follow-up distinguished
+the reported migration file from its unapplied schema and returned the completion
+status without an unnecessary future release walkthrough. This follow-up is not
+an independent trial or a measured reliability gain.
+
+Independent instruction review found that some direct entries named supporting
+skills without explicitly loading their full bodies. Conditional load-and-follow
+pointers were added, including the writing dependency for direct explanations.
+The reviewer rechecked the affected source and found both concrete gaps addressed,
+without an unconditional dependency loop. This is source review, not a host test
+of direct invocation.
+
+Each reader handled its cases in one context. They did not see the acceptance
+checks. Ambient host instructions remained active. No real implementation,
+database migration, installation, automatic trigger, compaction, or comparative
+cost was exercised. The check therefore cannot establish plugin-only causality
+or resolution of the production-session incidents that motivated the change.
+Active competing startup routers remain a host-configuration issue; no installed
+plugin or global setting was changed.
+
+Fifteen package tests and metadata validation of all 30 source skills passed.
+The package checks cover catalog membership, resources, hook output, and
+relocation. These are structural results, not a behavioral guarantee.
+
 ## 1.1.0: PR capabilities and conditional verification
 
 The source adds four independent PR capabilities and shortens catalog

@@ -1,16 +1,24 @@
-# Durable work state
+# Work state
 
-Use this contract when authoring or maintaining task documents that another session must use. It does not require documents for a small inline task or authorize edits during a read-only review.
+Use this contract when tracking execution or preserving an agreement for continuation. It does not require a tracker for a small inline task or authorize changes during a read-only review.
+
+## Tasks belong in the host
+
+When tasks need tracking, inspect the current host's available task tools and reuse its existing task list. Create and update tasks there, preserving identifiers and status. Keep dependencies and agreement or evidence references in supported fields or the conversation; do not create files to extend a limited task tool. A tool name mentioned by a skill is not proof that the tool is available. Task creation is not implementation, and a completed task status is not verification evidence.
+
+Do not create or maintain a parallel `todo.md` or other checklist file. If task tools are unavailable, keep the current unit, remaining work, and next action briefly in the conversation. Do not invent a tool, a task service, or a file fallback. Use a task file when the user explicitly requests it or an established project convention requires it; that file is then the task record, not an additional checklist to synchronize.
+
+Read and update the chosen task record at material transitions. Recover existing tasks, running operations, and pending questions before creating replacements after interruption or compaction. If the record cannot be recovered, report the limitation and reconstruct only the missing state from relevant evidence.
 
 ## One entry point, distinct responsibilities
 
-Choose an existing task README, specification, plan, or handoff as the entry point. Use the project's paths, language, and conventions; make the entry point discoverable from the existing task or project index. Do not create competing summaries or a global project status for unrelated work.
+Keep the accepted agreement, execution sequence, and progress distinct without requiring distinct files. Honor the user's or project's chosen location and format. A recoverable host artifact, task record, or conversation can be the entry point; use an existing project document when persistence, portability, or handoff requires it. Do not copy a native record into the repository merely to match a template. Create a document only for a concrete need not met by the existing record.
 
 - **Specification:** expected behavior, accepted examples, preservation obligations, and decisions with their source. Distinguish accepted decisions, proposals, unresolved choices, and superseded directions. A draft's presence is not approval.
-- **Plan:** ordered units referencing that contract, their dependencies, current status, and evidence. Keep the expected completion check separate from the result actually obtained. Use stable identifiers when other artifacts refer to a requirement, decision, or unit.
+- **Plan:** ordered units referencing that contract, their dependencies, and expected completion checks. Keep live status in the chosen task record; link observed evidence there when supported, otherwise from the conversation. Do not maintain a second live copy. Use stable identifiers when other artifacts refer to a requirement, decision, or unit.
 - **Continuation state:** where the work stands and the next authorized action. Link to the contract and evidence instead of copying them.
 
-These roles may be sections of one document. Keep the current state near the entry point and label older records as history. An appendix must not silently override a section still presented as current.
+These roles may share one record. A transient checklist does not replace a behavioral contract needed by another session or tool; verify that the chosen location can preserve and expose the required content. A requested handoff may summarize progress as a dated snapshot linked to the task record, not a second live checklist. Label older records as history. An appendix must not silently override a section still presented as current.
 
 ## Compact continuation block
 

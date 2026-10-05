@@ -1,40 +1,26 @@
 # Change specification
 
-## Document state and related work
+Use this shape in the chosen host artifact, conversation, or required project document. Omit sections that add no decision-relevant content. This template does not request a new file.
 
-Identify this change, the task entry point, current revision or last reconciliation, and any related plan. State which parts are accepted, proposed, or unresolved, with their authority; avoid a document-wide approval claim when only some decisions are settled. Follow the project's language and naming conventions.
+## Outcome and boundaries
 
-## Intent
+Explain what changes, for whom, why, and what stays outside the change. Give the reader a short standalone summary before technical detail.
 
-What outcome must change, for whom, and why?
+## Agreement and starting evidence
 
-## Non-goals
+Identify the accepted record, current revision or last reconciliation, and any related plan. Link the verified behavior and constraints needed to understand this change. Follow the project's language and naming conventions.
 
-What remains outside this change?
+State settled product and technical choices with their authority and the concrete user example. Distinguish accepted decisions, proposals, assumptions, and unresolved choices; the presence of a draft is not approval. When replacing a decision, mark the superseded direction and update its dependents. Use identifiers only when other records refer to them.
 
-## Current evidence
+## Behavior and acceptance
 
-What existing behavior, contracts, and constraints were verified?
+Describe actors, inputs, outputs, states, transitions, invariants, and interfaces where needed. Separate required behavior from proposed mechanisms. For material additions, identify the guarantee supplied and the gap in existing capabilities.
 
-## Accepted decisions
+For representative cases, state the situation, expected behavior, forbidden effect, and authoritative observation that would demonstrate compliance. These are expectations, not executed checks. Link observed results from the task record instead of copying them into the contract.
 
-Which product and technical choices are settled, by whom or on what authority? Which concrete user example anchors the result? Distinguish agreement from assumptions. When replacing a decision, identify the superseded direction and update its dependent requirements and current summary. Use identifiers when other documents need to refer to these decisions.
+## Preservation and failure behavior
 
-## Behavioral contract
-
-Describe actors, inputs, outputs, states, transitions, invariants, and interfaces. Distinguish required behavior from proposed mechanisms. For material additions, identify the guarantee they supply and the gap in existing capabilities; keep optional improvements outside the required contract.
-
-## Preservation and forbidden effects
-
-What must remain true? What must never happen?
-
-## Failure and compatibility behavior
-
-Cover relevant errors, retries, concurrency, recovery, migration, and mixed-version behavior.
-
-## Acceptance evidence
-
-List representative examples and the authoritative observations that would demonstrate compliance. These are expectations, not a claim that checks have run. Link actual execution evidence from the plan or continuation state.
+State what must remain true and what must never happen. Cover relevant errors, retries, concurrency, recovery, migration, and mixed-version behavior. Keep optional improvements outside the required contract.
 
 ## Open decisions
 

@@ -1,6 +1,6 @@
 ---
 name: watch-pr
-description: Use when asked to monitor or shepherd a pull request through a stated outcome or time limit.
+description: Use when asked to monitor a pull request or follow through on it to a stated outcome or time limit.
 ---
 
 # Watch a pull request

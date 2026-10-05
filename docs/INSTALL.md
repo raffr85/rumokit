@@ -23,7 +23,7 @@ router instructions. The install path is checked against Codex CLI 0.153.1.
 To pin a release instead of following the default branch, use this first command:
 
 ```sh
-codex plugin marketplace add raffr85/rumokit --ref v1.1.0
+codex plugin marketplace add raffr85/rumokit --ref v2.0.0
 ```
 
 Then run `codex plugin add rumokit@rumokit`.
@@ -181,7 +181,7 @@ inside Claude Code, select RumoKit in the Installed tab, and choose Uninstall.
 For a session-only trial, use a clone instead of the persistent installation:
 
 ```sh
-git clone --branch v1.1.0 --depth 1 https://github.com/raffr85/rumokit.git
+git clone --branch v2.0.0 --depth 1 https://github.com/raffr85/rumokit.git
 cd rumokit
 claude --plugin-dir .
 ```
@@ -210,6 +210,19 @@ does not edit files. This checks loading and basic scope, not overall quality.
 Keep your domain and tool plugins. Choose one default workflow router for the
 task. Multiple routers can impose conflicting planning, approval, test, or
 delegation rules.
+
+A default workflow and a useful utility are different choices. You can keep
+individual writing, debugging, and review skills while selecting RumoKit for
+task guidance. An installed plugin with a mandatory startup router may still
+impose its process even when RumoKit is loaded.
+
+For the pstack-claude version reviewed here, `session hook: off` in the host's
+pstack model sheet disables its startup injection without deleting its skills.
+Use its `setup-pstack` instructions to locate the correct sheet for your host.
+This is a user-selected configuration change, not something RumoKit applies
+automatically. It does not disable other globally active workflow instructions,
+including Superpowers. Confirm the actual startup context in a new session;
+do not infer isolation from a disabled hook or a disposable repository alone.
 
 For an isolated trial, use the host's supported profile isolation. A disposable
 project alone does not isolate user-wide plugins or instructions.

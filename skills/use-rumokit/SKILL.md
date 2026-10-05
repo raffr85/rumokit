@@ -5,13 +5,15 @@ description: Use when selecting RumoKit skills for new or resumed software work.
 
 # Use RumoKit
 
-Route the request; do not perform domain work here. When a focused skill was invoked directly and fits the result, keep it as owner and follow its own scope, clarification, and evidence obligations. Do not run the routing procedure below or add a lifecycle around that direct invocation.
+Route the request; do not perform domain work here. When a focused skill was invoked directly and fits the result, keep it as owner and follow its own scope, clarification, and evidence obligations. Skip owner selection and do not add a lifecycle around that invocation. The user-facing response obligation below still applies.
 
 ## Load the selected instructions
 
 A skill is loaded when its full body is in the current context, through the host's skill tool or by reading its `SKILL.md`. A name, catalog description, or this routing summary is not that body. A router supplied in full by a startup hook is already loaded; do not invoke it again.
 
 When this router selects an owner or an applicable dependency, load that skill before doing the work it governs, then follow its instructions. Reuse a body already loaded. If it cannot be loaded, report the missing guidance and distinguish any fallback from following the skill. Load only the selected skills, not the catalog.
+
+When other frameworks are present, follow the user's established workflow choice and the host's instruction hierarchy. Compose useful focused capabilities without silently adopting another router's lifecycle. If mandatory instructions still conflict, explain the conflict once and its consequence; do not claim an isolated RumoKit workflow or change plugin settings without authority. Another installed skill is not by itself an active competing process.
 
 ## Establish intent first
 
@@ -35,15 +37,19 @@ Then select the owner. Research that supports a requested MVP or V1 boundary doe
 - current-system explanation or evidence-only research: `understand-code` or `research-decision`
 - where a proposed change belongs: `locate-change`
 - MVP, V1, first increment, product boundary, or release order: `scope-product-increment`
+- a requested interview or unresolved product decisions: `resolve-product-decisions`
+- domain terms, states, or authority relationships: `model-domain`
 - a decision or prototype: `clarify-intent` or `prototype-decision`
 - design, specification, or plan: `design-change`, `specify-change`, or `plan-change`
 - implementation, fix, or refactor: `implement-change`, `debug-change`, or `refactor-change`
-- cleanup of an existing code, documentation, or prose artifact: `remove-slop`
+- cleanup of an existing code, documentation, or prose artifact: `reduce-complexity`
+- a technical explanation, rewrite, or delivery summary whose requested result is clear writing: `write-clearly`
+- conformity of a proposal or delivery to the accepted outcome: `check-agreement`
 - verification, review, or readiness: `verify-change`, `review-change`, or `finish-change`
 - preparing or opening a pull request: `prepare-pr`
 - assessing or resolving existing review feedback: `address-review`
 - diagnosing or repairing CI failures: `fix-ci`
-- ongoing pull-request monitoring or shepherding: `watch-pr`
+- ongoing pull-request monitoring or follow-through: `watch-pr`
 - reusable real-surface instructions: `create-project-verification`
 
 For PR work, select the current result rather than the artifact's name. A fresh code review uses `review-change`; existing comments use `address-review`; a one-time readiness question uses `finish-change`. Preparing a PR, fixing a check, or asking for status does not start monitoring. PR skills are independent entry points, not a delivery sequence.
@@ -59,15 +65,21 @@ For material product-boundary or priority choices inside another owner's work, c
 - `research-decision`: external or comparative evidence needed by another owner
 - `delegate-work`: genuinely separable work
 - `resume-work`: history and live state need reconciliation
+- `model-domain`: ambiguous terms, transitions, or effect ownership
+- `check-agreement`: a material commitment changes scope or effects, worker integration, conflicting recovery, or final delivery-fit comparison
 - `verify-change`: choosing or interpreting evidence for changed behavior, including inside implementation, debugging, or refactoring
 - `finish-change`: a multi-component handoff, release-readiness claim, or unresolved delivery boundary
 
-Load nothing without a concrete job. Do not impose a spec, plan, test-first loop, review, subagent, or fixed pipeline merely because routing occurred; follow the selected owner's task-specific conditions. When material work remains after compaction, compose `resume-work` before another research wave, delegation, expensive check, or recommendation; then return to the same owner and stop point.
+Activate these dependencies when their conditions occur, including mid-task; the user need not name them. Split or add a capability when its distinct decision and completion condition warrant it. Skill count is not a target. Do not impose a spec, plan, test-first loop, review, subagent, or fixed pipeline merely because routing occurred; follow the selected owner's task-specific conditions. When material work remains after compaction, compose `resume-work` before another research wave, delegation, expensive check, or recommendation; then return to the same owner and stop point.
 
 Supporting skills run within the owner's current work. Applying a skill already loaded in current context means following it, not reading it again. Reuse current evidence against unchanged artifacts and environments. Loading verification guidance requires no other agent, approval, artifact, or repeated check.
+
+When execution needs task tracking, follow [the work-state contract](../resume-work/references/work-state.md). Use the host's available task tools, not a parallel Markdown checklist. Tracking tasks does not require a specification, a plan document, or entering the host's planning mode.
 
 While a question or job is pending, coordinate follow-up work with what is already queued so it runs once. Use the host's event wait or an appropriately bounded wait; avoid repeated short polls that return no new information. Continue independent work and keep user updates timely.
 
 ## Tighten before return
 
-Before the owner returns, remove repeated evidence, detail that cannot change the current result, questions placed after the decision they should govern, and artifacts beyond the stop point. This response pass is separate from `remove-slop`, which checks the changed artifact within its owner or owns an explicit cleanup request. Do not use either to shrink required outcomes. If the pass exposes a material commitment without authority, return to the owner and `clarify-intent` instead of polishing the commitment into an assumption.
+Before drafting a substantive user-facing technical result, load and follow [write-clearly](../write-clearly/SKILL.md), reusing its body when already loaded. This also applies to focused direct entries. Give the answer and concrete meaning inline, with documents as support. It is a communication dependency, not another report or reviewer.
+
+Remove repeated evidence, detail that cannot change the current result, late questions, and artifacts beyond the stop point. Keep writing clarity separate from `reduce-complexity`'s artifact-complexity check. Preserve required outcomes. If the response exposes a material commitment without authority, apply [check-agreement](../check-agreement/SKILL.md) and return to the owner instead of polishing the commitment into an assumption.

@@ -11,6 +11,8 @@ Find material defects and risks. When supporting authorized implementation, retu
 
 Identify the intended behavior and accepted examples from the user's request and decisions, comparison base, current artifact, relevant specification, and deployment or compatibility context. Separate agreed requirements from still-unconfirmed product assumptions. Inspect the actual diff and enough surrounding code to understand ownership and callers.
 
+Keep two questions distinct: does the change meet the accepted outcome, and is its implementation technically sound in this repository? Apply [check-agreement](../check-agreement/SKILL.md) to the first. A clean result on either question cannot conceal a failure on the other. Both can be reviewed inline; separate workers are useful only when they add independent evidence.
+
 Use `assess-blast-radius` when a changed boundary may affect consumers not visible in the diff. Use `coordinate-change` for cross-repository contracts or release ordering.
 
 ## Hunt for consequential failures
@@ -34,10 +36,12 @@ Do not rely only on tests, explanations, or expected values authored with the ch
 
 For a changed contract, identify the previous behavior from the starting revision, an existing caller, or an accepted decision; then compare the final behavior and its authorization. Check changes to defaults, omissions, permissions, and errors where consumers depend on them. A consistent new code/test/spec trio can still contain an unapproved behavior change.
 
-Apply `remove-slop` to the changed artifact within this review, reusing an equivalent check already completed. A supported simpler equivalent can justify a finding without inventing a future bug. Identify the unnecessary construct, its replacement or removal, and the behavior that must survive. Keep these findings below correctness and safety issues; a read-only review does not authorize cleanup edits.
+Apply `reduce-complexity` to the changed artifact within this review, reusing an equivalent check already completed. A supported simpler equivalent can justify a finding without inventing a future bug. Identify the unnecessary construct, its replacement or removal, and the behavior that must survive. Keep these findings below correctness and safety issues; a read-only review does not authorize cleanup edits.
 
 ## Report findings first
 
 For each finding, give severity, precise location, triggering conditions, consequence, and supporting evidence. Keep the set deduplicated and ordered by impact.
 
 Then list material assumptions or unresolved questions. If no actionable finding remains, say so and name the residual coverage gap. A clean review does not mean the change has been independently verified.
+
+Use [write-clearly](../write-clearly/SKILL.md) for the explanation. Keep the triggering behavior, consequence, and evidence understandable without opening a separate report.

@@ -1,10 +1,12 @@
 # Implementation plan
 
-## Outcome and starting evidence
+Use this shape in the selected native task facility or explicitly needed plan record. Omit sections that add no distinct content. This template does not request a new file or a second task list.
 
-State the requested result, accepted behavior and example with their source, current revision or state, and decisive constraints. Reuse an existing agreement or specification rather than duplicating it.
+## Contract and starting point
 
-Identify the task entry point and when this plan was reconciled. Link the current behavioral contract and decisions. Keep superseded directions in clearly marked history, not in the current work summary.
+Link the governing agreement or specification. Give a short reader summary without restating its normative requirements. Include the current revision or state and only the starting evidence that affects this sequence.
+
+Identify the existing task record and when it was reconciled. Keep superseded directions in clearly marked history, not in current units.
 
 Identify whether this is an executable implementation plan or a conditional discovery/impact map. Name material open decisions and their dependent units; do not bury unresolved behavior in a generic first unit.
 
@@ -12,18 +14,22 @@ Identify whether this is an executable implementation plan or a conditional disc
 
 For each unit:
 
-1. **Result:** behavior or contract completed.
-2. **Scope:** exact files, symbols, components, or a marked discovery task.
-3. **Dependencies:** prerequisites and compatibility boundary.
-4. **Change:** focused implementation action, reused capability, and the requirement or concrete failure that justifies a new mechanism.
-5. **Completion check:** observation that would prove this unit on the resulting artifact.
-6. **Status and observed evidence:** pending, in progress, blocked, or complete; actual result and artifact revision/state when checked. Separate local verification from publication and activation. Use the project's equivalent status names if they already exist.
+1. **Result:** behavior completed, referencing its accepted requirement.
+2. **Change and scope:** focused action, exact files, symbols or components, reused capability, and the requirement or concrete failure that justifies a new mechanism. Mark unresolved locations as discovery.
+3. **Dependencies and interfaces:** prerequisites, compatibility boundary, and exact consumed or produced contracts when another unit relies on them.
+4. **Completion check:** observation that would prove this unit on the resulting artifact, including the decisive assertion and material failure or preservation case.
+
+Keep status in the chosen task record. Reference observed results and the artifact checked in supported fields or the conversation. Separate local verification from publication and activation. Link existing task identifiers here instead of maintaining a second copy. A task marked complete is not evidence that its completion check ran.
 
 Use stable unit identifiers when dependencies or evidence refer to them. Keep optional improvements outside required units, dependencies, and estimates.
 
+## Review focus
+
+Identify material input classes, failure paths, or preservation obligations not covered by the main operation. Link their checks to the owning units. Keep unresolved product choices explicit rather than inventing expected behavior for them. Omit this section when it adds no distinct check.
+
 ## Continuation state
 
-State the current unit and next authorized action, with links to completed evidence. Record material blockers and their owners, pending decisions, relevant uncommitted work, and running operations or workers when present. If another task document already owns this state, link it rather than maintaining a second copy. Update at material transitions, not after every tool call.
+Point to the current task record for the current unit, next authorized action, and completed evidence. Include only continuation facts not already recoverable there, such as a pending decision, material blocker, uncommitted work, or running operation. A requested cross-tool handoff may include a dated snapshot; do not maintain it as a second live checklist. Update at material transitions, not after every tool call.
 
 ## Integration and release order
 

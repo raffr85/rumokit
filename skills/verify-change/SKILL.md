@@ -9,7 +9,7 @@ Evaluate the claim against the resulting artifact. As a supporting skill, return
 
 ## Bind the claim to the expected outcome
 
-Recover the requested outcome, accepted decisions, representative example, preservation obligations, and stopping point from the conversation or existing task artifacts. An agent-authored spec or test is not an independent source of user intent. If a material expectation was never settled, identify that gap and use `clarify-intent` before claiming agreement; do not validate the assumption by repeating it in the report.
+Apply [check-agreement](../check-agreement/SKILL.md) to recover the requested outcome, accepted decisions, representative example, preservation obligations, and stopping point from their sources and compare them with the actual artifact. Reuse a current comparison already made by the owner. An agent-authored spec or test is not an independent source of user intent. If a material expectation was never settled, identify that gap and use `clarify-intent` before claiming agreement; do not validate the assumption by repeating it in the report.
 
 Name the exact claim, acceptance boundary, final artifact identity, revision or state, and material consumers. Distinguish integrated output from a worker's branch or worktree. A claim about the wrong revision or a pre-mutation result is not current evidence.
 
@@ -58,4 +58,4 @@ Report at the scale of the claim. An inline summary is enough when no durable re
 - `INCONCLUSIVE`: evidence is missing, stale, ambiguous, or cannot reach the needed boundary;
 - `NOT_APPLICABLE`: the proposed check does not address this claim.
 
-Separate outcome fit, technical correctness, and unverified scope. List failures and gaps before a verdict, mapping each material expectation to the observed result and its evidence. Reuse fresh observations against unchanged artifacts and environments; do not rerun checks for the wording of a final claim. Never translate advisory evidence into enforcement, confinement, universal correctness, or production proof.
+Separate outcome fit, technical correctness, and unverified scope. List failures and gaps before a verdict, mapping each material expectation to the observed result and its evidence. Use [write-clearly](../write-clearly/SKILL.md) to explain what the user can do and which requested behavior remains unverified. Reuse fresh observations against unchanged artifacts and environments; do not rerun checks for the wording of a final claim. Never translate advisory evidence into enforcement, confinement, universal correctness, or production proof.

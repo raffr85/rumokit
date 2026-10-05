@@ -36,6 +36,8 @@ Before recommending a correction, connect the suspicious code to a current calle
 
 ## Finish with a usable mental model
 
+For the explanation, load and follow [write-clearly](../write-clearly/SKILL.md), reusing its full body when already loaded. This also applies to a focused direct invocation without the router.
+
 Return:
 
 - the behavior in plain language;

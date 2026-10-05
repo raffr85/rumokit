@@ -12,9 +12,10 @@ request + developer context
   -> clarify-intent establishes the requested outcome and material decisions
   -> one primary outcome owner
   -> focused supporting skills, when their output is needed
+  -> unresolved product choices use resolve-product-decisions; ambiguous domain models use model-domain
   -> impact, coordination, or delegation overlays, when observed conditions require them
-  -> expected outcome compared with evidence on the final artifact
-  -> relevance pass inside the owner before return
+  -> check-agreement compares material proposed changes and delivered effects with accepted intent
+  -> evidence on the final artifact and a write-clearly response inside the owner
 ```
 
 The framework does not own the host's agent loop. It supplies focused decision procedures to the model and uses native host tools. A host adapter raises the visibility and persistence of the portable router; it does not classify user intent independently or block an unsupported recommendation.
@@ -39,7 +40,7 @@ Implementation, debugging, and refactoring use `verify-change` when choosing and
 
 For stateful, temporal, retry-sensitive, or interacting rules, verification derives a material invariant from the accepted outcome and exercises a short sequence that could violate it, including the visible consequence. This adds a way to select discriminating evidence, not a universal TDD requirement, test quota, review stage, or domain-specific oracle. The support-queue failure motivated the mechanism; its effectiveness beyond that case remains to be established.
 
-An owner may investigate facts without interruption, but it must not silently convert technical maturity or a conservative default into product priority. `scope-product-increment` reconciles each material outcome and keeps product priority separate from implementation order. When multiple material outcomes remain credible without a settled priority, it composes `clarify-intent` before drafting a preferred boundary or order. The clarification covers only the current decision frontier and then returns control to the owner; RumoKit does not require an up-front interview or an exhaustive decision tree.
+An owner may investigate facts without interruption, but it must not silently convert technical maturity or a conservative default into product priority. `scope-product-increment` reconciles each material outcome and keeps product priority separate from implementation order. When multiple material outcomes remain credible without a settled priority, it composes `clarify-intent` before drafting a preferred boundary or order. The clarification resolves the material choice needed for the current result and then returns control to the owner; RumoKit does not require an up-front interview or an exhaustive decision tree.
 
 Before returning, the owner removes repeated evidence, detail that cannot change the current result, late decorative questions, and artifacts beyond the requested stopping point. This relevance pass cannot narrow required outcomes or authorize a product choice. If it finds an unsupported commitment, control returns to the decision owner and `clarify-intent`.
 
@@ -55,6 +56,8 @@ A utility can own the result when the user directly requests its artifact. Other
 | Outcome | `research-decision` | Facts, options, contradictions, and evidence gaps |
 | Outcome | `scope-product-increment` | MVP, V1, product boundary, and release-order decisions |
 | Outcome | `clarify-intent` | Material human decisions needed for the requested result |
+| Outcome/support | `resolve-product-decisions` | Consequential product choices resolved through an example-driven interview |
+| Outcome/support | `model-domain` | Precise terms, states, invariants, and authority relationships |
 | Outcome | `prototype-decision` | A disposable artifact that answers one uncertain question |
 | Outcome | `design-change` | A selected design with boundaries and tradeoffs |
 | Outcome | `specify-change` | A behavioral specification and acceptance boundary |
@@ -62,25 +65,37 @@ A utility can own the result when the user directly requests its artifact. Other
 | Outcome | `implement-change` | New or changed behavior on the real path |
 | Outcome | `debug-change` | Root-cause fix with reproduction and regression evidence |
 | Outcome | `refactor-change` | Structural change with preservation evidence |
-| Outcome/support | `remove-slop` | Changed-artifact necessity check or requested cleanup, preserving behavior and meaning |
+| Outcome/support | `reduce-complexity` | Changed-artifact necessity check or requested cleanup, preserving behavior and meaning |
+| Outcome/support | `check-agreement` | Proposed or delivered effects reconciled with accepted outcomes and exclusions |
+| Outcome/support | `write-clearly` | Understandable technical writing with concrete result, evidence, and limits |
 | Outcome | `verify-change` | Bounded verdict from task-shaped evidence |
 | Outcome | `review-change` | Prioritized, evidence-backed findings |
 | Outcome | `finish-change` | Final-state readiness and handoff |
 | Outcome | `prepare-pr` | Reviewable PR description and requested creation or update |
 | Outcome | `address-review` | Evidence-backed feedback dispositions and authorized resolutions |
 | Outcome | `fix-ci` | CI cause, authorized repair, and current-revision check status |
-| Outcome | `watch-pr` | Requested monitoring or shepherding through a stated stop condition |
+| Outcome | `watch-pr` | Monitoring or authorized follow-through until the agreed stop condition |
 | Overlay | `assess-blast-radius` | Concrete downstream impact and tested safety facts |
 | Overlay | `coordinate-change` | Dependency, revision, integration, and release topology |
 | Overlay | `delegate-work` | Safe partitioning and adjudication of independent work |
 | Utility | `resume-work` | Current state reconstructed from history and live evidence |
 | Utility | `create-project-verification` | Created or repaired project-local instructions for driving the real surface |
 
-The catalog size is not a target. Keep a skill separate only while it has a distinct trigger and completion condition. Router-led new work loads clarification and one owner. A directly requested narrow result can establish its already-explicit scope inline. Design, specification, and planning share `remove-slop` with code-changing owners and review. Its necessity check distinguishes accepted obligations from proposed mechanisms before those mechanisms become required work. Reuse an equivalent check of unchanged content rather than adding a cleanup phase. Placement remains conditional.
+The catalog size is not a target or a cap. A separate capability can improve discovery and application when it has a distinct trigger and completion condition. Router-led new work loads clarification and one owner. A directly requested narrow result can establish its already-explicit scope inline. Design, specification, and planning share `reduce-complexity` with code-changing owners and review. Its necessity check distinguishes accepted obligations from proposed mechanisms before those mechanisms become required work. Reuse an equivalent check of unchanged content rather than adding a cleanup phase. Placement remains conditional.
+
+`clarify-intent` binds the current task and working agreement. A consequential unresolved product choice activates `resolve-product-decisions` before dependent work; ambiguous terminology, transitions, or effect ownership activates `model-domain`. These are reusable independent capabilities, not a requirement to interview every fully specified edit or create a glossary for every task.
+
+`check-agreement` runs before a newly exposed material commitment, at worker integration, after conflicting recovery, and when assessing final outcome fit. It distinguishes aligned, unresolved, and conflicting changes from evidence gaps. New persistence or infrastructure is allowed when the accepted guarantees justify it; the check must not reduce the requested capability to make the artifact easier to validate.
+
+`write-clearly` governs substantive user-facing technical results, including focused direct entries. `reduce-complexity` still owns unnecessary complexity in the artifact. Readable writing and technical necessity are separate checks. Neither one replaces verification or turns a model's self-report into enforcement.
 
 PR work follows the requested result. `review-change` finds defects; `address-review` evaluates an existing feedback queue. `prepare-pr` makes the change reviewable and performs requested PR creation or updates. `fix-ci` diagnoses check executions and carries out authorized repairs. `watch-pr` owns ongoing follow-through, using the host's monitoring facilities and composing repairs only within the user's authority. None implies a pipeline, a push, or a merge. One-time readiness questions remain with `finish-change`.
 
 Descriptions distinguish these entry points before their bodies are loaded. The common verification path stays in `verify-change`; state, asynchronous-effect, and recovery details load from its reference when those properties affect correctness. This changes instruction organization, not the required guarantees. More available skills need not mean more active instructions; routing and behavior still need validation on the actual host.
+
+## Coexistence with other frameworks
+
+Keep domain and tool skills available. Choose a default workflow through the user's instruction or host configuration; useful focused skills can support it. A second framework's mandatory router can still impose its own process. RumoKit reports a real conflict and respects the host's instruction hierarchy rather than claiming that its skill text disables another plugin. Changing startup hooks, global settings, or installed skills requires the corresponding user authority. A mixed-stack exercise must be reported as mixed-stack evidence.
 
 ## Process follows task shape
 
@@ -94,7 +109,9 @@ Descriptions distinguish these entry points before their bodies are loaded. The 
 
 Specs and plans are outputs, not taxes. Create them when the current request includes them or when decisions, dependencies, risk, or handoff make durable state necessary for the requested work. Neither artifact creates an approval gate or requires the other.
 
-When those artifacts exist, their owners use the shared [durable work-state contract](../skills/resume-work/references/work-state.md). A specification records expected behavior and decision authority; a plan records units, status and observed evidence; a compact continuation block identifies the next authorized action. These may share one existing document. Update current state at material transitions, mark replaced directions as history, and resume from that entry point with artifact checks. This is a portable document convention, not a memory service or a pre-compaction hook.
+Task tracking uses the host's available task tools and reuses its existing list. It does not create a parallel `todo.md`, require a specification, or enter planning mode. If task tools are unavailable, tracking stays briefly in the conversation unless the user or an established project convention requires a task file.
+
+The shared [work-state contract](../skills/resume-work/references/work-state.md) separates accepted behavior, planned units, and observed progress without requiring separate files. A specification records behavior and decision authority; a plan references it and defines units and expected checks; live status and evidence stay in the chosen task record. Native records are reused when they preserve the content needed for recovery. Documents remain available for a concrete persistence, portability, or handoff need, not as mandatory mirrors. Update at material transitions and resume from the existing entry point. This is a portable content convention, not a memory service or a pre-compaction hook.
 
 ## Delegation follows separability
 

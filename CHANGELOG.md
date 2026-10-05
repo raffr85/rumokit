@@ -1,5 +1,35 @@
 # Changes
 
+## 2.0.0
+
+- Use available native task tools without a parallel `todo.md`. Keep tracking
+  inline when those tools are unavailable; task files require a user request or
+  established project convention. Recover existing tasks after interruption.
+- Make specification and plan templates content shapes rather than file
+  creation instructions. Separate accepted requirements, planned checks, and
+  observed progress, and reference the chosen task record without live mirrors.
+- Rename the public `remove-slop` skill to `reduce-complexity`. Update discovery,
+  callers, and documentation without changing its procedure or adding an alias.
+  Existing explicit invocations need the new name after installation. This
+  identifier change makes the release incompatible with those invocations.
+- Shorten acknowledgments to general study references rather than mapping each
+  capability to another project's vocabulary.
+- Add independent `resolve-product-decisions`, `model-domain`, `check-agreement`, and
+  `write-clearly` capabilities, with condition-specific automatic activation.
+  Separate product interviewing, domain modeling, agreement reconciliation,
+  and readable communication from the existing clarification and cleanup owners.
+- Compare material proposed effects with the accepted agreement before
+  implementation and worker integration, after conflicting recovery, and at
+  delivery. Preserve delegated technical choices and necessary new mechanisms.
+- Make plans carry decision-rich interfaces, failure checks, and independently
+  verifiable units without transcribing implementation or forcing a tracker.
+- Reconcile worker lifetimes and reuse current evidence and pending reviews on
+  resumption. Report competing mandatory routers rather than silently stacking
+  their processes or changing active installations.
+
+Publishing this release does not update active installations.
+The catalog has no fixed size or prohibition on new skills and triggers.
+
 ## 1.1.0
 
 - Add independent skills for PR preparation, review-feedback resolution, CI

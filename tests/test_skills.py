@@ -10,6 +10,14 @@ ROOT = Path(__file__).resolve().parents[1]
 
 
 class SkillPackagingTest(unittest.TestCase):
+    def test_task_guidance_capabilities_are_discoverable(self) -> None:
+        for name in (
+            "resolve-product-decisions", "model-domain", "check-agreement",
+            "write-clearly", "reduce-complexity",
+        ):
+            with self.subTest(skill=name):
+                self.assertTrue((ROOT / "skills" / name / "SKILL.md").is_file())
+
     def test_pr_capabilities_are_discoverable(self) -> None:
         for name in ("prepare-pr", "address-review", "fix-ci", "watch-pr"):
             with self.subTest(skill=name):

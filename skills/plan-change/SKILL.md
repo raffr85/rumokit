@@ -19,21 +19,26 @@ Add `assess-blast-radius` before sequencing shared contracts. Add `coordinate-ch
 
 ## Sequence by evidence and dependency
 
-Each unit should state:
+Each unit should state, in the host's task record or requested plan:
 
 - the behavior or contract it changes;
 - its concrete scope and exclusions;
 - dependencies and compatibility requirements;
 - the implementation move, what it reuses, and the requirement or concrete failure that makes any new mechanism necessary;
-- the task-shaped evidence that completes it;
-- its current status and any evidence already obtained, bound to the artifact checked.
+- the task-shaped evidence that completes it.
+
+Follow [the work-state contract](../resume-work/references/work-state.md) for current status, artifact-bound evidence, native task tools, and fallback. Reuse existing task identifiers instead of creating a Markdown mirror. A required portable plan can reference those tasks; a handoff snapshot is not another live status list.
 
 Order units so the system remains understandable and, where practical, usable between them. Parallelize only units with independent inputs, outputs, and writable state. Test-first is useful when a fail-before check is cheap and discriminating; it is not a universal phase.
 
-Use [assets/implementation-plan.md](assets/implementation-plan.md) as a compact starting point. Follow [the durable work-state contract](../resume-work/references/work-state.md) so a new session can locate the accepted contract, distinguish planned checks from completed evidence, and identify the next authorized unit. Extend the existing task entry point instead of creating another status document.
+Prefer a narrow complete path that can be exercised independently over one task per technical layer. For a wide compatibility change, use an explicit expand, caller migration, and removal sequence when separate vertical slices cannot stay valid. Include the exact consumed and produced interfaces, pinned requirement values, and decisive assertions where another implementer cannot infer them. Leave routine implementation to that implementer rather than transcribing the future program.
+
+Identify the consequential input or failure class that could satisfy the happy-path checks while breaking the agreed behavior. Assign its check to the owning unit. This is review focus, not a fixed edge-case quota or permission to invent a new business policy.
+
+Use [assets/implementation-plan.md](assets/implementation-plan.md) to shape the content in the selected location, not as a command to create a file. Reference an existing accepted contract rather than restating its normative requirements. Include a short reader summary and only the starting evidence needed for this sequence. Keep the contract, planned checks, observed results, and next authorized unit recoverable without adding another status document.
 
 ## Finish at implementation readiness
 
-Apply `remove-slop` to the plan before handoff, reusing an equivalent check of unchanged content. Cover the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Keep optional improvements outside required units, dependencies, and estimates. Distinguish executable units from conditional ones; coverage counts do not establish readiness.
+Apply [check-agreement](../check-agreement/SKILL.md) and `reduce-complexity` to material planned changes before handoff, reusing equivalent checks of unchanged content. Cover the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Keep optional improvements outside required units, dependencies, and estimates. Distinguish executable units from conditional ones; coverage counts do not establish readiness.
 
-Reconcile the current summary, estimates, and next action with changed or completed units. Explain what will change, in which components, why, what is preserved, and how completion will be checked in the response. Stop at the plan unless implementation is also authorized.
+Reconcile the current summary, estimates, and next action with changed or completed units. Use [write-clearly](../write-clearly/SKILL.md) to explain what will change, in which components, why, what is preserved, and how completion will be checked. Stop at the plan unless implementation is also authorized.

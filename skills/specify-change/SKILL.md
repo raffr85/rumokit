@@ -26,13 +26,17 @@ Cover the parts that matter:
 - examples and acceptance evidence;
 - remaining decisions, owners, and consequences.
 
-Use [assets/change-spec.md](assets/change-spec.md) as a starting shape, deleting sections that do not earn their place. Follow [the durable work-state contract](../resume-work/references/work-state.md) for document identity, decision authority, and its relationship to plans and continuation state. Reuse an existing entry point; a specification does not require a separate status file.
+Start with a short explanation of the outcome and boundaries, then give the behavioral detail a builder or reviewer needs. Express representative acceptance cases as the situation, expected behavior, forbidden effect, and evidence that would distinguish compliance. Include failure and compatibility detail where relevant, not to fill a template.
+
+Use [assets/change-spec.md](assets/change-spec.md) to shape the content in the selected location, deleting sections that do not earn their place. Follow [the work-state contract](../resume-work/references/work-state.md) for record location, decision authority, and its relationship to plans and continuation state. Reuse the accepted record; a specification does not require a file or a separate status list.
 
 ## Check completeness
 
 Walk representative success, failure, boundary, and preservation cases. A reader without the prior conversation should distinguish a compliant implementation from a plausible but wrong one, and accepted decisions from proposals. Reconcile changed decisions with the current summary and linked dependent artifacts, not only a new history entry.
 
-Apply `remove-slop` to the affected specification, including duplicated rules and unsupported mechanisms. Check linked material for consistency; edit it only within the existing authorized scope, otherwise report the dependent correction. Reuse an equivalent check against unchanged content. Explain the resulting behavior, material changes, and remaining decisions in the response, with the document as supporting detail.
+Apply [check-agreement](../check-agreement/SKILL.md) to material proposed behavior. Check completeness, contradictory rules, unresolved interpretation, scope, and unsupported mechanisms. A missing detail matters when it could make a builder implement the wrong result, not because every template section needs equal length.
+
+Apply `reduce-complexity` to the affected specification, including duplicated rules and unsupported mechanisms. Check linked material for consistency; edit it only within the existing authorized scope, otherwise report the dependent correction. Reuse an equivalent check against unchanged content. Use [write-clearly](../write-clearly/SKILL.md) to explain the resulting behavior, material changes, and remaining decisions, with the document as supporting detail.
 
 Stop with the accepted behavioral boundary. Do not expand the document into an implementation plan unless that is also requested.
 

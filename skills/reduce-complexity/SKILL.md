@@ -1,9 +1,9 @@
 ---
-name: remove-slop
+name: reduce-complexity
 description: Use when checking or removing unnecessary complexity in code, designs, plans, or prose.
 ---
 
-# Remove Slop
+# Reduce complexity
 
 Remove unnecessary complexity while preserving the accepted contract. Support the current owner within the affected artifact and its existing authority, before proposed mechanisms become requirements or implementation. A direct cleanup request owns its stated artifact. Neither mode requires a router, spec, plan, or reviewer panel. For a read-only review, return findings without modifying anything.
 

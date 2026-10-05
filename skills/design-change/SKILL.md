@@ -15,7 +15,7 @@ Decide technical alternatives within delegated criteria without asking the user 
 
 If a design choice changes who receives an effect, when it takes effect, or how existing state is processed, establish its authority through `clarify-intent` before treating it as settled. Mark unaccepted proposals as proposals; agreement on capabilities does not settle every behavior within them.
 
-Describe the domain and state transitions before choosing modules or abstractions. Add `assess-blast-radius` for shared boundaries and `coordinate-change` for independently versioned components.
+Describe the domain and state transitions before choosing modules or abstractions. Use [model-domain](../model-domain/SKILL.md) when terminology, transitions, or authority remain ambiguous or are changing. Add `assess-blast-radius` for shared boundaries and `coordinate-change` for independently versioned components.
 
 ## Compare credible options
 
@@ -23,11 +23,13 @@ Start with the existing path and the smallest change that could satisfy the acce
 
 Compare viable options against correctness, security, compatibility, reversibility, maintenance effort, and the team's stated delivery and operating constraints. Separate necessary changes from optional improvements. Simplicity cannot justify dropping required behavior or protection. Use `prototype-decision` only when a focused artifact can distinguish the options.
 
-Apply `remove-slop` to the proposed design before carrying its mechanisms into a specification or plan. Reuse an equivalent check of the same proposal; do not add a separate stage, document, or reviewer.
+Apply [check-agreement](../check-agreement/SKILL.md) before carrying a material new mechanism into the selected design. When implementation exposes a repeated structural mismatch, reconsider the owning design rather than layering the same workaround. Update accepted deviations and their decision sources in the existing contract before another unit or worker consumes it.
+
+Apply `reduce-complexity` to the proposed design before carrying its mechanisms into a specification or plan. Reuse an equivalent check of the same proposal; do not add a separate stage, document, or reviewer.
 
 ## Produce the selected design
 
-Explain the selected solution in the response: what changes, where, why it is needed, and what remains unchanged. Supporting documents do not replace that explanation. Record the relevant detail:
+Use [write-clearly](../write-clearly/SKILL.md) to explain the selected solution: what changes, where, why it is needed, and what remains unchanged. Supporting documents do not replace that explanation. Record the relevant detail:
 
 - objective and non-goals;
 - current-system evidence;

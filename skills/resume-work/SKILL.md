@@ -13,7 +13,7 @@ When material work remains after a compaction, recovery is required before anoth
 
 Match recovered context to the current task before treating it as continuation. Sharing a repository, a keyword or an open app does not make two sessions the same task. Other sessions and memory can supply relevant evidence, not a replacement request or transferable approval. Reuse accepted decisions and authority for the same continuing task and scope; keep another task's instructions and pending work separate unless the current request connects them.
 
-For work with durable artifacts, locate the existing task entry point and read its continuation state using [the durable work-state contract](references/work-state.md). Follow links to the relevant contract, decisions, and unfinished units. Expand to the handoff or transcript only for missing authority, stale state, or contradictions; do not start by rereading the whole project history. When no durable state exists, recover from available history without making a new document mandatory. Extract:
+Recover the existing host task list or explicitly chosen task file using [the work-state contract](references/work-state.md). Reuse task identifiers and progress rather than creating a replacement list. For work with a durable agreement, locate its existing entry point and continuation state. Follow links to the relevant contract, decisions, and unfinished units. Expand to the handoff or transcript only for missing authority, stale state, or contradictions; do not start by rereading the whole project history. When no durable state exists, recover from available history without making a new document mandatory. Extract:
 
 - the user's requested result, accepted operational example, preservation obligations, and stopping point;
 - decisions with their authority or source, explicit exclusions, and unanswered questions;
@@ -41,6 +41,8 @@ Do not rerun or reread expensive work when identity and freshness already make i
 
 When a later decision supersedes an earlier direction, invalidate or rebind its downstream recommendations, rollout gates, and next artifacts before continuing.
 
-## Return a continuation capsule
+If recovered directions conflict, apply [check-agreement](../check-agreement/SKILL.md) against the actual decision sources before taking the next dependent action. Recover the agreement and in-flight work, not merely the instruction files. An unchanged completed check or pending review is reused, not scheduled again because its context was compacted.
 
-Return the recovered outcome, current state, evidence limits and next authorized action to the active owner. Reuse an existing continuation block when present; otherwise keep recovery inline. Correct stale task state when document maintenance is within scope; for read-only work, report the discrepancy. Continue through the same owner and stop point without a new planning or approval phase.
+## Return a continuation summary
+
+Return a compact summary: accepted outcome and exclusions, actual artifact and completed evidence, pending operation or choice, and next authorized action. Name any unknown that could change that action. Reuse an existing continuation block when present; otherwise keep recovery inline. Correct stale task state when document maintenance is within scope; for read-only work, report the discrepancy. Continue through the same owner and stop point without a new planning or approval phase.

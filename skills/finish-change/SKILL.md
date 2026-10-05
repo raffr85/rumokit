@@ -17,7 +17,7 @@ Use `coordinate-change` when readiness depends on multiple repositories, version
 
 ## Resolve contradictions
 
-Compare the final artifact with the accepted user outcome, examples, and preservation obligations, not only the latest plan or specification. State what was expected, what is integrated, and what is actually evidenced. Worker-only output and documented but absent capabilities remain unfinished. Surface unplanned changes, stale results, skipped boundaries, open findings, and claims that exceed the evidence. Confirm that no recommendation, rollout gate, or next artifact still depends on a superseded direction. Do not hide blockers in a general success summary.
+Apply [check-agreement](../check-agreement/SKILL.md) to the final artifact, reusing a current comparison from verification. Compare with the accepted user outcome, examples, and preservation obligations, not only the latest plan or specification. State what was expected, what is integrated, and what is actually evidenced. Worker-only output and documented but absent capabilities remain unfinished. Surface unplanned changes, stale results, skipped boundaries, open findings, and claims that exceed the evidence. Confirm that no recommendation, rollout gate, or next artifact still depends on a superseded direction. Do not hide blockers in a general success summary.
 
 For a durable handoff, follow [the durable work-state contract](../resume-work/references/work-state.md) and use [assets/change-handoff.md](assets/change-handoff.md) as needed. Update the existing entry point with final progress and the next action; do not leave a competing current summary behind. A separate handoff file is unnecessary when the existing task document already provides it.
 
@@ -29,4 +29,4 @@ Choose one:
 - `NOT_READY`: a concrete blocker prevents that action;
 - `INCONCLUSIVE`: required state or evidence cannot be established.
 
-State the next observation or action within the requested stopping point and who or what owns it. A status-only answer may be complete without another action; missing evidence calls for the missing observation, not an instruction to merge or deploy afterward. Do not merge, deploy, publish, delete, or approve on the user's behalf without authority.
+Use [write-clearly](../write-clearly/SKILL.md) to state the actual delivery state, what the user can do, and the next observation or action within the requested stopping point. Name who or what owns that action. A status-only answer may be complete without another action; missing evidence calls for the missing observation, not an instruction to merge or deploy afterward. Do not merge, deploy, publish, delete, or approve on the user's behalf without authority.
