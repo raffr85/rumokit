@@ -23,6 +23,8 @@ For a durable handoff, follow [the durable work-state contract](../resume-work/r
 
 ## Give the next-step decision
 
+If the user requested execution and an in-scope action can still advance it, take that action before handing off. If one effect needs unavailable access, finish and verify the separable effects. For a status or review request, report the state at the requested boundary.
+
 Choose one:
 
 - `READY_FOR_NEXT_STEP`: the named next action is supported within scope;

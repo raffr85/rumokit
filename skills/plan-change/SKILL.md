@@ -39,6 +39,8 @@ Use [assets/implementation-plan.md](assets/implementation-plan.md) to shape the 
 
 ## Finish at implementation readiness
 
+For a plan that another team or session must execute, apply the [handoff check](../review-change/references/handoff.md) to a unit whose meaning depends on the drafting conversation.
+
 Apply [check-agreement](../check-agreement/SKILL.md) and `reduce-complexity` to material planned changes before handoff, reusing equivalent checks of unchanged content. Cover the requested result, preservation obligations, integration edges, and final evidence without speculative future infrastructure. Keep optional improvements outside required units, dependencies, and estimates. Distinguish executable units from conditional ones; coverage counts do not establish readiness.
 
 Reconcile the current summary, estimates, and next action with changed or completed units. Use [write-clearly](../write-clearly/SKILL.md) to explain what will change, in which components, why, what is preserved, and how completion will be checked. Stop at the plan unless implementation is also authorized.

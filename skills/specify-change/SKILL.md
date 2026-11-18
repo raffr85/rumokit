@@ -11,6 +11,8 @@ Write the behavioral contract needed to build or review the change. A specificat
 
 Establish or reuse the outcome through `clarify-intent`, including direct invocation. Inspect current behavior and relevant interfaces. Carry forward accepted examples, preservation obligations, and the basis for decisions; do not replace user intent with a technically convenient scope. Incorporate accepted research and design without reopening settled choices. Use `coordinate-change` for versioned component edges.
 
+When revising an existing spec, identify which old rules the new decision actually replaces. Check a distinguishing input against the user's words and the surviving rule before writing the new expected result. A reader can implement a perfectly clear example of the wrong behavior.
+
 Describe behavior independently of an imagined implementation unless the mechanism is itself an accepted requirement. For a proposed mechanism, state the required behavior it supports and why existing capabilities cannot supply it. Keep optional improvements outside the required contract.
 
 ## Make boundaries testable
@@ -32,7 +34,7 @@ Use [assets/change-spec.md](assets/change-spec.md) to shape the content in the s
 
 ## Check completeness
 
-Walk representative success, failure, boundary, and preservation cases. A reader without the prior conversation should distinguish a compliant implementation from a plausible but wrong one, and accepted decisions from proposals. Reconcile changed decisions with the current summary and linked dependent artifacts, not only a new history entry.
+Walk representative success, failure, boundary, and preservation cases. When another implementer will receive the spec without this conversation, use the [handoff check](../review-change/references/handoff.md). Reconcile changed decisions with the current summary and linked dependent artifacts, not only a new history entry.
 
 Apply [check-agreement](../check-agreement/SKILL.md) to material proposed behavior. Check completeness, contradictory rules, unresolved interpretation, scope, and unsupported mechanisms. A missing detail matters when it could make a builder implement the wrong result, not because every template section needs equal length.
 

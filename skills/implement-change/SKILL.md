@@ -9,6 +9,8 @@ Own the requested behavior through a working, evidenced result.
 
 ## Confirm the target
 
+When a change lets an existing action run under a new condition, or separates what one person submits from what another later receives, use [resolve-product-decisions](../resolve-product-decisions/SKILL.md) before the first edit. This applies even when reusing the old code would give an obvious default. If an accepted contract already covers the later result in that condition, use it and proceed.
+
 Load and follow `clarify-intent` before selecting the implementation, including when this skill is invoked directly. Load dependencies through the host's skill tool or by reading their full `SKILL.md`; reuse bodies already in context. Their names and descriptions alone are not their instructions. Reuse the established outcome, accepted example, preservation obligations, and stopping point on continuation instead of eliciting them again. Inspect the real execution path and working state before editing. Keep this agreement as the acceptance source; implementation convenience does not change it.
 
 Use an existing specification or plan when one is accepted. Create one only when the change's uncertainty, dependency structure, risk, or handoff requires it.
@@ -47,4 +49,4 @@ Load and follow `verify-change` when choosing and interpreting evidence within t
 
 For a multi-component handoff or release-readiness claim, apply `finish-change` to reconcile the final inventory, evidence, and remaining actions.
 
-Use [write-clearly](../write-clearly/SKILL.md) for the result. Return how the implemented behavior meets the accepted outcome, material files or contracts changed, evidence obtained, and missing or unverified expectations. If part remains incomplete, say what the user still cannot do. Do not merge, deploy, publish, or broaden scope without authority.
+Use [write-clearly](../write-clearly/SKILL.md) for the result. Name the material files or contracts changed. When there is an intent receipt, close it in this reply with the checked artifact, expected and observed behavior, and material gaps. Reuse the verification result. If part remains incomplete, say what the user still cannot do. Do not merge, deploy, publish, or broaden scope without authority.

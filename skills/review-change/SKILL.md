@@ -24,7 +24,9 @@ Prioritize:
 3. missing or misleading validation on a material path;
 4. unnecessary complexity and maintainability problems supported by the actual diff and callers.
 
-Trace each candidate finding to executable behavior, a violated contract, or a credible concrete scenario. Check whether nearby code already handles it. Do not report personal style preferences, speculative architecture, or issues unrelated to the change.
+Trace each finding to a concrete failure or violated contract. For a PR finding, compare the same input or caller on base and head. What fails now that previously worked or could not occur? An unchanged helper can become reachable through a new caller. A touched line can preserve an old defect or project convention. Attribute the regression to the change that exposes it. Keep independent baseline issues out of blocking PR comments; include them when the requested review covers existing defects. If the base is unavailable, qualify attribution.
+
+For a specification or plan being handed to another implementer, use the [handoff check](references/handoff.md) when a missing decision could change the result.
 
 For changed handlers and coordinating code, follow failure and cleanup paths as well as success. Check what happens to dependent or waiting work when an earlier operation fails: can it complete, fail, or be cancelled according to the contract? When context can change while work is pending, check that late errors remain attributable to the operation that produced them. Separate a broken guarantee from optional resilience that would require a new policy.
 

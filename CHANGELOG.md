@@ -1,5 +1,22 @@
 # Changes
 
+## 2.1.0
+
+- Teach `verify-change` to reuse sufficient tests and protect distinct failures that the existing suite would miss.
+- Capture a short intent receipt before implementing material behavior. At
+  delivery, compare the agreement with the checked revision and show any
+  mismatch or gap in the same conversation.
+- Ask which behavior to implement when two outcomes fit the request and the
+  choice belongs to the user. A settled or delegated decision can proceed.
+- Check which existing rules survive a spec revision. For consequential
+  handoffs, test whether the next implementer can use the artifact by itself.
+- Compare a PR finding with behavior on the base revision, including defects
+  exposed by new callers of unchanged code.
+- Shorten the startup router. Recover incomplete skill reads, check relevant
+  alternative evidence when a source is unavailable, and continue authorized work.
+- Add reproducible, synthetic review, handoff, repair and product-decision
+  exercises. See the [validation results](docs/VALIDATION.md).
+
 ## 2.0.0
 
 - Use available native task tools without a parallel `todo.md`. Keep tracking

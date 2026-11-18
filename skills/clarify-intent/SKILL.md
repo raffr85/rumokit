@@ -5,7 +5,11 @@ description: Use when starting software work or when the intended outcome or mat
 
 # Clarify Intent
 
-Establish a shared understanding of the requested result. Clarification is always part of the work; it is not an optional reaction to feeling uncertain.
+Before editing, follow a real situation the old product could not represent through to the person who sees the result. When several actions can occur before that result and their combined effect is unsettled, put two distinct occurrences inside that interval in the question you send. Ask what the person sees, in order. An answer about a single occurrence settles only that case.
+
+Check the behavior you are about to promise. For each material outcome, including a proposed refusal, name what selects it: the user's words, an existing contract for that situation, or delegated criteria. If two responses still meet those terms and affect the user differently, describe the starting situation and ask the user to supply the missing outcome. If they can answer by picking an outcome you named, rewrite the question. Ask about independent decisions separately in the same message.
+
+While waiting, inspect facts or run existing checks. Leave implementation of the feature and its acceptance tests until the decisions arrive; a partial edit can silently make a default observable. Follow up when a material choice remains open or the answer opens a new one. Fully specified behavior and delegated implementation details can proceed immediately.
 
 ## Establish the outcome
 
@@ -15,7 +19,7 @@ Bind source and tool selection to the current task and its relevant project, env
 
 Keep a compact working agreement in the conversation or an existing task artifact: the observable outcome and who needs it, material constraints and preservation obligations, settled decisions and their basis, open choices, and the requested stopping point. Distinguish the investigation surface from the authorized changes: permission to inspect broadly or prepare repositories does not authorize repairing every discovered problem. Distinguish user decisions, delegated choices, technical facts, and assumptions. Do not create a separate document or approval turn merely to hold this understanding.
 
-State the understood outcome and decisive constraints briefly before committing to a solution, so the user can recognize a misunderstanding. This is a write-back, not a new permission request. An explicit accepted instruction already supplies authority within its scope.
+When material behavior is settled, give the user a short **intent receipt** before the first dependent edit. Use one “Agreed” sentence in their language. Attribute the rule to the user's answer or an accepted spec passage and show the distinguishing input and expected result together. Quote an example the user already gave, or derive one from their explicit rule. Include a consequential exclusion or open choice when it limits the claim. Continue under existing approval. Routine mechanical edits need no separate receipt.
 
 An explicit, sufficiently defined request can establish this agreement immediately. Otherwise, test the understanding against a concrete example of the user's operation. Extract the behavior the example illustrates; a sample vendor, technology, or name is not an additional integration requirement.
 
@@ -23,7 +27,7 @@ When the user rejects the subject, scope, or complexity, stop work based on that
 
 ## Resolve material choices
 
-For new or changed behavior, trace a representative operation and what must remain unchanged. If the terms, states, or effect owners are ambiguous, apply [model-domain](../model-domain/SKILL.md). Code can reveal existing behavior; it cannot choose the intended result.
+Use a concrete example to check what the answer settles. Use [model-domain](../model-domain/SKILL.md) for unclear terms, states or owners.
 
 When credible alternatives would materially change outcomes, included capabilities, authority, risk, or cost, load and follow [resolve-product-decisions](../resolve-product-decisions/SKILL.md) before dependent research, planning, delegation, or implementation. Its interview resolves the needed choice rather than producing a generic open-decisions list. Use `scope-product-increment` when the product boundary itself needs resolution. For an inventory-only request, report unknowns without pulling future choices into scope.
 
@@ -35,6 +39,6 @@ For a cheap, reversible detail that does not change the core outcome, make a cle
 
 Closure requires an explicit request or answer, a prior accepted decision, delegated choice with sufficient criteria, or evidence that eliminates the material alternatives. Silence about an announced default is not acceptance. Writing an assumption into a draft does not settle it. Preserve decisions and constraints in the resulting recommendation; do not ask the user to approve them again.
 
-Return the agreement to the primary owner. Keep its concrete example and preservation obligations available to implementation, delegation, and final verification. Revisit only newly opened material choices. When a decision changes, replace the superseded expectation and its dependent plan or checks; do not silently rewrite the expectation to match what was built.
+Keep the receipt in this conversation by default. When the work already uses a task record or spec for handoff, put it there or point to the exact passage that already captures it. If a later decision changes an expectation, identify what it replaces, cite the new authority, and carry unaffected promises forward. Return the current receipt to the owner for implementation and final verification.
 
 Before a newly exposed material commitment or a disputed delivery-fit claim, compose [check-agreement](../check-agreement/SKILL.md). Reuse the established understanding; reopen only the choice that the comparison shows is unresolved.

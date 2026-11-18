@@ -68,7 +68,7 @@ A utility can own the result when the user directly requests its artifact. Other
 | Outcome/support | `reduce-complexity` | Changed-artifact necessity check or requested cleanup, preserving behavior and meaning |
 | Outcome/support | `check-agreement` | Proposed or delivered effects reconciled with accepted outcomes and exclusions |
 | Outcome/support | `write-clearly` | Understandable technical writing with concrete result, evidence, and limits |
-| Outcome | `verify-change` | Bounded verdict from task-shaped evidence |
+| Outcome | `verify-change` | Regression coverage for independent failure modes and a verdict on the delivered behavior |
 | Outcome | `review-change` | Prioritized, evidence-backed findings |
 | Outcome | `finish-change` | Final-state readiness and handoff |
 | Outcome | `prepare-pr` | Reviewable PR description and requested creation or update |

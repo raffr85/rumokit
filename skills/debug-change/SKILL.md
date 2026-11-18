@@ -17,11 +17,11 @@ Before asking the user to repair authentication or configuration, check the fail
 
 ## Narrow with discriminating evidence
 
-Form the smallest current hypothesis and run the cheapest observation that could disprove it. Every retry should add information. Read callers and sibling paths before changing a shared function.
+Form the smallest current hypothesis and run the cheapest observation that could disprove it. If the first source is unavailable, empty, or covers a shorter interval than the incident, try a relevant authorized alternative that could distinguish the explanations. Check its time range, identity and coverage before inferring absence. If still blocked, name the inaccessible observation and finish the independent work. Read callers and sibling paths before changing a shared function.
 
 Before prescribing a correction, verify the causal premise that makes it appropriate. Bind explanatory source and configuration to the failing runtime's revision; unmatched local code is a candidate explanation, not proof of the live cause. Distinguish a directly observed fault from alternatives still compatible with the evidence. If a decisive check is unavailable or fails, keep the recommendation conditional and name the missing observation. A request for the fix does not confirm the hypothesis.
 
-A fail-before test is valuable when it faithfully reproduces the defect and is cheap to retain. Do not force test-first when the failure lives in a surface the test cannot observe.
+Use [verify-change](../verify-change/SKILL.md) when choosing regression coverage during the repair. A test that reproduces the symptom on the failing revision can also protect the fix.
 
 ## Fix the owner when authorized
 

@@ -14,6 +14,111 @@ not distributed, so this report alone is not a publicly reproducible benchmark.
 | Later focused exercises | Specific observed decisions and behaviors | Causal reliability gains or a full new acceptance run |
 | Package tests | Manifest consistency, hook output, and relocation | Model compliance or automatic activation in every host |
 
+## 2.1.0, 18 November 2026
+
+We installed 2.0.0 and the candidate in separate Codex CLI 0.159.0 profiles.
+The task prompts, product-owner replies, fixture setup and executable graders
+are in [portable workflow exercises](../tests/scenarios/portable-workflows.md).
+We inspected the bootstrap delivered to the scored sessions. An earlier setup
+still exposed user-level Superpowers skills and was excluded. The clean runs
+disabled those ambient skills per process. Fresh handoff consumers had the
+same host defaults with plugins disabled and received only their respective spec
+as task data. These are maintainer-run synthetic exercises, one run per cell.
+
+| Exercise | 2.0.0 | Final candidate |
+| --- | --- | --- |
+| Merge saved views, Sol | Implemented a duplicate rule before asking. It happened to match the later decision. | Asked what counts as a duplicate before editing. After the reply all five checks passed, as on 2.0.0. |
+| Same request, Astra, different user preference | Its first patch failed three of five checks for that preference. It corrected the patch after the reply. | Asked before editing. Its first implementation after the reply passed all five. |
+| Transfer to draft expiry, Sol | Asked which date starts the clock. | Also asked. Both passed after clarification and implemented directly in the fully specified control. |
+| Spec passed to a fresh implementer, Sol | Five of five input/output and preservation cases passed. | Five of five passed. An earlier candidate incorrectly turned an absent slot into a blank line and failed two; the reader faithfully implemented the faulty spec. |
+| Repair with an offline feed, Sol | Four of four external CLI cases passed. Used the captured feed. | Same result. The checks cover the saved feed and the resulting report. |
+| PR review, Sol | Found the newly reachable failure, with no unrelated blocking comments. | Same result. The unchanged helper now receives a valid input that the old caller filtered out. |
+
+The control with workflow plugins disabled also guessed the merge rule on Sol.
+The first candidate guessed it too. We revised clarification to check for
+different visible outcomes that satisfy the same constraints, and spec revision
+to preserve the rules the new decision leaves in force. The merge retest is a
+development regression. The separate expiry task checks transfer and unnecessary
+questioning. These exercises do not measure failure rates in the field.
+
+For the six matched Sol workflows (review, handoff including its consumer,
+repair, two-turn merge, two-turn expiry, and settled expiry), the CLI reported:
+
+| Version | Input incl. cache hits | Cached input | Input minus cache hits | Output incl. reasoning | Sum of active turn seconds |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| 2.0.0 | 781,098 | 646,400 | 134,698 | 10,085 | 297.06 |
+| 2.1.0 candidate | 721,091 | 511,872 | 209,219 | 11,107 | 335.62 |
+
+Each resumed conversation contributes its final cumulative token counter once.
+Active times exclude waiting for the operator and may overlap across exercises.
+The requested models were GPT-6.1 Sol and GPT-6 Astra, medium reasoning. Cache
+utilization varied; these observations do not establish lower cost or latency.
+The startup skill itself shrank from 8,382 to 5,198 bytes. Both builds in that
+comparison had 30 skills. On the two-turn Astra merge case, 2.0.0 used 167,292 input
+tokens (144,384 cached) and 2,199 output. The candidate used 190,646 input
+(167,808 cached) and 2,182 output. Active times were 70.12 and 70.77 seconds.
+
+The 15 package tests passed, as did metadata validation for all 30 skills.
+Claude Code 2.1.319 accepted the plugin and marketplace manifests. Model
+execution in this comparison used Codex. No new end-to-end Devin or Claude
+behavioral run was recorded.
+
+### Same-session intent receipt
+
+In a synthetic archive task on Codex CLI 0.159.0 with GPT-6.1 Sol at medium
+reasoning, the user supplied a rule without an example. Before editing, the
+agent worked out that visible A, B, A followed by a withdrawn B should yield
+B, A. Its delivery reply reported that same result from the local Python API,
+and the named test asserted it. We then substituted first-occurrence ordering
+and three tests that still passed. Asked to review the checkout in the same
+conversation, the agent observed A, B and flagged the mismatch. The working
+files were unchanged during review. An earlier draft ran the right check but
+omitted the observation from its successful delivery reply. This exercise
+covers local behavior on one model.
+
+### Reusing coverage and adding an integration test
+
+Four fresh Codex CLI sessions received the same request to repair a command
+that acknowledged a saved note but lost it before the next process opened the
+book. We ran the local builds from before and after adding
+`maintain-regression-tests`, once each on two copies of the same application
+with GPT-6.1 Sol at medium reasoning. The prompt did not mention test changes.
+
+With an existing command-level regression test, both builds fixed the command
+and left every test file byte-identical. With only component tests, both added
+one test that wrote and read the same book through separate CLI processes. All
+four deliveries passed eight external command checks. We also ran each delivered
+suite against the original missing write and a second implementation that wrote
+to the wrong file. All four suites rejected both broken implementations and
+passed the reference repair. The starting component suite had accepted both
+defects. The new skill was read before editing in both sessions that had it.
+This exercise confirms both decisions on this task. The preceding build made
+the same decisions, so the comparison establishes no incremental quality or
+efficiency gain.
+
+We repeated the comparison on a label printer with ten passing tests, including
+three CLI workflows. The suite already checked a partially printed job, but it
+never continued that job in a new process. Across three fresh sessions per
+build, all six delivered the same production fix, passed eleven external CLI
+checks and added a test that caught all three preselected progress faults.
+The preceding build also added a test that interleaved two partially printed
+jobs in each run. In a follow-up check designed after inspecting those extra
+tests, we made switching jobs lose the other job's progress. All three
+preceding suites caught that regression and all three suites with the separate
+skill missed it. All six unmodified deliveries handled the two jobs correctly.
+On this task, fewer new tests cost useful regression protection.
+
+We removed the separate skill and moved test selection into `verify-change`.
+With the same prompt, fixture and model, an initial revision caught the
+interleaved-job regression in two of three fresh sessions. The final wording
+asks for lasting coverage of the other owner's observable state when a write
+can reach it. All three fresh sessions with that wording caught the regression.
+They added two tests, one test and two tests respectively. Withdrawing each
+new test in turn exposed one overlapping case in the third delivery. Removing
+it preserved detection of all five original faults and an additional fault
+that reset progress during a zero-capacity window. The other four new tests
+each provided protection their suite would lose without them.
+
 ## 2.0.0: task decisions, native task tracking, and clear communication
 
 The correction adds independent interviewing, domain modeling, agreement

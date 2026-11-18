@@ -17,7 +17,7 @@ Inspect the actual diff, commit history, working-tree changes, repository contri
 
 Explain the intended behavior and why it changes. Identify the files that carry the decision, distinguish mechanical or generated changes, and name compatibility, migration, or rollout constraints when relevant. For generated changes, identify the inputs and generation command, and state whether reproduction was verified. If that relationship is unavailable or unexplained, flag it for review rather than labeling the output harmless because it is generated.
 
-Use the repository's PR template when present. Keep the description specific to the actual diff, with the checks performed on the named revision and their gaps. Separate expected behavior from behavior already implemented. A known defect remains visible even when the request only asks for preparation.
+Use the repository's PR template when present. Reuse the delivery comparison from [check-agreement](../check-agreement/SKILL.md) when it applies to the PR head. Summarize the agreed example, observed result and material gaps for reviewers. Keep private conversation links or excerpts within their authorized audience. If the checked worktree differs from the PR, identify the affected evidence before using it in the description.
 
 Prefer description and reviewer guidance when behavior must remain unchanged. Flag unrelated edits or a proposed split without dropping user work or silently changing the PR's scope. Use `review-change` for requested technical findings; preparing a description does not require another full review.
 

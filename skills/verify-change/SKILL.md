@@ -1,6 +1,6 @@
 ---
 name: verify-change
-description: Use when choosing checks or assessing whether current evidence supports a claimed result.
+description: Use when choosing regression coverage or assessing whether evidence supports a claimed result.
 ---
 
 # Verify a Change
@@ -9,7 +9,7 @@ Evaluate the claim against the resulting artifact. As a supporting skill, return
 
 ## Bind the claim to the expected outcome
 
-Apply [check-agreement](../check-agreement/SKILL.md) to recover the requested outcome, accepted decisions, representative example, preservation obligations, and stopping point from their sources and compare them with the actual artifact. Reuse a current comparison already made by the owner. An agent-authored spec or test is not an independent source of user intent. If a material expectation was never settled, identify that gap and use `clarify-intent` before claiming agreement; do not validate the assumption by repeating it in the report.
+Apply [check-agreement](../check-agreement/SKILL.md) to close the intent receipt against the actual artifact. Reuse the example recorded before implementation and any current comparison the owner already made. An agent-authored test cannot establish user intent. If a material expectation was never settled, identify the gap and use `clarify-intent` before claiming agreement.
 
 Name the exact claim, acceptance boundary, final artifact identity, revision or state, and material consumers. Distinguish integrated output from a worker's branch or worktree. A claim about the wrong revision or a pre-mutation result is not current evidence.
 
@@ -31,11 +31,11 @@ Select representative operations by their identity, commitment, and duplicate-pr
 
 When correctness depends on state transitions, time, retries, interacting rules, asynchronous work, or a changing UI context, load [state and recovery checks](references/state-and-recovery.md) before selecting the checks. That reference covers invariants, authoritative effects, consumer consistency, and recovery. Apply only the parts relevant to the claim; a static change does not require a concurrency scenario.
 
-Use an existing test, a small direct probe, or a property/stateful test when its generated cases earn their cost. This does not require a testing framework, a separate reviewer, or a fixed test count.
+Read the closest existing tests through their final assertions. Reuse a test unchanged when it would catch the regression. If a write can reach data belonging to another owner, include lasting coverage that gives that owner meaningful state before the write and observes it through normal use afterward. Extend or add a case only for a material failure that would otherwise escape. Exercise the public flow if the failure lies between components. One case can protect several guarantees. Use a direct probe for evidence needed only for this delivery.
 
 For a resource-use claim or a material change to a cost-sensitive path, measure the resulting program on a representative workload while checking equivalent output. Compare with the starting implementation or another relevant baseline when usable; report the workload, environment, time and relevant resource use separately from the agent's own execution cost. Do not turn an unrequested optimization into a new acceptance requirement.
 
-Ask what plausible incorrect behavior a passing check would reject. If the check cannot distinguish it, strengthen the observation rather than count another pass. For a known defect, failing-before/passing-after evidence is useful when feasible. A green check sharing the implementation's mistaken assumption is weak evidence. An absent, documented-only, or unintegrated capability remains a gap regardless of passing tests elsewhere.
+Ask what plausible incorrect behavior a passing check would reject. For a known defect, use the same observation on the failing base and repaired artifact when feasible. If sensitivity is uncertain and consequential, introduce one representative fault in a disposable copy, confirm the exercised path contains it, and see whether the check rejects it for the expected reason. Keep the original untouched. A check that still passes leaves that behavior unverified.
 
 Separate process success from execution of the claimed behavior. When a runner can skip the relevant tests or exit early, inspect the execution output or entrypoint to establish whether those tests ran. An exit-zero command with no execution of the target is `NOT_RUN` for that target, not `PASSED`; report deliberate skips and their reasons. Compilation-only checks support compilation claims, not behavioral claims.
 

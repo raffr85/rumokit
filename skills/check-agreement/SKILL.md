@@ -9,7 +9,7 @@ Compare proposed or delivered behavior with the agreement that governs this task
 
 ## Reconcile the change
 
-Recover the requested outcome, accepted examples, exclusions, preservation obligations, delegated choices, and stopping point from their decision sources. A worker proposal, generated specification, or passing test does not establish acceptance.
+Start with the intent receipt from this task, usually the earlier write-back in the same conversation. Follow an existing spec or task reference when it carries the agreement. Use the latest authorized change to each affected decision. If no prior receipt exists, identify the original request or decision you recovered and say when the comparison is retrospective. If the source is missing, leave its authority unconfirmed.
 
 For each material changed outcome or effect, identify:
 
@@ -19,6 +19,10 @@ For each material changed outcome or effect, identify:
 - the preserved behavior and evidence still needed.
 
 Inspect actual diffs and execution state for delivered work. Keep worker-only output, uninspected artifacts, and unavailable evidence distinct from integrated or verified behavior. Group by consequential outcome, not every line of code.
+
+At delivery, close the receipt in the normal reply. Identify the artifact actually checked (commit or PR head, or the relevant worktree contents for uncommitted work). For each material promise, pair the agreed example or requirement with the observed result and the check that produced it. Group items that share evidence. State which were supported, contradicted, or left unverified. Inspect the reverse direction too: flag material effects in the diff that the agreement does not cover. An open product choice stays open even if the implementation behaves consistently.
+
+Keep the comparison as short as the decision allows. For example, “You asked for input order. On this checkout the public API returned [B, A] for [B, A].” A passing suite needs an observation that would distinguish the wrong behavior before it supports that claim. If the agreement or artifact changes, refresh only affected conclusions. When the task uses a handoff record, leave the result or a usable evidence reference there. A receipt records evidence within the checked boundary; it grants no release authority.
 
 Before introducing shared persistence, financial or permission policy, or a new operational dependency, explain the unmet requirement, adequate existing alternatives, and the proposed effect on constraints, failure, and operating cost. A new mechanism is not automatically wrong; technical necessity is not automatically permission to change the agreed behavior.
 

@@ -20,10 +20,10 @@ Launch `codex`, open `/hooks`, and review and trust RumoKit's `SessionStart`
 hook. Then start a new task in your client. The hook only reads the bundled
 router instructions. The install path is checked against Codex CLI 0.153.1.
 
-To pin a release instead of following the default branch, use this first command:
+To pin this release, use its tag when adding the marketplace.
 
 ```sh
-codex plugin marketplace add raffr85/rumokit --ref v2.0.0
+codex plugin marketplace add raffr85/rumokit --ref v2.1.0
 ```
 
 Then run `codex plugin add rumokit@rumokit`.
@@ -178,10 +178,10 @@ inside Claude Code, select RumoKit in the Installed tab, and choose Uninstall.
 
 ### Try a local copy for one session
 
-For a session-only trial, use a clone instead of the persistent installation:
+For a session-only trial of the default branch, use a clone:
 
 ```sh
-git clone --branch v2.0.0 --depth 1 https://github.com/raffr85/rumokit.git
+git clone --depth 1 https://github.com/raffr85/rumokit.git
 cd rumokit
 claude --plugin-dir .
 ```

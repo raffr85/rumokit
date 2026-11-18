@@ -13,11 +13,13 @@ Start with the answer or observable result the user asked for. Explain the concr
 
 Use the project's established terms and actual names. Explain a necessary unfamiliar term once. Do not replace a concrete operation with an abstract metaphor, invent synonyms for one concept, or assume a glossary makes an answer understandable to a new reader.
 
-Write complete sentences with clear actors. Split dense sentences without compressing them into arrows, unexplained abbreviations, or verbless fragments. Use direct everyday language and natural sentence lengths. Remove stock praise, rhetorical contrasts, generic conclusions, filler, decorative formatting, and repeated explanations. Preserve useful qualifications and required technical detail.
+When someone asks again what a change means, switch to one concrete before-and-after example in their terms. Show who does what differently and which part already exists. Put the mechanism and any uncertainty after that answer. Preserve the technical detail the reader needs to decide.
 
 ## Make the status intelligible
 
 Tie each material claim to its evidence and limit. When relevant, distinguish implementation, local verification, commit, publication, deployment, and observed operation. Say which requested behavior remains untested, not only that a command is green. Numbers need a named workload or target; a test count is not a quality verdict.
+
+When closing an intent receipt, include one “Checked” sentence in the user's language, even on a successful delivery. Bring the agreed example back into the reply with the expected result, the result actually observed, and where it was checked. A named test that ran and asserted that exact result is sufficient. If the example was never exercised, say what remains unverified. This sentence can replace a generic verification summary.
 
 For schema, configuration, and operational changes, name what is proposed or prepared, what was applied or activated, and what is currently observed. A ready migration file does not establish an applied schema; an absent table does not establish that no migration file exists. Keep a worker's report distinct from your own inspection.
 

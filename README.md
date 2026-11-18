@@ -60,14 +60,16 @@ With the startup hook active, describe the result you want:
 
 > Add a waitlist to this workshop panel. Preserve existing registrations.
 
-A missing product decision matters here: does a freed seat automatically confirm
-the next person, or create an offer they must accept? RumoKit directs the agent
-to ask about that choice before implementing it. It also directs the agent to
-inspect facts it can find itself, instead of asking you to explain the codebase.
+The agent can inspect how registrations work today and ask what should happen
+to the next person when a seat opens. Suppose you say they should get an offer
+and remain on the waitlist until they accept.
 
-After you agree on the behavior, the work includes checking that registrations
-survive the change and that interrupted requests do not lose a seat. This is
-an illustrative example, not a quoted evaluation transcript.
+That answer becomes a short **intent receipt** in the conversation. Before
+editing, the agent records the expected result. At delivery it checks the
+actual change and reports whether a cancellation produced an offer, whether
+the person stayed on the waitlist, and what it could verify about existing
+registrations. A later change of mind updates the affected expectation.
+For a handoff, the same receipt can live in the task or spec you already use.
 
 You can also request a focused skill without starting the whole workflow:
 
@@ -76,8 +78,10 @@ You can also request a focused skill without starting the whole workflow:
 | Explain existing behavior without editing files | `understand-code` |
 | Find where a change belongs | `locate-change` |
 | Diagnose and fix a defect | `debug-change` |
+| Choose regression coverage or verify a delivered change | `verify-change` |
 | Coordinate a change across repositories | `coordinate-change` |
 | Review a diff for supported findings | `review-change` |
+| Check whether a teammate can implement a spec using only the handoff | `review-change` |
 | Prepare or open a reviewable pull request | `prepare-pr` |
 | Assess or resolve existing review feedback | `address-review` |
 | Diagnose or repair failed CI checks | `fix-ci` |
